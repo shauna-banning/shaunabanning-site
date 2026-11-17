@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /guides/
+Sitemap: https://shaunabanning.com/sitemap.xml

@@ -104,6 +104,20 @@
 .map-key{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:.85rem;color:var(--muted)}
 @media (max-width:720px){#pcsmap{height:420px}}
 </style>
+<!-- Flodesk universal loader (required before any Flodesk form) -->
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() { (w[n].q = w[n].q || []).push(arguments); };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t); sm.async = true; sm.type = 'module'; sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t); sn.async = true; sn.noModule = true; sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
 </head>
 <body>
 
@@ -319,17 +333,24 @@
   </div>
 </section>
 
-<!-- ===== HELP / LEAD CAPTURE (FLODESK TODO: swap in MacDill PCS form) ===== -->
+<!-- ===== HELP / LEAD CAPTURE ===== -->
 <section id="help">
   <div class="wrap capture">
     <div>
       <span class="eyebrow">Free · No Pressure</span>
       <h2>Get a Personalized Neighborhood Shortlist</h2>
-      <p class="lead">Tell me your report date, BAH and what matters most: commute, schools, space or water. I'll send back two or three areas that fit, with real homes and honest tradeoffs. Renting first? I'll still point you to the right areas.</p>
+      <p class="lead">Leave your info and I'll ask a few quick questions: your report date, BAH and what matters most. Then I'll send two or three areas that fit, with real homes and honest tradeoffs. Renting first? I'll still point you to the right areas.</p>
     </div>
-    <div class="btns">
-      <a class="btn btn-dark" href="sms:+14254954577?&body=MACDILL%20-%20Hi%20Shauna!%20We%E2%80%99re%20PCSing%20to%20MacDill%20and%20would%20love%20a%20neighborhood%20shortlist.">Text Me "MACDILL"</a>
-      <a class="btn btn-light" href="mailto:shaunasellstampa@gmail.com?subject=MacDill%20PCS%20Neighborhood%20Shortlist">Email Me</a>
+    <!-- Flodesk form: "MacDill PCS – Website" → segment MacDill PCS -->
+    <div class="form" style="border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.06)">
+      <div id="fd-form-6afd7a892e6441411757f8f2"></div>
+      <script>
+        window.fd('form', {
+          formId: '6afd7a892e6441411757f8f2',
+          containerEl: '#fd-form-6afd7a892e6441411757f8f2'
+        });
+      </script>
+      <small>Prefer to text? <a href="sms:+14254954577?&body=MACDILL%20-%20Hi%20Shauna!%20We%E2%80%99re%20PCSing%20to%20MacDill%20and%20would%20love%20a%20neighborhood%20shortlist.">Text me "MACDILL"</a>. By signing up you agree to receive emails from Shauna Banning, Coldwell Banker Realty.</small>
     </div>
   </div>
 </section>

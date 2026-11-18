@@ -81,6 +81,20 @@
 @media(max-width:820px){.bah-hero .wrap,.bah-main .wrap{grid-template-columns:1fr}}
 @media(max-width:460px){.areas{grid-template-columns:1fr 1fr}.compare{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.bahout b{font-size:2.2rem}}
 </style>
+<!-- Flodesk universal loader (required before any Flodesk form) -->
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() { (w[n].q = w[n].q || []).push(arguments); };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t); sm.async = true; sm.type = 'module'; sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t); sn.async = true; sn.noModule = true; sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
 </head>
 <body>
 
@@ -196,12 +210,18 @@
 
       <div class="bcta" id="help">
         <h3>Want This Run on Real Homes?</h3>
-        <p>Send me your pay grade and report date. I'll pull homes in Riverview, Brandon, Valrico and FishHawk where the payment fits your BAH, with commute times to the MacDill gate.</p>
-        <!-- FLODESK TODO: replace these buttons with the "MacDill PCS" Flodesk form embed when Shauna sends it -->
-        <div class="btns">
-          <a class="btn btn-caramel" href="sms:+14254954577?&amp;body=BAH%20-%20Hi%20Shauna!%20My%20pay%20grade%20is%20___%20and%20I%20report%20to%20MacDill%20on%20___.">Text Me "BAH"</a>
-          <a class="btn btn-light" href="mailto:shaunasellstampa@gmail.com?subject=My%20MacDill%20BAH%20home%20list&amp;body=Pay%20grade%3A%0AReport%20date%3A%0AAreas%20I%27m%20considering%3A">Email Me</a>
-        </div>
+        <p>Leave your info and I'll ask two quick questions (report date and pay grade), then pull homes in Riverview, Brandon, Valrico and FishHawk where the payment fits your BAH, with commute times to the MacDill gate.</p>
+        <!-- Flodesk form: "MacDill PCS – Website" → segment MacDill PCS -->
+    <div class="form" style="margin:14px 0">
+      <div id="fd-form-6afd7a892e6441411757f8f2"></div>
+      <script>
+        window.fd('form', {
+          formId: '6afd7a892e6441411757f8f2',
+          containerEl: '#fd-form-6afd7a892e6441411757f8f2'
+        });
+      </script>
+      <small>Prefer to text? <a href="sms:+14254954577?&body=MACDILL%20-%20Hi%20Shauna!%20We%E2%80%99re%20PCSing%20to%20MacDill%20and%20would%20love%20a%20neighborhood%20shortlist.">Text me "MACDILL"</a>. By signing up you agree to receive emails from Shauna Banning, Coldwell Banker Realty.</small>
+    </div>
         <p class="fine" style="margin:0">Shauna Banning, REALTOR® · Coldwell Banker Realty · (425) 495-4577</p>
       </div>
     </div>

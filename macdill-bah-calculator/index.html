@@ -143,7 +143,7 @@
           <label class="f" for="tax">Property tax (% of price / yr)<input id="tax" type="number" step="0.05" min="0"><small>Hillsborough runs ~1.6–2%</small></label>
           <label class="f" for="ins">Homeowners insurance / mo<input id="ins" type="number" step="10" min="0"></label>
           <label class="f" for="hoa">HOA + CDD / mo<input id="hoa" type="number" step="10" min="0"><small>Most newer communities here have a CDD</small></label>
-          <label class="f" for="maint">Maintenance (% of price / yr)<input id="maint" type="number" step="0.25" min="0"><small>Plan on ~1% a year for repairs</small></label>
+          <label class="f" for="maint">Maintenance (% of price / yr)<input id="maint" type="number" step="0.25" min="0"><small>Newer homes ~0.5%; older homes 1%+</small></label>
           <label class="f" for="rins">Renters insurance / mo<input id="rins" type="number" step="5" min="0"></label>
         </div>
       </div>
@@ -251,7 +251,7 @@ const $=id=>document.getElementById(id);
 const fmt=n=>(n<0?"−":"")+"$"+Math.round(Math.abs(n)).toLocaleString("en-US");
 const g=$("grade");
 Object.keys(BAH).forEach(k=>{const o=document.createElement("option");o.value=k;o.textContent=k;g.appendChild(o)});
-const defaults={grade:"E-5",deps:"w",price:362000,rent:2285,rate:6.25,down:0,ff:"first",tax:1.8,ins:240,hoa:120,rins:20,yrs:3,app:2,maint:1};
+const defaults={grade:"E-5",deps:"w",price:362000,rent:2285,rate:6.25,down:0,ff:"first",tax:1.8,ins:240,hoa:120,rins:20,yrs:3,app:3,maint:0.5};
 Object.entries(defaults).forEach(([k,v])=>{$(k).value=v});
 function setArea(a){const d=AREAS[a];$("price").value=d.price;$("rent").value=d.rent;$("hoa").value=d.hoa;
   document.querySelectorAll(".areas button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.area===a));calc()}

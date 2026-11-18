@@ -39,6 +39,7 @@
 .bahout span{font-size:13px;color:#c8c4be}
 .bah-main{background:var(--cream);padding:40px 0 56px}
 .bah-main .wrap{display:grid;gap:24px;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);align-items:start}
+.bah-main .wrap.solo{display:block}
 .bcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .bcard h2{font-size:1.8rem;margin-bottom:4px}
 .bcard .sub{color:var(--muted);font-size:14px;margin:0 0 16px}
@@ -77,6 +78,11 @@
 .bcta h3{font-size:1.6rem;margin:0}
 .bcta p{margin:0;color:var(--ink)}
 .bcta .btns{margin-top:4px}
+.bcta-wide{margin:28px 0 8px;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;padding:36px 40px}
+.bcta-wide h3{font-size:2rem;margin-bottom:12px}
+.bcta-wide > div:first-child > p:not(.fine){margin-bottom:14px}
+.bcta-wide .form{margin:0!important}
+@media(max-width:860px){.bcta-wide{grid-template-columns:1fr;gap:18px;padding:24px}}
 .bah-fine{color:var(--muted);font-size:12px;line-height:1.55;max-width:90ch;margin:28px auto 0}
 @media(max-width:820px){.bah-hero .wrap,.bah-main .wrap{grid-template-columns:1fr}}
 @media(max-width:460px){.areas{grid-template-columns:1fr 1fr}.compare{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.bahout b{font-size:2.2rem}}
@@ -208,9 +214,15 @@
         </table></div></div>
       </div>
 
-      <div class="bcta" id="help">
+    </div>
+  </div>
+  <div class="wrap solo"><div class="bcta bcta-wide" id="help">
+    <div>
         <h3>Want This Run on Real Homes?</h3>
         <p>Leave your info and I'll ask two quick questions (report date and pay grade), then pull homes in Riverview, Brandon, Valrico and FishHawk where the payment fits your BAH, with commute times to the MacDill gate.</p>
+        <p class="fine" style="margin:0">Shauna Banning, REALTOR®, Military Relocation Professional (MRP) · Coldwell Banker Realty · (425) 495-4577</p>
+    </div>
+    <div>
         <!-- Flodesk form: "MacDill PCS – Website" → segment MacDill PCS -->
     <div class="form" style="margin:14px 0">
       <div id="fd-form-6afd7a892e6441411757f8f2"></div>
@@ -222,11 +234,9 @@
       </script>
       <small>Prefer to text? <a href="sms:+14254954577?&body=MACDILL%20-%20Hi%20Shauna!%20We%E2%80%99re%20PCSing%20to%20MacDill%20and%20would%20love%20a%20neighborhood%20shortlist.">Text me "MACDILL"</a>. By signing up you agree to receive emails from Shauna Banning, Coldwell Banker Realty.</small>
     </div>
-        <p class="fine" style="margin:0">Shauna Banning, REALTOR®, Military Relocation Professional (MRP) · Coldwell Banker Realty · (425) 495-4577</p>
-      </div>
     </div>
-  </div>
-  <div class="wrap"><p class="bah-fine">Estimates for planning only, not a loan offer or financial advice. BAH figures are 2026 Defense Travel Management Office rates for the Tampa military housing area (MacDill AFB), effective Jan 1, 2026, and change each January; confirm yours with the official DoD BAH calculator. Area figures are fall 2026 medians from MLS data and rental sites (RentCafe, Trulia, Rentometer), not current listings; FishHawk uses the Stellar MLS 12-month median sale price. HOA/CDD amounts vary by community. VA funding fee uses current VA tiers and is added to the loan. Sale estimate assumes 7% selling costs and 2% buyer closing costs; maintenance and home value growth use the rates you enter; rent assumes 3% yearly increases. Your lender sets your actual rate, payment and eligibility. Not affiliated with or endorsed by the Department of Defense, U.S. Air Force or VA.</p></div>
+  </div></div>
+  <div class="wrap solo"><p class="bah-fine">Estimates for planning only, not a loan offer or financial advice. BAH figures are 2026 Defense Travel Management Office rates for the Tampa military housing area (MacDill AFB), effective Jan 1, 2026, and change each January; confirm yours with the official DoD BAH calculator. Area figures are fall 2026 medians from MLS data and rental sites (RentCafe, Trulia, Rentometer), not current listings; FishHawk uses the Stellar MLS 12-month median sale price. HOA/CDD amounts vary by community. VA funding fee uses current VA tiers and is added to the loan. Sale estimate assumes 7% selling costs and 2% buyer closing costs; maintenance and home value growth use the rates you enter; rent assumes 3% yearly increases. Your lender sets your actual rate, payment and eligibility. Not affiliated with or endorsed by the Department of Defense, U.S. Air Force or VA.</p></div>
 </div>
 </div>
 

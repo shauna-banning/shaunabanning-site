@@ -167,7 +167,7 @@ def page(slug, c):
   <div class="wrap">
     <span class="eyebrow">What It Really Costs</span>
     <h2>HOA, CDD &amp; Insurance</h2>
-    <p class="lead">Don't budget off the mortgage alone. These are the lines that surprise people.</p>
+    <p class="lead">Your monthly cost is more than the mortgage. Here's everything else to plan for in {n}.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Cost</th><th>Rough range</th><th>What to know</th></tr></thead>
       <tbody>
@@ -182,7 +182,7 @@ def page(slug, c):
 <section>
   <div class="wrap">
     <span class="eyebrow">Schools</span>
-    <h2>Schools, Address by Address</h2>
+    <h2>{n} Schools</h2>
     <p class="lead">{n} is in Hillsborough County Public Schools. Your zone depends on the exact address.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>School</th><th>Grades</th></tr></thead>

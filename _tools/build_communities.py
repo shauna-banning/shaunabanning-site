@@ -19,6 +19,24 @@ LOADER = """<script>
   })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
 </script>"""
 E = html.escape
+ICONS = {
+ "price": '<path d="M3 12V4h8l9 9-8 8-9-9z"/><circle cx="7.5" cy="8.5" r="1.5"/>',
+ "home": '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+ "hoa": '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+ "cdd": '<path d="M4 7h16v12H4z"/><path d="M4 11h16"/><path d="M8 3v4M16 3v4"/>',
+ "school": '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
+ "car": '<path d="M5 16l1.5-5h11L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/><circle cx="7" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/>',
+ "pin": '<path d="M12 21s-7-6.5-7-12a7 7 0 0114 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>',
+ "water": '<path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/>',
+ "plane": '<path d="M2 16l20-7-3-2-7 3-5-5-2 1 3 6-4 2-2-1-1 1z"/>',
+ "hospital": '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8M8 12h8"/>',
+ "build": '<path d="M3 21h18"/><path d="M5 21V8l7-4 7 4v13"/><path d="M9 21v-5h6v5"/>',
+}
+def icon_for(label):
+    l = label.lower()
+    for k, key in [("price","price"),("homes","home"),("hoa","hoa"),("cdd","cdd"),("school","school"),("macdill","car"),("downtown","car"),("airport","plane"),("general","hospital"),("size","pin"),("setting","pin"),("built","build"),("flood","water")]:
+        if k in l: return ICONS[key]
+    return ICONS["pin"]
 
 def stats(c):
     s = c.get("stats")
@@ -44,17 +62,30 @@ def form(c):
       <small>Shauna Banning, Coldwell Banker Realty.</small>
     </div>"""
 
+def band(c):
+    b = (c.get("photos") or {}).get("band")
+    if not b: return ""
+    return f'<div class="photo-band" role="img" aria-label="{E(b["alt"])}" style="background-image:url(../assets/img/{b["src"]})"></div>'
+
+def school_img(c):
+    b = (c.get("photos") or {}).get("schools")
+    if not b: return ""
+    return f'<img class="school-photo" src="../assets/img/{b["src"]}" alt="{E(b["alt"])}" loading="lazy">'
+
 def page(slug, c):
     url = f"https://shaunabanning.com/{slug}/"
     stat_html, note = stats(c)
     faq = c["faq"]
     faq_ld = ",\n".join(json.dumps({"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}) for q, a in faq)
+    if not c.get("hero") and (c.get("photos") or {}).get("hero"): c["hero"] = c["photos"]["hero"]
     hero_img = f'<img class="bg" src="../assets/img/{c["hero"]["src"]}" alt="{E(c["hero"]["alt"])}">' if c.get("hero") else ""
     hero_cls = "hero" if c.get("hero") else "hero hero-type"
-    glance = "\n".join(f'      <div class="glance"><b>{E(v)}</b><span>{E(k)}</span></div>' for k, v in c["glance"])
+    glance = "\n".join(f'        <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{icon_for(k)}</svg></i><div><span>{E(k)}</span><b>{E(v)}</b></div></li>' for k, v in c["glance"])
+    lat, lon = c["coords"]
     life = "\n".join(f'      <div class="card"><span class="tag">{E(t)}</span><h3>{E(h)}</h3><p>{p}</p></div>' for t, h, p in c["life"])
     costs = "\n".join(f"        <tr><td>{E(a)}</td><td>{E(b)}</td><td>{d}</td></tr>" for a, b, d in c["costs"])
-    schools = "\n".join(f"        <tr><td>{E(a)}</td><td>{E(b)}</td></tr>" for a, b in c["schools"]) if c["schools"] else '        <tr><td colspan="2">Zoning varies by section. I\'ll confirm the schools for any address you\'re considering.</td></tr>'
+    gr = lambda g: f'<span class="grade">{g}</span>' if g else "—"
+    schools = "\n".join(f"        <tr><td>{E(r[0])}</td><td>{E(r[1])}</td><td>{gr(r[2])}</td><td>{gr(r[3])}</td></tr>" for r in c["schools"]) if c["schools"] else '        <tr><td colspan="2">Zoning varies by section. I\'ll confirm the schools for any address you\'re considering.</td></tr>'
     tips = "\n".join(f'      <div class="tip"><h3>{E(h)}</h3><p>{p}</p></div>' for h, p in c["tips"])
     faqs = "\n".join(f"      <details><summary>{E(q)}</summary><p>{a}</p></details>" for q, a in faq)
     n = E(c["name"])
@@ -74,6 +105,8 @@ def page(slug, c):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
 {LOADER}
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@graph":[
@@ -144,9 +177,13 @@ def page(slug, c):
   <div class="wrap">
     <span class="eyebrow">At a Glance</span>
     <h2>{E(c['glance_h2'])}</h2>
-    <div class="glance-grid">
+    <div class="facts-map">
+      <ul class="facts-list">
 {glance}
+      </ul>
+      <div id="cmap" role="region" aria-label="Map of {n} with MacDill AFB, downtown Tampa, Tampa General Hospital and Tampa International Airport"></div>
     </div>
+    <p class="fine">Drive times are without traffic. Weekday rush hour typically adds 15 to 30 minutes.</p>
   </div>
 </section>
 
@@ -162,6 +199,7 @@ def page(slug, c):
   </div>
 </section>
 
+{band(c)}
 <!-- ===== COSTS ===== -->
 <section class="alt">
   <div class="wrap">
@@ -183,14 +221,15 @@ def page(slug, c):
   <div class="wrap">
     <span class="eyebrow">Schools</span>
     <h2>{n} Schools</h2>
+    {school_img(c)}
     <p class="lead">{n} is in Hillsborough County Public Schools. Your zone depends on the exact address.</p>
     <div class="table-wrap"><table>
-      <thead><tr><th>School</th><th>Grades</th></tr></thead>
+      <thead><tr><th>School</th><th>Grades</th><th>2025-26</th><th>2024-25</th></tr></thead>
       <tbody>
 {schools}
       </tbody>
     </table></div>
-    <p class="fine">Schools most often listed for {n} addresses. Boundaries change, so confirm with the <a href="https://www.hillsboroughschools.org/" rel="noopener">district</a> before you go under contract.</p>
+    <p class="fine">Schools most often listed for {n} addresses, with Florida Department of Education grades released July 2026. Boundaries change, so confirm with the <a href="https://www.hillsboroughschools.org/" rel="noopener">district</a> before you go under contract. Not set on your zoned school? Hillsborough also offers school choice, magnet and charter options, and I can help you sort through them.</p>
   </div>
 </section>
 
@@ -266,6 +305,23 @@ def page(slug, c):
   </div>
   <div class="legal">© 2026 Shauna Banning. Coldwell Banker Realty. Equal Housing Opportunity. Information is deemed reliable but not guaranteed. Costs, fees, school zones and boundaries change, so verify them for your specific address. Nothing here is legal, tax or insurance advice.</div>
 </footer>
+<script>
+window.addEventListener('load',function(){{
+  if(!window.L)return;
+  var here=[{lat},{lon}],gate=[27.8935,-82.5055],dt=[27.9506,-82.4572],tpa=[27.9755,-82.5332],tgh=[27.9376,-82.4590];
+  var m=L.map('cmap',{{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false,zoomControl:false}});
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:16,attribution:'Tiles &copy; Esri &copy; OpenStreetMap contributors'}}).addTo(m);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{{z}}/{{y}}/{{x}}',{{maxZoom:16,opacity:.7}}).addTo(m);
+  function ic(t,c){{return L.divIcon({{className:'',html:'<div class="mk '+c+'"><i></i><span>'+t+'</span></div>',iconSize:null,iconAnchor:[9,9]}})}}
+  L.marker(here,{{icon:ic('{n}','here'),zIndexOffset:1000}}).addTo(m);
+  L.marker(gate,{{icon:ic('MacDill AFB','base')}}).addTo(m);
+  L.marker(dt,{{icon:ic('Downtown Tampa','dt')}}).addTo(m);
+  L.marker(tpa,{{icon:ic('TPA Airport','dt')}}).addTo(m);
+  L.marker(tgh,{{icon:ic('Tampa General','dt')}}).addTo(m);
+  var fit=function(){{m.invalidateSize();m.fitBounds(L.latLngBounds([here,gate,dt,tpa,tgh]),{{padding:[40,40]}});}};
+  fit();setTimeout(fit,300);
+}});
+</script>
 </body>
 </html>
 """

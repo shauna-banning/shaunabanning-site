@@ -1,839 +1,1106 @@
 {
- "south-fork": {
-  "name": "South Fork",
-  "city": "Riverview",
-  "zip": "33579",
-  "title": "South Fork Market Update & Living Guide | Riverview, FL | Shauna Banning",
-  "description": "Monthly South Fork real estate market update plus a local's guide: amenities, CDD and HOA costs, schools, commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
-  "h1": "South Fork, Riverview: A Local's Guide",
-  "intro": "Newer homes, a resort-style amenity center and a price point that still works for a lot of families. Here's what it's really like, and what it really costs.",
-  "search_url": "https://www.coldwellbankerhomes.com/fl/riverview/",
-  "first_update": "December 15",
-  "glance_h2": "South Fork Quick Facts",
-  "glance": [
-   [
-    "Price range",
-    "~$270K – $825K"
-   ],
-   [
-    "Homes",
-    "3–6 beds · 1,600–7,900 sq ft"
-   ],
-   [
-    "HOA",
-    "~$11 – $300, varies"
-   ],
-   [
-    "CDD",
-    "Yes, on most homes"
-   ],
-   [
-    "Schools",
-    "Eisenhower MS · Sumner HS"
-   ],
-   [
-    "To MacDill",
-    "35–55 min at rush"
-   ]
-  ],
-  "life_h2": "Pools, Parks & Room to Spread Out",
-  "life_lead": "South Fork is a collection of neighborhoods built around a shared amenity center, with sidewalks, ponds and parks throughout.",
-  "life": [
-   [
-    "Amenity center",
-    "Clubhouse & Resort Pool",
-    "The centerpiece: a pool, spa and clubhouse that host summer weekends and birthday parties."
-   ],
-   [
-    "Stay active",
-    "Fitness Center",
-    "An on-site gym, so you can skip the drive to a membership."
-   ],
-   [
-    "Outside",
-    "Courts & Playgrounds",
-    "Tennis and basketball courts plus playgrounds spread through the neighborhoods."
-   ],
-   [
-    "Walkable",
-    "Trails & Ponds",
-    "Sidewalks and walking paths loop past retention ponds. Good for a morning walk or an evening stroll with the dog."
-   ],
-   [
-    "Errands",
-    "US-301 & Big Bend",
-    "Groceries, coffee and restaurants are a short drive away along US-301 and Big Bend Road."
-   ],
-   [
-    "Commute",
-    "I-75 Access",
-    "I-75 is close for trips north to Tampa or south toward Sarasota."
-   ]
-  ],
-  "costs": [
-   [
-    "CDD assessment",
-    "~$2,000 – $2,700 / yr",
-    "Billed on your property tax bill. Varies by section and lot."
-   ],
-   [
-    "HOA",
-    "~$11 – $300 / mo",
-    "Depends on the section. Covers common areas and the amenity center. Check the exact association."
-   ],
-   [
-    "Property tax",
-    "~1.8–2% of price / yr",
-    "Your bill resets after you buy. Homestead by March 1 to cap future increases."
-   ],
-   [
-    "Homeowners insurance",
-    "Varies by roof age",
-    "Get quotes during your inspection period."
-   ],
-   [
-    "Flood insurance",
-    "Varies by address",
-    "Not included in homeowners coverage. Check the FEMA flood map."
-   ]
-  ],
-  "schools": [
-   [
-    "Elementary: varies by section",
-    "K–5"
-   ],
-   [
-    "Eisenhower Middle",
-    "6–8"
-   ],
-   [
-    "Sumner High",
-    "9–12"
-   ]
-  ],
-  "tips": [
-   [
-    "There's more than one \"South Fork\"",
-    "South Fork is made up of several subdivisions, and Southfork Lakes is a separate community with its own HOA. Confirm exactly which association a home belongs to."
-   ],
-   [
-    "The CDD hides on your tax bill",
-    "It's not a separate monthly bill, so it's easy to miss. Ask for the exact amount on any home you like."
-   ],
-   [
-    "Drive it at rush hour",
-    "US-301, Big Bend and I-75 back up at peak times. Drive your real commute before you make an offer."
-   ],
-   [
-    "Get insurance quotes early",
-    "Roof age moves your premium more than almost anything. Quote it during your inspection period, not after closing."
-   ],
-   [
-    "Pets have rules",
-    "South Fork allows dogs and cats, but some sections have breed, size or number limits. Check before you fall for a house."
-   ],
-   [
-    "Compare total monthly cost",
-    "Two similar homes can differ by hundreds a month once you add the CDD, HOA and insurance. Compare the full payment, not the price."
-   ]
-  ],
-  "faq": [
-   [
-    "How much is the CDD in South Fork?",
-    "Recent listings show roughly $2,000 to $2,700 a year, billed on the property tax bill. It varies by section and lot, so check the exact amount for any home you're considering."
-   ],
-   [
-    "What are the HOA fees in South Fork?",
-    "Most listings show low monthly dues, roughly $10 to $45 a month, though some sub-areas run higher. Confirm the exact association and fee for the home."
-   ],
-   [
-    "What schools serve South Fork?",
-    "South Fork is in Hillsborough County Public Schools, and zoning varies by section. I'll confirm the assigned schools for any address you're considering."
-   ],
-   [
-    "How far is South Fork from MacDill AFB?",
-    "About 22 to 25 miles, or roughly 35 to 55 minutes at weekday morning rush depending on your route. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
-   ],
-   [
-    "How much are homes in South Fork?",
-    "In November 2026, listings ranged from about $270,000 to $825,000, from 3-bed homes around 1,600 sq ft to 6-bed homes near 8,000 sq ft. My monthly update has the latest sold prices."
-   ],
-   [
-    "What amenities does South Fork have?",
-    "A clubhouse, pool and spa, fitness center, tennis, pickleball and basketball courts, a dog park, playgrounds, a community park and walking trails."
-   ],
-   [
-    "Does South Fork flood?",
-    "Flood risk depends on the address. Check the FEMA flood zone and ask the seller for flood history, which Florida sellers now have to disclose."
-   ],
-   [
-    "Can I have pets in South Fork?",
-    "Yes, dogs and cats are allowed, though some sections have breed, size or number limits. Check the rules for the specific association."
-   ]
-  ]
- },
- "triple-creek": {
-  "name": "Triple Creek",
-  "city": "Riverview",
-  "zip": "33579",
-  "title": "Triple Creek Market Update & Living Guide | Riverview, FL | Shauna Banning",
-  "description": "Monthly Triple Creek real estate market update plus a local's guide: amenities, CDD and HOA costs, schools, commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
-  "h1": "Triple Creek, Riverview: A Local's Guide",
-  "intro": "About 1,000 acres of newer homes, multiple amenity centers and an elementary school inside the community. Here's the full picture, costs included.",
-  "search_url": "https://www.coldwellbankerhomes.com/fl/riverview/",
-  "first_update": "December 15",
-  "glance_h2": "Triple Creek Quick Facts",
-  "glance": [
-   [
-    "Size",
-    "~1,038 acres"
-   ],
-   [
-    "Homes",
-    "Newer single-family"
-   ],
-   [
-    "HOA",
-    "~$90 – $300 / yr"
-   ],
-   [
-    "CDD",
-    "Often ~$3K+ / yr"
-   ],
-   [
-    "Schools",
-    "Dawson ES (on site) · Sumner HS"
-   ],
-   [
-    "To MacDill",
-    "40–60 min at rush"
-   ]
-  ],
-  "life_h2": "Amenity Centers, Parks & a School Next Door",
-  "life_lead": "Triple Creek was planned around its amenities, with more than one clubhouse and plenty of green space.",
-  "life": [
-   [
-    "Amenity centers",
-    "Clubhouses & Pools",
-    "Multiple amenity centers with pools, plus a splash pad for little ones."
-   ],
-   [
-    "Stay active",
-    "Fitness & Sports Fields",
-    "A fitness center, sports fields and courts for tennis and basketball."
-   ],
-   [
-    "Four-legged friends",
-    "Dog Park",
-    "A fenced dog park, so the pup gets a run too."
-   ],
-   [
-    "School",
-    "Elementary Inside the Community",
-    "Dawson Elementary sits inside Triple Creek, which makes school drop-off short for many families."
-   ],
-   [
-    "Outside",
-    "Parks & Playgrounds",
-    "Parks and playgrounds are spread through the villages."
-   ],
-   [
-    "Still growing",
-    "New Construction",
-    "Builders are still active in some villages, so you'll find both new and resale homes."
-   ]
-  ],
-  "costs": [
-   [
-    "CDD assessment",
-    "Often ~$3,000+ / yr",
-    "Billed on your property tax bill. Varies by village and lot."
-   ],
-   [
-    "HOA",
-    "~$90 – $300 / yr",
-    "Low, but some villages have more than one association. Check every fee."
-   ],
-   [
-    "Property tax",
-    "~1.8–2% of price / yr",
-    "Your bill resets after you buy. Homestead by March 1 to cap future increases."
-   ],
-   [
-    "Homeowners insurance",
-    "Varies",
-    "Newer roofs usually quote lower. Get quotes during inspection."
-   ],
-   [
-    "Flood insurance",
-    "Varies by address",
-    "Check the FEMA flood map for the exact lot."
-   ]
-  ],
-  "schools": [
-   [
-    "Warren Hope Dawson Elementary",
-    "K–5"
-   ],
-   [
-    "Barrington Middle",
-    "6–8"
-   ],
-   [
-    "Sumner High",
-    "9–12"
-   ]
-  ],
-  "tips": [
-   [
-    "The CDD is the big number",
-    "HOA dues are low, but the CDD often runs $3,000 or more a year on the tax bill. Compare total monthly cost, not just the HOA."
-   ],
-   [
-    "Some villages have two associations",
-    "Ask for every association fee on the home, not just the master HOA."
-   ],
-   [
-    "It's farther east than it looks",
-    "Triple Creek sits east of US-301, so drives to Tampa and MacDill run longer than the rest of Riverview. Drive it at rush hour."
-   ],
-   [
-    "Construction traffic is temporary",
-    "Building is still going on in parts of the community. Visit on a weekday to see what daily life is like right now."
-   ],
-   [
-    "School is close, so check the walk zone",
-    "Dawson Elementary sits inside Triple Creek. Some homes are close enough to walk, which matters for bus service. Ask the school."
-   ],
-   [
-    "New build or resale?",
-    "New homes come with builder warranties but often bigger CDDs. Resale homes may have landscaping and window treatments done. Price out both."
-   ]
-  ],
-  "faq": [
-   [
-    "How much is the CDD in Triple Creek?",
-    "Recent listings show CDD assessments often around $3,000 or more a year, billed on the property tax bill. It varies by village and lot."
-   ],
-   [
-    "What schools serve Triple Creek?",
-    "Listings most often show Warren Hope Dawson Elementary (inside the community), Barrington Middle and Sumner High. Always confirm zoning for the exact address with the district."
-   ],
-   [
-    "What amenities does Triple Creek have?",
-    "Multiple amenity centers with pools, a splash pad, a fitness center, sports fields, tennis and basketball courts, a dog park, parks and playgrounds."
-   ],
-   [
-    "How far is Triple Creek from MacDill AFB?",
-    "Roughly 25 to 28 miles, or about 40 to 60 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
-   ],
-   [
-    "Are there new homes in Triple Creek?",
-    "Yes, builders are still active in some villages, so you'll find both new construction and resale homes."
-   ],
-   [
-    "Does Triple Creek flood?",
-    "Flood risk depends on the address. Check the FEMA flood zone and the seller's flood disclosure for the specific home."
-   ]
-  ]
- },
- "river-hills": {
-  "name": "River Hills",
-  "city": "Valrico",
-  "zip": "33596",
-  "title": "River Hills Country Club Market Update & Living Guide | Valrico, FL | Shauna Banning",
-  "description": "Monthly River Hills (Valrico) real estate market update plus a local's guide: the country club, HOA costs, A-rated schools, commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
-  "h1": "River Hills, Valrico: A Local's Guide",
-  "intro": "An established golf community with mature trees, bigger lots and A-rated schools. Here's what living here is really like, club membership included.",
-  "search_url": "https://www.coldwellbankerhomes.com/fl/valrico/",
-  "first_update": "December 15",
-  "glance_h2": "River Hills Quick Facts",
-  "glance": [
-   [
-    "Setting",
-    "Golf community, mature trees"
-   ],
-   [
-    "Homes",
-    "Larger single-family"
-   ],
-   [
-    "Built",
-    "Late 1980s–2000s"
-   ],
-   [
-    "HOA",
-    "~$290 – $680 / quarter"
-   ],
-   [
-    "Schools",
-    "Lithia Springs · Randall · Newsome"
-   ],
-   [
-    "To MacDill",
-    "40–60 min at rush"
-   ]
-  ],
-  "life_h2": "Golf, Gathering & Quiet Streets",
-  "life_lead": "River Hills is built around River Hills Country Club, with established neighborhoods tucked along the fairways and conservation areas.",
-  "life": [
-   [
-    "The club",
-    "River Hills Country Club",
-    "An 18-hole course with a clubhouse. Golf membership is separate from the HOA."
-   ],
-   [
-    "Social side",
-    "Pool, Fitness & Dining",
-    "Many listings say HOA dues include a social membership with pool, fitness and dining access. Confirm what's included for the home you're considering."
-   ],
-   [
-    "Setting",
-    "Mature Trees & Bigger Lots",
-    "Older neighborhoods mean established landscaping and more space between homes."
-   ],
-   [
-    "Schools",
-    "A-Rated Options",
-    "Listings commonly show Lithia Springs Elementary, Randall Middle and Newsome High."
-   ],
-   [
-    "Errands",
-    "Close to Brandon & FishHawk",
-    "Shopping and dining in Brandon and FishHawk are a short drive away."
-   ],
-   [
-    "Outside",
-    "Conservation Views",
-    "Many homes back up to fairways, ponds or wooded preserve."
-   ]
-  ],
-  "costs": [
-   [
-    "HOA",
-    "~$290 – $680 / quarter",
-    "Varies by section. Ask exactly what it covers, including any club access."
-   ],
-   [
-    "Golf membership",
-    "Separate",
-    "Full golf membership is in addition to the HOA. Only some owners join."
-   ],
-   [
-    "Property tax",
-    "~1.8–2% of price / yr",
-    "Your bill resets after you buy. Homestead by March 1 to cap future increases."
-   ],
-   [
-    "CDD",
-    "Usually none",
-    "Many established sections don't have one. Confirm on the tax bill."
-   ],
-   [
-    "Homeowners insurance",
-    "Varies by roof age",
-    "Older homes mean roof age matters a lot. Quote it during inspection."
-   ]
-  ],
-  "schools": [
-   [
-    "Lithia Springs Elementary",
-    "PK–5"
-   ],
-   [
-    "Randall Middle",
-    "6–8"
-   ],
-   [
-    "Newsome High",
-    "9–12"
-   ]
-  ],
-  "tips": [
-   [
-    "Know what the HOA covers",
-    "Some sections include a club social membership and some don't. Ask for the HOA's budget and what's included before you compare homes."
-   ],
-   [
-    "Golf is optional",
-    "You don't have to golf to live here, and many residents don't. Full golf membership is a separate cost."
-   ],
-   [
-    "Roof age drives insurance",
-    "Many homes date from the 1990s–2000s. A newer roof can save thousands a year on insurance."
-   ],
-   [
-    "Ask about the club's plans",
-    "Clubs change hands and update their plans. Ask the HOA about the club's current status and any planned assessments."
-   ],
-   [
-    "Lot sizes vary a lot",
-    "Some streets have much bigger lots than others. If yard space matters, compare lot sizes, not just square footage."
-   ],
-   [
-    "Check for an HOA budget and reserves",
-    "In an established community, the HOA's reserves tell you whether big projects are covered or could mean a special assessment."
-   ]
-  ],
-  "faq": [
-   [
-    "What are the HOA fees in River Hills?",
-    "Recent listings show roughly $290 to $680 a quarter depending on section, and some include a social membership to the country club. Confirm the exact fee and what it covers."
-   ],
-   [
-    "Do you have to join the River Hills Country Club?",
-    "Full golf membership is separate from the HOA and optional. Many listings say HOA dues include social access, so check what's included for the specific home."
-   ],
-   [
-    "What schools serve River Hills?",
-    "Listings commonly show Lithia Springs Elementary, Randall Middle and Newsome High. Always confirm zoning for the exact address with the district."
-   ],
-   [
-    "Is there a CDD in River Hills?",
-    "Many established sections don't have a CDD, but check the property tax bill for the specific home to be sure."
-   ],
-   [
-    "How old are the homes in River Hills?",
-    "Most homes were built from the late 1980s through the 2000s, so roof age, AC age and updates matter when comparing homes."
-   ],
-   [
-    "How far is River Hills from MacDill AFB?",
-    "About 25 miles, or roughly 40 to 60 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
-   ]
-  ]
- },
- "waterset": {
-  "name": "Waterset",
-  "city": "Apollo Beach",
-  "zip": "33572",
-  "title": "Waterset Market Update & Living Guide | Apollo Beach, FL | Shauna Banning",
-  "description": "Monthly Waterset real estate market update plus a local's guide: amenities, CDD and HOA costs, schools, MacDill commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
-  "h1": "Waterset, Apollo Beach: A Local's Guide",
-  "intro": "A newer master-planned community near the bay, with trails, amenity centers and schools on site. Here's what it's like, and what it costs.",
-  "search_url": "https://www.coldwellbankerhomes.com/fl/apollo-beach/",
-  "first_update": "December 15",
-  "glance_h2": "Waterset Quick Facts",
-  "glance": [
-   [
-    "Built",
-    "2010s–today"
-   ],
-   [
-    "Homes",
-    "Single-family & townhomes"
-   ],
-   [
-    "HOA",
-    "~$120 – $140 / yr"
-   ],
-   [
-    "CDD",
-    "~$1,970 – $3,470 / yr"
-   ],
-   [
-    "Schools",
-    "Doby · Eisenhower · East Bay"
-   ],
-   [
-    "To MacDill",
-    "35–55 min at rush"
-   ]
-  ],
-  "life_h2": "Trails, Clubhouses & Coastal Living",
-  "life_lead": "Waterset was planned around walkability, with trails, parks and amenity centers connecting the neighborhoods.",
-  "life": [
-   [
-    "Amenity centers",
-    "Clubhouse & Pools",
-    "Resort-style pools and clubhouse space for gatherings."
-   ],
-   [
-    "Stay active",
-    "Fitness, Courts & Fields",
-    "A fitness center, soccer fields and tennis and basketball courts."
-   ],
-   [
-    "Outside",
-    "Trails & Parks",
-    "Walking trails, parks and playgrounds throughout the neighborhoods."
-   ],
-   [
-    "Little ones",
-    "Splash Pad & Dog Park",
-    "A splash pad for kids and a dog park for the pup."
-   ],
-   [
-    "School on site",
-    "Charter & Montessori Options",
-    "Waterset Charter School (K–8) and a Montessori school (PK–K) are on site, plus district schools nearby."
-   ],
-   [
-    "Near the water",
-    "Bay Access Nearby",
-    "Apollo Beach's waterfront, boat ramps and restaurants are minutes away."
-   ]
-  ],
-  "costs": [
-   [
-    "CDD assessment",
-    "~$1,970 – $3,470 / yr",
-    "Billed on your property tax bill. Varies by village and lot."
-   ],
-   [
-    "HOA",
-    "~$120 – $140 / yr",
-    "Low, though some villages and townhomes run higher. Check the exact association."
-   ],
-   [
-    "Property tax",
-    "~1.8–2% of price / yr",
-    "Your bill resets after you buy. Homestead by March 1 to cap future increases."
-   ],
-   [
-    "Club membership",
-    "Optional",
-    "Some amenities may sit behind an optional membership. Ask what the HOA and CDD include."
-   ],
-   [
-    "Flood insurance",
-    "Varies by address",
-    "Coastal area. Check the FEMA flood zone and evacuation zone for the exact lot."
-   ]
-  ],
-  "schools": [
-   [
-    "Doby Elementary",
-    "PK–5"
-   ],
-   [
-    "Eisenhower Middle",
-    "6–8"
-   ],
-   [
-    "East Bay High",
-    "9–12"
-   ],
-   [
-    "Waterset Charter School (charter)",
-    "K–8"
-   ]
-  ],
-  "tips": [
-   [
-    "Coastal means flood homework",
-    "Even newer homes built to higher standards can sit in a flood or evacuation zone. Check both for the exact lot and get a flood quote."
-   ],
-   [
-    "Know what's included",
-    "Some amenities may require an optional club membership. Ask exactly what the HOA and CDD cover."
-   ],
-   [
-    "The CDD varies by village",
-    "Two similar homes can carry very different CDD amounts. Compare total monthly cost."
-   ],
-   [
-    "US-41 and I-75 at rush hour",
-    "Most drives north run through US-41 or I-75. Drive your real commute before you commit."
-   ],
-   [
-    "Ask which village",
-    "Each village has its own CDD amount, and some have their own HOA. Know which village a home is in before comparing prices."
-   ],
-   [
-    "Builders compete with resale",
-    "New-home incentives can make resale homes look pricey. Compare total cost, including builder closing-cost credits."
-   ]
-  ],
-  "faq": [
-   [
-    "How much is the CDD in Waterset?",
-    "Community and builder materials show roughly $1,970 to $3,470 a year, billed on the property tax bill, varying by village and lot."
-   ],
-   [
-    "What schools serve Waterset?",
-    "Listings most often show Doby Elementary, Eisenhower Middle and East Bay High. Waterset Charter School (K–8) is also on site. Confirm zoning with the district for the exact address."
-   ],
-   [
-    "Is Waterset in a flood zone?",
-    "It depends on the lot. Waterset is in coastal south Hillsborough, so check the FEMA flood zone and evacuation zone for the specific address."
-   ],
-   [
-    "How far is Waterset from MacDill AFB?",
-    "About 25 miles, or roughly 35 to 55 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
-   ],
-   [
-    "What amenities does Waterset have?",
-    "Clubhouse and pools, a fitness center, a splash pad, a dog park, trails, playgrounds and soccer, tennis and basketball courts."
-   ],
-   [
-    "Are there new homes in Waterset?",
-    "Yes, builders are still active, so you'll find new construction and resale homes side by side."
-   ]
-  ]
- },
- "mirabay": {
-  "name": "MiraBay",
-  "city": "Apollo Beach",
-  "zip": "33572",
-  "title": "MiraBay Market Update & Living Guide | Apollo Beach, FL | Shauna Banning",
-  "description": "Monthly MiraBay real estate market update plus a local's guide: waterfront living, amenities, CDD and HOA costs, schools, flood and insurance tips. From Shauna Banning, Coldwell Banker Realty.",
-  "h1": "MiraBay, Apollo Beach: A Local's Guide",
-  "intro": "Canals, Tampa Bay access and a resort-style clubhouse. Here's what waterfront living really looks like here, insurance and all.",
-  "search_url": "https://www.coldwellbankerhomes.com/fl/apollo-beach/",
-  "first_update": "December 15",
-  "glance_h2": "MiraBay Quick Facts",
-  "glance": [
-   [
-    "Setting",
-    "Canals with bay access"
-   ],
-   [
-    "Homes",
-    "Single-family & townhomes"
-   ],
-   [
-    "CDD",
-    "Yes, on tax bill"
-   ],
-   [
-    "Flood",
-    "Coastal: check every lot"
-   ],
-   [
-    "Schools",
-    "Apollo Beach · Eisenhower · Lennard"
-   ],
-   [
-    "To MacDill",
-    "35–55 min at rush"
-   ]
-  ],
-  "life_h2": "On the Water, Every Day",
-  "life_lead": "MiraBay is built around canals with Tampa Bay access, a resort-style clubhouse and a small shopping village.",
-  "life": [
-   [
-    "On the water",
-    "Canals & Bay Access",
-    "Many homes sit on canals with Tampa Bay access. A big draw for boaters."
-   ],
-   [
-    "Paddle",
-    "Kayak Launch",
-    "Kayak and paddleboard access, no trailer needed."
-   ],
-   [
-    "Clubhouse",
-    "Pools & Dining",
-    "Heated pools (one with a water slide) and a clubhouse with food and drink."
-   ],
-   [
-    "Stay active",
-    "Fitness & Courts",
-    "A fitness center plus tennis, pickleball and basketball."
-   ],
-   [
-    "Errands",
-    "Shopping Village",
-    "A small village of shops and restaurants nearby, with golf cart access."
-   ],
-   [
-    "Views",
-    "Sunsets Over the Bay",
-    "West-facing water means some of the best sunsets in south Hillsborough."
-   ]
-  ],
-  "costs": [
-   [
-    "CDD assessment",
-    "Varies by lot",
-    "Billed on your property tax bill and funds the community amenities."
-   ],
-   [
-    "HOA",
-    "Varies",
-    "Some listings show a few hundred dollars a year; some sections have more than one association."
-   ],
-   [
-    "Property tax",
-    "~1.8–2% of price / yr",
-    "Your bill resets after you buy. Homestead by March 1 to cap future increases."
-   ],
-   [
-    "Homeowners insurance",
-    "Higher near water",
-    "Waterfront and coastal homes usually quote higher. Get quotes early."
-   ],
-   [
-    "Flood insurance",
-    "Likely required",
-    "Coastal and canal-front homes are often in flood zones. Get a quote before you make an offer."
-   ]
-  ],
-  "schools": [
-   [
-    "Apollo Beach Elementary",
-    "PK–5"
-   ],
-   [
-    "Eisenhower Middle",
-    "6–8"
-   ],
-   [
-    "Lennard High",
-    "9–12"
-   ]
-  ],
-  "tips": [
-   [
-    "Insurance first, house second",
-    "On the water, insurance can change the whole budget. Get homeowners and flood quotes before you write an offer."
-   ],
-   [
-    "Check the flood and evacuation zone",
-    "Look up both for the exact address, and ask the seller for any flood claims history (Florida now requires the disclosure)."
-   ],
-   [
-    "Know your bridge heights",
-    "If you boat, check the canal route and any fixed-bridge clearances for your boat."
-   ],
-   [
-    "Seawalls are a big-ticket item",
-    "Ask the age and condition of the seawall, and who's responsible for repairs."
-   ],
-   [
-    "Know the evacuation zone",
-    "Coastal communities evacuate first in a storm. Know your zone and route before hurricane season."
-   ],
-   [
-    "Not every home is on the water",
-    "Prices vary widely between waterfront, water-view and interior homes. Compare like with like."
-   ]
-  ],
-  "faq": [
-   [
-    "Does MiraBay have a CDD?",
-    "Yes. The CDD assessment is billed on the property tax bill and helps fund the community amenities. The amount varies by lot."
-   ],
-   [
-    "Is MiraBay in a flood zone?",
-    "Many homes are, since it's a coastal, canal-front community. Check the FEMA flood zone and evacuation zone for the exact address and get a flood insurance quote early."
-   ],
-   [
-    "What schools serve MiraBay?",
-    "Listings show Apollo Beach Elementary, Eisenhower Middle and Lennard High. Confirm zoning with the district for the exact address."
-   ],
-   [
-    "Does MiraBay have boat access to Tampa Bay?",
-    "Many canal-front homes have Tampa Bay access. Check the specific route and any bridge clearances for your boat."
-   ],
-   [
-    "What amenities does MiraBay have?",
-    "Heated pools (one with a slide), a clubhouse with food and drinks, a fitness center, tennis, pickleball, basketball and a kayak launch."
-   ],
-   [
-    "How far is MiraBay from MacDill AFB?",
-    "About 25 miles, or roughly 35 to 55 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
-   ]
-  ]
- }
+  "south-fork": {
+    "name": "South Fork",
+    "city": "Riverview",
+    "zip": "33579",
+    "title": "South Fork Market Update & Living Guide | Riverview, FL | Shauna Banning",
+    "description": "Monthly South Fork real estate market update plus a local's guide: amenities, CDD and HOA costs, schools, commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
+    "h1": "South Fork, Riverview: A Local's Guide",
+    "intro": "Newer homes, a resort-style amenity center and a price point that still works for a lot of families. Here's what it's really like, and what it really costs.",
+    "search_url": "https://www.coldwellbankerhomes.com/fl/riverview/",
+    "first_update": "December 15",
+    "glance_h2": "South Fork Quick Facts",
+    "glance": [
+      [
+        "Price range",
+        "~$270K – $825K"
+      ],
+      [
+        "Homes",
+        "3–6 beds · 1,600–7,900 sq ft"
+      ],
+      [
+        "HOA & CDD",
+        "HOA ~$11 – $300 · CDD ~$2,000 – $2,700 / yr"
+      ],
+      [
+        "Schools",
+        "Summerfield Crossings ES · Eisenhower MS"
+      ],
+      [
+        "To MacDill AFB",
+        "~36 min · 25 mi"
+      ],
+      [
+        "To Downtown Tampa",
+        "~29 min · 19 mi"
+      ],
+      [
+        "To TPA Airport",
+        "~43 min · 27 mi"
+      ],
+      [
+        "To Tampa General",
+        "~32 min · 20 mi"
+      ]
+    ],
+    "life_h2": "Pools, Parks & Room to Spread Out",
+    "life_lead": "South Fork is a collection of neighborhoods built around a shared amenity center, with sidewalks, ponds and parks throughout.",
+    "life": [
+      [
+        "Amenity center",
+        "Clubhouse & Resort Pool",
+        "The centerpiece: a pool, spa and clubhouse that host summer weekends and birthday parties."
+      ],
+      [
+        "Stay active",
+        "Fitness Center",
+        "An on-site gym, so you can skip the drive to a membership."
+      ],
+      [
+        "Outside",
+        "Courts & Playgrounds",
+        "Tennis and basketball courts plus playgrounds spread through the neighborhoods."
+      ],
+      [
+        "Walkable",
+        "Trails & Ponds",
+        "Sidewalks and walking paths loop past retention ponds. Good for a morning walk or an evening stroll with the dog."
+      ],
+      [
+        "Errands",
+        "US-301 & Big Bend",
+        "Groceries, coffee and restaurants are a short drive away along US-301 and Big Bend Road."
+      ],
+      [
+        "Commute",
+        "I-75 Access",
+        "I-75 is close for trips north to Tampa or south toward Sarasota."
+      ]
+    ],
+    "costs": [
+      [
+        "CDD assessment",
+        "~$2,000 – $2,700 / yr",
+        "Billed on your property tax bill. Varies by section and lot."
+      ],
+      [
+        "HOA",
+        "~$11 – $300 / mo",
+        "Depends on the section. Covers common areas and the amenity center. Check the exact association."
+      ],
+      [
+        "Property tax",
+        "~1.8–2% of price / yr",
+        "Your bill resets after you buy. Homestead by March 1 to cap future increases."
+      ],
+      [
+        "Homeowners insurance",
+        "Varies by roof age",
+        "Get quotes during your inspection period."
+      ],
+      [
+        "Flood insurance",
+        "Varies by address",
+        "Not included in homeowners coverage. Check the FEMA flood map."
+      ]
+    ],
+    "schools": [
+      [
+        "Summerfield Crossings Elementary",
+        "PK–5",
+        "C",
+        "C"
+      ],
+      [
+        "Eisenhower Middle",
+        "6–8",
+        "C",
+        "C"
+      ],
+      [
+        "Jule F. Sumner High (some sections)",
+        "9–12",
+        "B",
+        "C"
+      ],
+      [
+        "East Bay High (some sections)",
+        "9–12",
+        "C",
+        "B"
+      ]
+    ],
+    "tips": [
+      [
+        "There's more than one \"South Fork\"",
+        "South Fork is made up of several subdivisions, and Southfork Lakes is a separate community with its own HOA. Confirm exactly which association a home belongs to."
+      ],
+      [
+        "The CDD hides on your tax bill",
+        "It's not a separate monthly bill, so it's easy to miss. Ask for the exact amount on any home you like."
+      ],
+      [
+        "Drive it at rush hour",
+        "US-301, Big Bend and I-75 back up at peak times. Drive your real commute before you make an offer."
+      ],
+      [
+        "Get insurance quotes early",
+        "Roof age moves your premium more than almost anything. Quote it during your inspection period, not after closing."
+      ],
+      [
+        "Pets have rules",
+        "South Fork allows dogs and cats, but some sections have breed, size or number limits. Check before you fall for a house."
+      ],
+      [
+        "Compare total monthly cost",
+        "Two similar homes can differ by hundreds a month once you add the CDD, HOA and insurance. Compare the full payment, not the price."
+      ]
+    ],
+    "faq": [
+      [
+        "How much is the CDD in South Fork?",
+        "Recent listings show roughly $2,000 to $2,700 a year, billed on the property tax bill. It varies by section and lot, so check the exact amount for any home you're considering."
+      ],
+      [
+        "What are the HOA fees in South Fork?",
+        "Most listings show low monthly dues, roughly $10 to $45 a month, though some sub-areas run higher. Confirm the exact association and fee for the home."
+      ],
+      [
+        "What schools serve South Fork?",
+        "Listings show Summerfield Crossings Elementary and Eisenhower Middle. High school is Sumner or East Bay depending on the section, since Sumner opened in 2023 and took over part of East Bay's zone. Confirm with the district for the exact address."
+      ],
+      [
+        "How far is South Fork from MacDill AFB?",
+        "About 22 to 25 miles, or roughly 35 to 55 minutes at weekday morning rush depending on your route. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
+      ],
+      [
+        "How much are homes in South Fork?",
+        "In November 2026, listings ranged from about $270,000 to $825,000, from 3-bed homes around 1,600 sq ft to 6-bed homes near 8,000 sq ft. My monthly update has the latest sold prices."
+      ],
+      [
+        "What amenities does South Fork have?",
+        "A clubhouse, pool and spa, fitness center, tennis, pickleball and basketball courts, a dog park, playgrounds, a community park and walking trails."
+      ],
+      [
+        "Does South Fork flood?",
+        "Flood risk depends on the address. Check the FEMA flood zone and ask the seller for flood history, which Florida sellers now have to disclose."
+      ],
+      [
+        "Can I have pets in South Fork?",
+        "Yes, dogs and cats are allowed, though some sections have breed, size or number limits. Check the rules for the specific association."
+      ]
+    ],
+    "coords": [
+      27.7871,
+      -82.3241
+    ],
+    "stats": {
+      "cells": [
+        [
+          "27",
+          "Homes sold, last 90 days"
+        ],
+        [
+          "$390,000",
+          "Median sold price"
+        ],
+        [
+          "47 days",
+          "Median days to contract"
+        ],
+        [
+          "46",
+          "Homes for sale right now"
+        ]
+      ],
+      "note": "Sold homes closed Aug 20 – Nov 18, 2026. Homes for sale as of Nov 18, 2026. Source: Stellar MLS, South Fork subdivisions."
+    },
+    "photos": {
+      "hero": {
+        "src": "florida-home-palms-1.jpg",
+        "alt": "Florida home with a tile roof and palm trees"
+      },
+      "band": {
+        "src": "pool-float-summer.jpg",
+        "alt": "Pink donut pool float in a sunny swimming pool"
+      },
+      "schools": {
+        "src": "child-boarding-school-bus.jpg",
+        "alt": "Child with a backpack boarding a yellow school bus"
+      }
+    }
+  },
+  "triple-creek": {
+    "name": "Triple Creek",
+    "city": "Riverview",
+    "zip": "33579",
+    "title": "Triple Creek Market Update & Living Guide | Riverview, FL | Shauna Banning",
+    "description": "Monthly Triple Creek real estate market update plus a local's guide: amenities, CDD and HOA costs, schools, commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
+    "h1": "Triple Creek, Riverview: A Local's Guide",
+    "intro": "About 1,000 acres of newer homes, multiple amenity centers and an elementary school inside the community. Here's the full picture, costs included.",
+    "search_url": "https://www.coldwellbankerhomes.com/fl/riverview/",
+    "first_update": "December 15",
+    "glance_h2": "Triple Creek Quick Facts",
+    "glance": [
+      [
+        "Size",
+        "~1,038 acres"
+      ],
+      [
+        "Homes",
+        "Newer single-family"
+      ],
+      [
+        "HOA & CDD",
+        "HOA ~$90 – $300 / yr · CDD Often ~$3K+ / yr"
+      ],
+      [
+        "Schools",
+        "Dawson ES (B, on site) · Barrington (A)"
+      ],
+      [
+        "To MacDill AFB",
+        "~38 min · 25 mi"
+      ],
+      [
+        "To Downtown Tampa",
+        "~30 min · 20 mi"
+      ],
+      [
+        "To TPA Airport",
+        "~44 min · 28 mi"
+      ],
+      [
+        "To Tampa General",
+        "~33 min · 21 mi"
+      ]
+    ],
+    "life_h2": "Amenity Centers, Parks & a School Next Door",
+    "life_lead": "Triple Creek was planned around its amenities, with more than one clubhouse and plenty of green space.",
+    "life": [
+      [
+        "Amenity centers",
+        "Clubhouses & Pools",
+        "Multiple amenity centers with pools, plus a splash pad for little ones."
+      ],
+      [
+        "Stay active",
+        "Fitness & Sports Fields",
+        "A fitness center, sports fields and courts for tennis and basketball."
+      ],
+      [
+        "Four-legged friends",
+        "Dog Park",
+        "A fenced dog park, so the pup gets a run too."
+      ],
+      [
+        "School",
+        "Elementary Inside the Community",
+        "Dawson Elementary sits inside Triple Creek, which makes school drop-off short for many families."
+      ],
+      [
+        "Outside",
+        "Parks & Playgrounds",
+        "Parks and playgrounds are spread through the villages."
+      ],
+      [
+        "Still growing",
+        "New Construction",
+        "Builders are still active in some villages, so you'll find both new and resale homes."
+      ]
+    ],
+    "costs": [
+      [
+        "CDD assessment",
+        "Often ~$3,000+ / yr",
+        "Billed on your property tax bill. Varies by village and lot."
+      ],
+      [
+        "HOA",
+        "~$90 – $300 / yr",
+        "Low, but some villages have more than one association. Check every fee."
+      ],
+      [
+        "Property tax",
+        "~1.8–2% of price / yr",
+        "Your bill resets after you buy. Homestead by March 1 to cap future increases."
+      ],
+      [
+        "Homeowners insurance",
+        "Varies",
+        "Newer roofs usually quote lower. Get quotes during inspection."
+      ],
+      [
+        "Flood insurance",
+        "Varies by address",
+        "Check the FEMA flood map for the exact lot."
+      ]
+    ],
+    "schools": [
+      [
+        "Warren Hope Dawson Elementary",
+        "K–5",
+        "B",
+        "C"
+      ],
+      [
+        "Barrington Middle",
+        "6–8",
+        "A",
+        "A"
+      ],
+      [
+        "Jule F. Sumner High",
+        "9–12",
+        "B",
+        "C"
+      ]
+    ],
+    "tips": [
+      [
+        "The CDD is the big number",
+        "HOA dues are low, but the CDD often runs $3,000 or more a year on the tax bill. Compare total monthly cost, not just the HOA."
+      ],
+      [
+        "Some villages have two associations",
+        "Ask for every association fee on the home, not just the master HOA."
+      ],
+      [
+        "It's farther east than it looks",
+        "Triple Creek sits east of US-301, so drives to Tampa and MacDill run longer than the rest of Riverview. Drive it at rush hour."
+      ],
+      [
+        "Construction traffic is temporary",
+        "Building is still going on in parts of the community. Visit on a weekday to see what daily life is like right now."
+      ],
+      [
+        "School is close, so check the walk zone",
+        "Dawson Elementary sits inside Triple Creek. Some homes are close enough to walk, which matters for bus service. Ask the school."
+      ],
+      [
+        "New build or resale?",
+        "New homes come with builder warranties but often bigger CDDs. Resale homes may have landscaping and window treatments done. Price out both."
+      ]
+    ],
+    "faq": [
+      [
+        "How much is the CDD in Triple Creek?",
+        "Recent listings show CDD assessments often around $3,000 or more a year, billed on the property tax bill. It varies by village and lot."
+      ],
+      [
+        "What schools serve Triple Creek?",
+        "Listings most often show Warren Hope Dawson Elementary (inside the community), Barrington Middle and Sumner High. Always confirm zoning for the exact address with the district."
+      ],
+      [
+        "What amenities does Triple Creek have?",
+        "Multiple amenity centers with pools, a splash pad, a fitness center, sports fields, tennis and basketball courts, a dog park, parks and playgrounds."
+      ],
+      [
+        "How far is Triple Creek from MacDill AFB?",
+        "Roughly 25 to 28 miles, or about 40 to 60 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
+      ],
+      [
+        "Are there new homes in Triple Creek?",
+        "Yes, builders are still active in some villages, so you'll find both new construction and resale homes."
+      ],
+      [
+        "Does Triple Creek flood?",
+        "Flood risk depends on the address. Check the FEMA flood zone and the seller's flood disclosure for the specific home."
+      ]
+    ],
+    "coords": [
+      27.778,
+      -82.276
+    ],
+    "stats": {
+      "cells": [
+        [
+          "19",
+          "Homes sold, last 90 days"
+        ],
+        [
+          "$380,000",
+          "Median sold price"
+        ],
+        [
+          "48 days",
+          "Median days to contract"
+        ],
+        [
+          "20",
+          "Homes for sale right now"
+        ]
+      ],
+      "note": "Sold homes closed Aug 20 – Nov 18, 2026. Homes for sale as of Nov 18, 2026. Source: Stellar MLS, Triple Creek subdivisions."
+    },
+    "photos": {
+      "hero": {
+        "src": "florida-home-tile-roof.jpg",
+        "alt": "Stucco Florida home with a tile roof and tropical landscaping"
+      },
+      "band": {
+        "src": "family-biking-trail.jpg",
+        "alt": "Family riding bikes on a paved trail"
+      },
+      "schools": {
+        "src": "dad-kids-walk-to-school.jpg",
+        "alt": "Dad walking two kids with backpacks to school"
+      }
+    }
+  },
+  "river-hills": {
+    "name": "River Hills",
+    "city": "Valrico",
+    "zip": "33596",
+    "title": "River Hills Country Club Market Update & Living Guide | Valrico, FL | Shauna Banning",
+    "description": "Monthly River Hills (Valrico) real estate market update plus a local's guide: the country club, HOA costs, A-rated schools, commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
+    "h1": "River Hills, Valrico: A Local's Guide",
+    "intro": "An established golf community with mature trees, bigger lots and A-rated schools. Here's what living here is really like, club membership included.",
+    "search_url": "https://www.coldwellbankerhomes.com/fl/valrico/",
+    "first_update": "December 15",
+    "glance_h2": "River Hills Quick Facts",
+    "glance": [
+      [
+        "Setting",
+        "Golf community, mature trees"
+      ],
+      [
+        "Homes",
+        "Larger single-family, late 1980s–2000s"
+      ],
+      [
+        "HOA & CDD",
+        "HOA ~$290 – $680 / quarter · usually no CDD"
+      ],
+      [
+        "Schools",
+        "All A-rated (2026)"
+      ],
+      [
+        "To MacDill AFB",
+        "~39 min · 25 mi"
+      ],
+      [
+        "To Downtown Tampa",
+        "~32 min · 19 mi"
+      ],
+      [
+        "To TPA Airport",
+        "~46 min · 27 mi"
+      ],
+      [
+        "To Tampa General",
+        "~35 min · 21 mi"
+      ]
+    ],
+    "life_h2": "Golf, Gathering & Quiet Streets",
+    "life_lead": "River Hills is built around River Hills Country Club, with established neighborhoods tucked along the fairways and conservation areas.",
+    "life": [
+      [
+        "The club",
+        "River Hills Country Club",
+        "An 18-hole course with a clubhouse. Golf membership is separate from the HOA."
+      ],
+      [
+        "Social side",
+        "Pool, Fitness & Dining",
+        "Many listings say HOA dues include a social membership with pool, fitness and dining access. Confirm what's included for the home you're considering."
+      ],
+      [
+        "Setting",
+        "Mature Trees & Bigger Lots",
+        "Older neighborhoods mean established landscaping and more space between homes."
+      ],
+      [
+        "Schools",
+        "A-Rated Options",
+        "Listings commonly show Lithia Springs Elementary, Randall Middle and Newsome High."
+      ],
+      [
+        "Errands",
+        "Close to Brandon & FishHawk",
+        "Shopping and dining in Brandon and FishHawk are a short drive away."
+      ],
+      [
+        "Outside",
+        "Conservation Views",
+        "Many homes back up to fairways, ponds or wooded preserve."
+      ]
+    ],
+    "costs": [
+      [
+        "HOA",
+        "~$290 – $680 / quarter",
+        "Varies by section. Ask exactly what it covers, including any club access."
+      ],
+      [
+        "Golf membership",
+        "Separate",
+        "Full golf membership is in addition to the HOA. Only some owners join."
+      ],
+      [
+        "Property tax",
+        "~1.8–2% of price / yr",
+        "Your bill resets after you buy. Homestead by March 1 to cap future increases."
+      ],
+      [
+        "CDD",
+        "Usually none",
+        "Many established sections don't have one. Confirm on the tax bill."
+      ],
+      [
+        "Homeowners insurance",
+        "Varies by roof age",
+        "Older homes mean roof age matters a lot. Quote it during inspection."
+      ]
+    ],
+    "schools": [
+      [
+        "Lithia Springs Elementary",
+        "PK–5",
+        "A",
+        "A"
+      ],
+      [
+        "Randall Middle",
+        "6–8",
+        "A",
+        "A"
+      ],
+      [
+        "Newsome High",
+        "9–12",
+        "A",
+        "A"
+      ]
+    ],
+    "tips": [
+      [
+        "Know what the HOA covers",
+        "Some sections include a club social membership and some don't. Ask for the HOA's budget and what's included before you compare homes."
+      ],
+      [
+        "Golf is optional",
+        "You don't have to golf to live here, and many residents don't. Full golf membership is a separate cost."
+      ],
+      [
+        "Roof age drives insurance",
+        "Many homes date from the 1990s–2000s. A newer roof can save thousands a year on insurance."
+      ],
+      [
+        "Ask about the club's plans",
+        "Clubs change hands and update their plans. Ask the HOA about the club's current status and any planned assessments."
+      ],
+      [
+        "Lot sizes vary a lot",
+        "Some streets have much bigger lots than others. If yard space matters, compare lot sizes, not just square footage."
+      ],
+      [
+        "Check for an HOA budget and reserves",
+        "In an established community, the HOA's reserves tell you whether big projects are covered or could mean a special assessment."
+      ]
+    ],
+    "faq": [
+      [
+        "What are the HOA fees in River Hills?",
+        "Recent listings show roughly $290 to $680 a quarter depending on section, and some include a social membership to the country club. Confirm the exact fee and what it covers."
+      ],
+      [
+        "Do you have to join the River Hills Country Club?",
+        "Full golf membership is separate from the HOA and optional. Many listings say HOA dues include social access, so check what's included for the specific home."
+      ],
+      [
+        "What schools serve River Hills?",
+        "Listings commonly show Lithia Springs Elementary, Randall Middle and Newsome High, all A-rated by the state for 2026. Always confirm zoning for the exact address with the district."
+      ],
+      [
+        "Is there a CDD in River Hills?",
+        "Many established sections don't have a CDD, but check the property tax bill for the specific home to be sure."
+      ],
+      [
+        "How old are the homes in River Hills?",
+        "Most homes were built from the late 1980s through the 2000s, so roof age, AC age and updates matter when comparing homes."
+      ],
+      [
+        "How far is River Hills from MacDill AFB?",
+        "About 25 miles, or roughly 40 to 60 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
+      ]
+    ],
+    "coords": [
+      27.8882,
+      -82.2056
+    ],
+    "stats": {
+      "cells": [
+        [
+          "10",
+          "Homes sold, last 90 days"
+        ],
+        [
+          "$495,000",
+          "Median sold price"
+        ],
+        [
+          "52 days",
+          "Median days to contract"
+        ],
+        [
+          "12",
+          "Homes for sale right now"
+        ]
+      ],
+      "note": "Sold homes closed Aug 20 – Nov 18, 2026. Homes for sale as of Nov 18, 2026. Source: Stellar MLS, River Hills subdivisions."
+    },
+    "photos": {
+      "hero": {
+        "src": "golf-course-sunrise.jpg",
+        "alt": "Golf course fairway at sunrise"
+      },
+      "band": {
+        "src": "screened-pool-lanai.jpg",
+        "alt": "Screened pool and lanai"
+      },
+      "schools": {
+        "src": "mom-daughter-walk-to-school.jpg",
+        "alt": "Mom and daughter walking to school on a sidewalk"
+      }
+    }
+  },
+  "waterset": {
+    "name": "Waterset",
+    "city": "Apollo Beach",
+    "zip": "33572",
+    "title": "Waterset Market Update & Living Guide | Apollo Beach, FL | Shauna Banning",
+    "description": "Monthly Waterset real estate market update plus a local's guide: amenities, CDD and HOA costs, schools, MacDill commute and flood tips. From Shauna Banning, Coldwell Banker Realty.",
+    "h1": "Waterset, Apollo Beach: A Local's Guide",
+    "intro": "A newer master-planned community near the bay, with trails, amenity centers and schools on site. Here's what it's like, and what it costs.",
+    "search_url": "https://www.coldwellbankerhomes.com/fl/apollo-beach/",
+    "first_update": "December 15",
+    "glance_h2": "Waterset Quick Facts",
+    "glance": [
+      [
+        "Built",
+        "2010s–today"
+      ],
+      [
+        "Homes",
+        "Single-family & townhomes"
+      ],
+      [
+        "HOA & CDD",
+        "HOA ~$120 – $140 / yr · CDD ~$1,970 – $3,470 / yr"
+      ],
+      [
+        "Schools",
+        "Doby ES (A) · Eisenhower · East Bay"
+      ],
+      [
+        "To MacDill AFB",
+        "~35 min · 23 mi"
+      ],
+      [
+        "To Downtown Tampa",
+        "~28 min · 18 mi"
+      ],
+      [
+        "To TPA Airport",
+        "~42 min · 26 mi"
+      ],
+      [
+        "To Tampa General",
+        "~31 min · 19 mi"
+      ]
+    ],
+    "life_h2": "Trails, Clubhouses & Coastal Living",
+    "life_lead": "Waterset was planned around walkability, with trails, parks and amenity centers connecting the neighborhoods.",
+    "life": [
+      [
+        "Amenity centers",
+        "Clubhouse & Pools",
+        "Resort-style pools and clubhouse space for gatherings."
+      ],
+      [
+        "Stay active",
+        "Fitness, Courts & Fields",
+        "A fitness center, soccer fields and tennis and basketball courts."
+      ],
+      [
+        "Outside",
+        "Trails & Parks",
+        "Walking trails, parks and playgrounds throughout the neighborhoods."
+      ],
+      [
+        "Little ones",
+        "Splash Pad & Dog Park",
+        "A splash pad for kids and a dog park for the pup."
+      ],
+      [
+        "School on site",
+        "Charter & Montessori Options",
+        "Waterset Charter School (K–8) and a Montessori school (PK–K) are on site, plus district schools nearby."
+      ],
+      [
+        "Near the water",
+        "Bay Access Nearby",
+        "Apollo Beach's waterfront, boat ramps and restaurants are minutes away."
+      ]
+    ],
+    "costs": [
+      [
+        "CDD assessment",
+        "~$1,970 – $3,470 / yr",
+        "Billed on your property tax bill. Varies by village and lot."
+      ],
+      [
+        "HOA",
+        "~$120 – $140 / yr",
+        "Low, though some villages and townhomes run higher. Check the exact association."
+      ],
+      [
+        "Property tax",
+        "~1.8–2% of price / yr",
+        "Your bill resets after you buy. Homestead by March 1 to cap future increases."
+      ],
+      [
+        "Club membership",
+        "Optional",
+        "Some amenities may sit behind an optional membership. Ask what the HOA and CDD include."
+      ],
+      [
+        "Flood insurance",
+        "Varies by address",
+        "Coastal area. Check the FEMA flood zone and evacuation zone for the exact lot."
+      ]
+    ],
+    "schools": [
+      [
+        "Doby Elementary",
+        "PK–5",
+        "A",
+        "A"
+      ],
+      [
+        "Eisenhower Middle",
+        "6–8",
+        "C",
+        "C"
+      ],
+      [
+        "East Bay High",
+        "9–12",
+        "C",
+        "B"
+      ],
+      [
+        "Waterset Charter School (charter, apply)",
+        "K–8",
+        "B",
+        "B"
+      ]
+    ],
+    "tips": [
+      [
+        "Coastal means flood homework",
+        "Even newer homes built to higher standards can sit in a flood or evacuation zone. Check both for the exact lot and get a flood quote."
+      ],
+      [
+        "Know what's included",
+        "Some amenities may require an optional club membership. Ask exactly what the HOA and CDD cover."
+      ],
+      [
+        "The CDD varies by village",
+        "Two similar homes can carry very different CDD amounts. Compare total monthly cost."
+      ],
+      [
+        "US-41 and I-75 at rush hour",
+        "Most drives north run through US-41 or I-75. Drive your real commute before you commit."
+      ],
+      [
+        "Ask which village",
+        "Each village has its own CDD amount, and some have their own HOA. Know which village a home is in before comparing prices."
+      ],
+      [
+        "Builders compete with resale",
+        "New-home incentives can make resale homes look pricey. Compare total cost, including builder closing-cost credits."
+      ]
+    ],
+    "faq": [
+      [
+        "How much is the CDD in Waterset?",
+        "Community and builder materials show roughly $1,970 to $3,470 a year, billed on the property tax bill, varying by village and lot."
+      ],
+      [
+        "What schools serve Waterset?",
+        "Listings most often show Doby Elementary, Eisenhower Middle and East Bay High. Waterset Charter School (K–8) is also on site. Confirm zoning with the district for the exact address."
+      ],
+      [
+        "Is Waterset in a flood zone?",
+        "It depends on the lot. Waterset is in coastal south Hillsborough, so check the FEMA flood zone and evacuation zone for the specific address."
+      ],
+      [
+        "How far is Waterset from MacDill AFB?",
+        "About 25 miles, or roughly 35 to 55 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
+      ],
+      [
+        "What amenities does Waterset have?",
+        "Clubhouse and pools, a fitness center, a splash pad, a dog park, trails, playgrounds and soccer, tennis and basketball courts."
+      ],
+      [
+        "Are there new homes in Waterset?",
+        "Yes, builders are still active, so you'll find new construction and resale homes side by side."
+      ]
+    ],
+    "coords": [
+      27.768,
+      -82.383
+    ],
+    "stats": {
+      "cells": [
+        [
+          "73",
+          "Homes sold, last 90 days"
+        ],
+        [
+          "$518,000",
+          "Median sold price"
+        ],
+        [
+          "61 days",
+          "Median days to contract"
+        ],
+        [
+          "80",
+          "Homes for sale right now"
+        ]
+      ],
+      "note": "Sold homes closed Aug 20 – Nov 18, 2026. Homes for sale as of Nov 18, 2026. Source: Stellar MLS, Waterset subdivisions."
+    },
+    "photos": {
+      "hero": {
+        "src": "florida-home-palms-2.jpg",
+        "alt": "Florida home with palm trees and a paver driveway"
+      },
+      "band": {
+        "src": "pond-fountain.jpg",
+        "alt": "Neighborhood pond with a fountain"
+      },
+      "schools": {
+        "src": "family-walk-to-school.jpg",
+        "alt": "Parents walking their daughter to school"
+      }
+    }
+  },
+  "mirabay": {
+    "name": "MiraBay",
+    "city": "Apollo Beach",
+    "zip": "33572",
+    "title": "MiraBay Market Update & Living Guide | Apollo Beach, FL | Shauna Banning",
+    "description": "Monthly MiraBay real estate market update plus a local's guide: waterfront living, amenities, CDD and HOA costs, schools, flood and insurance tips. From Shauna Banning, Coldwell Banker Realty.",
+    "h1": "MiraBay, Apollo Beach: A Local's Guide",
+    "intro": "Canals, Tampa Bay access and a resort-style clubhouse. Here's what waterfront living really looks like here, insurance and all.",
+    "search_url": "https://www.coldwellbankerhomes.com/fl/apollo-beach/",
+    "first_update": "December 15",
+    "glance_h2": "MiraBay Quick Facts",
+    "glance": [
+      [
+        "Setting",
+        "Canals with bay access · flood zones common"
+      ],
+      [
+        "Homes",
+        "Single-family & townhomes"
+      ],
+      [
+        "HOA & CDD",
+        "CDD on tax bill · HOA varies by section"
+      ],
+      [
+        "Schools",
+        "Apollo Beach K-8 (A) · Lennard HS (B)"
+      ],
+      [
+        "To MacDill AFB",
+        "~38 min · 25 mi"
+      ],
+      [
+        "To Downtown Tampa",
+        "~31 min · 19 mi"
+      ],
+      [
+        "To TPA Airport",
+        "~45 min · 27 mi"
+      ],
+      [
+        "To Tampa General",
+        "~34 min · 20 mi"
+      ]
+    ],
+    "life_h2": "On the Water, Every Day",
+    "life_lead": "MiraBay is built around canals with Tampa Bay access, a resort-style clubhouse and a small shopping village.",
+    "life": [
+      [
+        "On the water",
+        "Canals & Bay Access",
+        "Many homes sit on canals with Tampa Bay access. A big draw for boaters."
+      ],
+      [
+        "Paddle",
+        "Kayak Launch",
+        "Kayak and paddleboard access, no trailer needed."
+      ],
+      [
+        "Clubhouse",
+        "Pools & Dining",
+        "Heated pools (one with a water slide) and a clubhouse with food and drink."
+      ],
+      [
+        "Stay active",
+        "Fitness & Courts",
+        "A fitness center plus tennis, pickleball and basketball."
+      ],
+      [
+        "Errands",
+        "Shopping Village",
+        "A small village of shops and restaurants nearby, with golf cart access."
+      ],
+      [
+        "Views",
+        "Sunsets Over the Bay",
+        "West-facing water means some of the best sunsets in south Hillsborough."
+      ]
+    ],
+    "costs": [
+      [
+        "CDD assessment",
+        "Varies by lot",
+        "Billed on your property tax bill and funds the community amenities."
+      ],
+      [
+        "HOA",
+        "Varies",
+        "Some listings show a few hundred dollars a year; some sections have more than one association."
+      ],
+      [
+        "Property tax",
+        "~1.8–2% of price / yr",
+        "Your bill resets after you buy. Homestead by March 1 to cap future increases."
+      ],
+      [
+        "Homeowners insurance",
+        "Higher near water",
+        "Waterfront and coastal homes usually quote higher. Get quotes early."
+      ],
+      [
+        "Flood insurance",
+        "Likely required",
+        "Coastal and canal-front homes are often in flood zones. Get a quote before you make an offer."
+      ]
+    ],
+    "schools": [
+      [
+        "Apollo Beach K-8",
+        "K–8",
+        "A",
+        "A"
+      ],
+      [
+        "Lennard High",
+        "9–12",
+        "B",
+        "B"
+      ]
+    ],
+    "tips": [
+      [
+        "Insurance first, house second",
+        "On the water, insurance can change the whole budget. Get homeowners and flood quotes before you write an offer."
+      ],
+      [
+        "Check the flood and evacuation zone",
+        "Look up both for the exact address, and ask the seller for any flood claims history (Florida now requires the disclosure)."
+      ],
+      [
+        "Know your bridge heights",
+        "If you boat, check the canal route and any fixed-bridge clearances for your boat."
+      ],
+      [
+        "Seawalls are a big-ticket item",
+        "Ask the age and condition of the seawall, and who's responsible for repairs."
+      ],
+      [
+        "Know the evacuation zone",
+        "Coastal communities evacuate first in a storm. Know your zone and route before hurricane season."
+      ],
+      [
+        "Not every home is on the water",
+        "Prices vary widely between waterfront, water-view and interior homes. Compare like with like."
+      ]
+    ],
+    "faq": [
+      [
+        "Does MiraBay have a CDD?",
+        "Yes. The CDD assessment is billed on the property tax bill and helps fund the community amenities. The amount varies by lot."
+      ],
+      [
+        "Is MiraBay in a flood zone?",
+        "Many homes are, since it's a coastal, canal-front community. Check the FEMA flood zone and evacuation zone for the exact address and get a flood insurance quote early."
+      ],
+      [
+        "What schools serve MiraBay?",
+        "Listings show Apollo Beach K-8 (A-rated in 2026) and Lennard High (B). Confirm zoning with the district for the exact address."
+      ],
+      [
+        "Does MiraBay have boat access to Tampa Bay?",
+        "Many canal-front homes have Tampa Bay access. Check the specific route and any bridge clearances for your boat."
+      ],
+      [
+        "What amenities does MiraBay have?",
+        "Heated pools (one with a slide), a clubhouse with food and drinks, a fitness center, tennis, pickleball, basketball and a kayak launch."
+      ],
+      [
+        "How far is MiraBay from MacDill AFB?",
+        "About 25 miles, or roughly 35 to 55 minutes at weekday morning rush. See my <a href=\"../where-to-live-near-macdill/\">Where to Live Near MacDill</a> guide."
+      ]
+    ],
+    "coords": [
+      27.7529,
+      -82.4237
+    ],
+    "stats": {
+      "cells": [
+        [
+          "25",
+          "Homes sold, last 90 days"
+        ],
+        [
+          "$615,000",
+          "Median sold price"
+        ],
+        [
+          "92 days",
+          "Median days to contract"
+        ],
+        [
+          "46",
+          "Homes for sale right now"
+        ]
+      ],
+      "note": "Sold homes closed Aug 20 – Nov 18, 2026. Homes for sale as of Nov 18, 2026. Source: Stellar MLS, MiraBay subdivisions."
+    },
+    "photos": {
+      "hero": {
+        "src": "waterfront-canal-boat.jpg",
+        "alt": "Waterfront homes on a canal with a boat"
+      },
+      "band": {
+        "src": "palm-sunset.jpg",
+        "alt": "Palm trees silhouetted at sunset"
+      },
+      "schools": {
+        "src": "kids-backpacks.jpg",
+        "alt": "Two kids with backpacks walking together"
+      }
+    }
+  }
 }

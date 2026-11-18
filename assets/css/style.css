@@ -196,3 +196,23 @@ footer li{margin-bottom:6px}
 .glance span{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 @media(max-width:860px){.glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.glance-grid{grid-template-columns:1fr}}
+/* Community quick facts: icon list + map */
+.facts-map{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;margin-top:30px;align-items:stretch}
+.facts-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.facts-list li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.facts-list i{flex:none;width:42px;height:42px;border-radius:50%;background:var(--black);color:#e9c9a8;display:flex;align-items:center;justify-content:center}
+.facts-list svg{width:22px;height:22px}
+.facts-list span{display:block;font:600 .68rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--caramel-dark);margin-bottom:4px}
+.facts-list b{display:block;font:600 1.12rem/1.25 var(--serif);color:var(--ink)}
+#cmap{min-height:380px;border-radius:var(--radius);border:1px solid var(--line);z-index:1}
+.mk{display:flex;align-items:center;gap:6px;white-space:nowrap;font:600 12.5px var(--sans);color:var(--ink)}
+.mk i{width:14px;height:14px;border-radius:50%;background:var(--caramel);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);flex:none}
+.mk span{background:#fff;padding:3px 8px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.mk.here i{width:18px;height:18px}.mk.here span{background:var(--caramel);color:#fff}
+.mk.base i{background:var(--black)}.mk.base span{background:var(--black);color:#fff}
+.mk.dt i{background:#8a837b;width:10px;height:10px}.mk.dt span{font-weight:500;color:var(--muted)}
+@media(max-width:900px){.facts-map{grid-template-columns:1fr}}
+@media(max-width:520px){.facts-list{grid-template-columns:1fr}}
+.photo-band{height:380px;background-size:cover;background-position:center}
+.school-photo{float:right;width:38%;max-width:420px;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);margin:0 0 20px 32px}
+@media(max-width:760px){.photo-band{height:240px}.school-photo{float:none;width:100%;max-width:none;margin:0 0 20px}}

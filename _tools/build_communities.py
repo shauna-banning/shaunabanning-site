@@ -125,7 +125,7 @@ def page(slug, c):
     <li class="hide-sm"><a href="#market-update">Market Update</a></li>
     <li class="hide-sm"><a href="#living">Living Here</a></li>
     <li class="hide-sm"><a href="#faq">FAQ</a></li>
-    <li><a class="btn btn-dark btn-sm" href="https://tally.so/r/VLLD6l?source={slug}">Home Value</a></li>
+    <li><a class="btn btn-dark btn-sm" href="../home-value/?source={slug}">Home Value</a></li>
   </ul>
 </div></nav>
 
@@ -136,7 +136,7 @@ def page(slug, c):
     <h1>{E(c['h1'])}</h1>
     <p>{c['intro']}</p>
     <div class="btns">
-      <a class="btn btn-caramel" href="https://tally.so/r/VLLD6l?source={slug}">What's My Home Worth?</a>
+      <a class="btn btn-caramel" href="../home-value/?source={slug}">What's My Home Worth?</a>
       <a class="btn btn-light" href="{E(c['search_url'])}" rel="noopener">See Homes for Sale</a>
     </div>
   </div>
@@ -282,7 +282,7 @@ def page(slug, c):
       </ul>
       <div class="btns">
         <a class="btn btn-dark" href="sms:+14254954577">Text Me</a>
-        <a class="btn btn-light" href="https://tally.so/r/VLLD6l?source={slug}">Get My Home Value</a>
+        <a class="btn btn-light" href="../home-value/?source={slug}">Get My Home Value</a>
       </div>
     </div>
   </div>
@@ -300,7 +300,7 @@ def page(slug, c):
     </div>
     <div>
       <h4>Quick Links</h4>
-      <ul><li><a href="https://tally.so/r/VLLD6l?source={slug}">Home Value</a></li><li><a href="../where-to-live-near-macdill/">Where to Live Near MacDill</a></li><li><a href="../macdill-bah-calculator/">MacDill BAH Calculator</a></li><li><a href="../">Home</a></li></ul>
+      <ul><li><a href="../home-value/?source={slug}">Home Value</a></li><li><a href="../where-to-live-near-macdill/">Where to Live Near MacDill</a></li><li><a href="../macdill-bah-calculator/">MacDill BAH Calculator</a></li><li><a href="../">Home</a></li></ul>
     </div>
   </div>
   <div class="legal">© 2026 Shauna Banning. Coldwell Banker Realty. Equal Housing Opportunity. Information is deemed reliable but not guaranteed. Costs, fees, school zones and boundaries change, so verify them for your specific address. Nothing here is legal, tax or insurance advice.</div>

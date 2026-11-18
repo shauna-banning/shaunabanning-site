@@ -184,3 +184,15 @@ footer li{margin-bottom:6px}
 .form [data-ff-el="root"] [data-ff-el="submit"]{width:100%!important;border-radius:999px!important;padding:16px 28px!important;font:600 15px var(--sans)!important;background:var(--black)!important;border-color:var(--black)!important;transition:.2s}
 .form [data-ff-el="root"] [data-ff-el="submit"]:hover{background:var(--caramel)!important;border-color:var(--caramel)!important}
 .form [data-ff-el="root"] [data-ff-el="success"]{font-family:var(--sans)!important;font-size:1.05rem;color:var(--ink);text-align:left}
+
+/* Community pages: typographic hero (no photo yet) + at-a-glance grid */
+.hero-type{background:var(--black);min-height:0}
+.hero-type::after{background:radial-gradient(ellipse at 85% 15%,rgba(155,108,72,.38),rgba(0,0,0,0) 60%)}
+.hero-type .wrap{padding-top:120px;padding-bottom:80px}
+.hero-type h1{font-size:clamp(2.4rem,5vw,4rem)}
+.glance-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+.glance{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+.glance b{display:block;font:600 1.6rem var(--serif);color:var(--ink);line-height:1.15;margin-bottom:6px}
+.glance span{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:860px){.glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.glance-grid{grid-template-columns:1fr}}

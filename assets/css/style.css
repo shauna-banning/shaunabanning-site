@@ -162,7 +162,8 @@ td:first-child{font-weight:600;color:var(--ink)}
 /* footer */
 footer{background:var(--black);color:#a9a39b;padding:56px 0 40px;font-size:.88rem}
 footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
-@media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
+footer .wrap.f4{grid-template-columns:1.4fr 1fr 1fr 1fr}
+@media(max-width:760px){footer .wrap,footer .wrap.f4{grid-template-columns:1fr 1fr}footer .wrap>div:first-child{grid-column:1/-1}}
 footer h4{color:#fff;font:600 1.3rem var(--serif);margin:0 0 10px}
 footer a{color:#d9d4cd;text-decoration:none}
 footer ul{list-style:none;padding:0;margin:0}
@@ -216,3 +217,13 @@ footer li{margin-bottom:6px}
 .photo-band{height:380px;background-size:cover;background-position:center}
 .school-photo{float:right;width:38%;max-width:420px;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);margin:0 0 20px 32px}
 @media(max-width:760px){.photo-band{height:240px}.school-photo{float:none;width:100%;max-width:none;margin:0 0 20px}}
+
+/* homepage area + neighborhood grids (even rows) */
+.grid-areas{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.grid-areas>.comm{aspect-ratio:3/4}.grid-areas .comm h3{font-size:2rem}
+.grid-hoods{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.grid-hoods>*{grid-column:span 2}.grid-hoods>*:nth-child(n+4){grid-column:span 3}
+.grid-hoods>*:nth-child(n+4){aspect-ratio:16/9}
+.sub-h{font:500 2rem var(--serif)}
+@media(max-width:860px){.grid-areas{grid-template-columns:repeat(2,1fr)}.grid-hoods{grid-template-columns:1fr 1fr}.grid-hoods>*{grid-column:auto!important;aspect-ratio:4/3!important}.grid-hoods>*:last-child{grid-column:1/-1!important;aspect-ratio:16/9!important}}
+@media(max-width:620px){.grid-areas,.grid-hoods{grid-template-columns:1fr}.grid-hoods>*:last-child{aspect-ratio:4/3!important}}

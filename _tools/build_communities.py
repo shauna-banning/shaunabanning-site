@@ -42,7 +42,7 @@ def stats(c):
     s = c.get("stats")
     if not s:
         cells = [("—", "Homes sold, last 90 days"), ("—", "Median sold price"), ("—", "Median days to contract"), ("—", "Homes for sale right now")]
-        note = f"First monthly numbers drop {c['first_update']}. Source: Stellar MLS, {E(c['name'])} subdivisions."
+        note = f"First monthly numbers drop {c['first_update']}. Source: Stellar MLS, {E(c.get('scope', c['name'] + ' subdivisions'))}."
     else:
         cells = s["cells"]; note = s["note"]
     return "\n".join(f'          <div class="stat"><b>{E(v)}</b><span>{E(l)}</span></div>' for v, l in cells), note
@@ -71,6 +71,23 @@ def school_img(c):
     b = (c.get("photos") or {}).get("schools")
     if not b: return ""
     return f'<img class="school-photo" src="../assets/img/{b["src"]}" alt="{E(b["alt"])}" loading="lazy">'
+
+def hoods(c):
+    h = c.get("hoods")
+    if not h: return ""
+    cards = "\n".join(f'      <div class="card"><span class="tag">{E(t)}</span><h3>{E(name)}</h3><p>{p}</p>' + (f'<p><a href="../{link}/"><b>Read the {E(name)} guide &rarr;</b></a></p>' if link else '') + '</div>' for t, name, p, link in h["cards"])
+    return f"""<!-- ===== NEIGHBORHOODS ===== -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Where to Look</span>
+    <h2>{E(h['h2'])}</h2>
+    <p class="lead">{h['lead']}</p>
+    <div class="grid-3" style="margin-top:34px">
+{cards}
+    </div>
+  </div>
+</section>
+"""
 
 def page(slug, c):
     url = f"https://shaunabanning.com/{slug}/"
@@ -132,7 +149,7 @@ def page(slug, c):
 <header class="{hero_cls}">
   {hero_img}
   <div class="wrap">
-    <span class="eyebrow">{n} · {E(c['city'])}, FL {E(c['zip'])}</span>
+    <span class="eyebrow">{E(c.get('eyebrow') or (c['name'] + ' · ' + c['city'] + ', FL ' + c['zip']))}</span>
     <h1>{E(c['h1'])}</h1>
     <p>{c['intro']}</p>
     <div class="btns">
@@ -199,6 +216,7 @@ def page(slug, c):
   </div>
 </section>
 
+{hoods(c)}
 {band(c)}
 <!-- ===== COSTS ===== -->
 <section class="alt">
@@ -229,7 +247,7 @@ def page(slug, c):
 {schools}
       </tbody>
     </table></div>
-    <p class="fine">Schools most often listed for {n} addresses, with Florida Department of Education grades released July 2026. Boundaries change, so confirm with the <a href="https://www.hillsboroughschools.org/" rel="noopener">district</a> before you go under contract. Not set on your zoned school? Hillsborough also offers school choice, magnet and charter options, and I can help you sort through them.</p>
+    <p class="fine">{E(c.get('schools_note') or ('Schools most often listed for ' + c['name'] + ' addresses'))}, with Florida Department of Education grades released July 2026. Boundaries change, so confirm with the <a href="https://www.hillsboroughschools.org/" rel="noopener">district</a> before you go under contract. Not set on your zoned school? Hillsborough also offers school choice, magnet and charter options, and I can help you sort through them.</p>
   </div>
 </section>
 
@@ -289,14 +307,18 @@ def page(slug, c):
 </section>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap f4">
     <div>
       <h4>Shauna Banning</h4>
       <p>REALTOR® · Coldwell Banker Realty<br>Your Tampa Suburbs Realtor<br><a href="tel:+14254954577">(425) 495-4577</a> · <a href="mailto:shaunasellstampa@gmail.com">shaunasellstampa@gmail.com</a></p>
     </div>
     <div>
-      <h4>Communities</h4>
-      <ul><li><a href="../fishhawk-ranch/">FishHawk Ranch</a></li><li><a href="../south-fork/">South Fork</a></li><li><a href="../triple-creek/">Triple Creek</a></li><li><a href="../river-hills/">River Hills</a></li><li><a href="../waterset/">Waterset</a></li><li><a href="../mirabay/">MiraBay</a></li></ul>
+      <h4>Areas</h4>
+      <ul><li><a href="../brandon/">Brandon</a></li><li><a href="../valrico/">Valrico</a></li><li><a href="../riverview/">Riverview</a></li><li><a href="../fishhawk-ranch/">FishHawk</a></li></ul>
+    </div>
+    <div>
+      <h4>Neighborhoods</h4>
+      <ul><li><a href="../south-fork/">South Fork</a></li><li><a href="../triple-creek/">Triple Creek</a></li><li><a href="../river-hills/">River Hills</a></li><li><a href="../waterset/">Waterset</a></li><li><a href="../mirabay/">MiraBay</a></li></ul>
     </div>
     <div>
       <h4>Quick Links</h4>

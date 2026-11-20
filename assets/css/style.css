@@ -227,3 +227,11 @@ footer li{margin-bottom:6px}
 .sub-h{font:500 2rem var(--serif)}
 @media(max-width:860px){.grid-areas{grid-template-columns:repeat(2,1fr)}.grid-hoods{grid-template-columns:1fr 1fr}.grid-hoods>*{grid-column:auto!important;aspect-ratio:4/3!important}.grid-hoods>*:last-child{grid-column:1/-1!important;aspect-ratio:16/9!important}}
 @media(max-width:620px){.grid-areas,.grid-hoods{grid-template-columns:1fr}.grid-hoods>*:last-child{aspect-ratio:4/3!important}}
+
+/* home value band (CTA #2 on area pages) */
+.hv-band{background:var(--caramel);color:#fff;padding:48px 0}
+.hv-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.hv-band h2{color:#fff;margin:0 0 8px}
+.hv-band p{margin:0;color:#fbeee2;max-width:560px}
+.hv-band .btn-light{background:#fff;color:var(--black);border-color:#fff;flex-shrink:0}
+@media(max-width:760px){.hv-band .wrap{flex-direction:column;align-items:flex-start}}

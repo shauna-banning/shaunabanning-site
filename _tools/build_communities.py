@@ -89,6 +89,31 @@ def hoods(c):
 </section>
 """
 
+# ===== FREE DOWNLOADS (same on every page). Fill in Flodesk form ids to switch the section on. =====
+DOWNLOADS = [
+ # (title, blurb, flodesk_form_id)
+ ("The Complete Guide to Buying a Home", "Every step from pre-approval to keys, with Florida costs nobody mentions.", ""),
+ ("Moving Checklist", "What to do 8 weeks, 4 weeks and 1 week out, plus your first week here.", ""),
+ ("The Complete Guide to Selling a Home", "How to price, prep and market your home to sell for top dollar.", ""),
+ ("30-Day Plan to Prep Your Home for Sale", "A simple day-by-day list to get your home photo-ready in a month.", ""),
+]
+def downloads(slug):
+    if not all(d[2] for d in DOWNLOADS): return "<!-- FREE DOWNLOADS: hidden until all 4 Flodesk form ids are filled in DOWNLOADS -->"
+    cards = "\n".join(f'''      <div class="card dl"><span class="tag">Free Download</span><h3>{E(t)}</h3><p>{E(b)}</p>
+        <div id="fd-form-{fid}"></div><script>window.fd('form',{{formId:'{fid}',containerEl:'#fd-form-{fid}'}});</script></div>''' for t, b, fid in DOWNLOADS)
+    return f'''<!-- ===== FREE DOWNLOADS ===== -->
+<section id="downloads" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Free Downloads</span>
+    <h2>Guides for Buying, Selling &amp; Moving</h2>
+    <p class="lead">Pick what fits where you are. Each one lands in your inbox.</p>
+    <div class="grid-2" style="margin-top:34px">
+{cards}
+    </div>
+  </div>
+</section>
+'''
+
 def page(slug, c):
     url = f"https://shaunabanning.com/{slug}/"
     stat_html, note = stats(c)
@@ -189,6 +214,18 @@ def page(slug, c):
   </div>
 </section>
 
+<!-- ===== HOME VALUE BAND (CTA #2) ===== -->
+<section class="hv-band">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:#f3dcc4">Free · No Obligation</span>
+      <h2>What's Your {n} Home Worth?</h2>
+      <p>Get a free home value report from a local Realtor. Real comps from your street, not a bot estimate.</p>
+    </div>
+    <a class="btn btn-light" href="../home-value/?source={slug}-band">Get My Free Report</a>
+  </div>
+</section>
+
 <!-- ===== AT A GLANCE ===== -->
 <section class="alt">
   <div class="wrap">
@@ -275,6 +312,7 @@ def page(slug, c):
   </div>
 </section>
 
+{downloads(slug)}
 <!-- ===== FAQ ===== -->
 <section id="faq">
   <div class="wrap">

@@ -1,0 +1,195 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><!-- Google Analytics (GA4). Every form submit (home value, Flodesk sign-ups) is sent as a generate_lead event. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLBMHTPVP9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SLBMHTPVP9');
+document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','generate_lead',{form_name:(f.getAttribute&&(f.getAttribute('class')||f.id))||'form',page_path:location.pathname});},true);</script>
+<!-- Microsoft Clarity (heat maps + session recordings) -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ziqe3qusgo");</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A free website grade for local businesses: speed, search, schema, links, wording, trade rules and privacy."><link rel="canonical" href="https://shaunabanning.com/grade/"><style>[hidden]{display:none!important}</style><title>Local Website Grade</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;700&display=swap">
+<style>/* Layout: one readable column, dark result band, then plain ruled rows; tables scroll in their own box */
+:root{--bg:#fff;--fg:#141210;--muted:#655e57;--line:#e7e1da;--soft:#f6f3f0;--accent:#8a5a37;--tint:#f2e6db;--band:#141210;--band-fg:#f6f2ee;--good:#2f6b47;--mid:#8a5610;--bad:#9b3022;--on-accent:#fff;--display:"Instrument Serif",Georgia,serif;--body:"Manrope",-apple-system,"Segoe UI",Arial,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171513;--fg:#f3eee8;--muted:#aba197;--line:#35302b;--soft:#201c19;--accent:#d7a170;--tint:#30241c;--band:#080706;--band-fg:#f3eee8;--good:#7cc29a;--mid:#e0a25a;--bad:#ef8f80;--on-accent:#171513;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#171513;--fg:#f3eee8;--muted:#aba197;--line:#35302b;--soft:#201c19;--accent:#d7a170;--tint:#30241c;--band:#080706;--band-fg:#f3eee8;--good:#7cc29a;--mid:#e0a25a;--bad:#ef8f80;--on-accent:#171513;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);overflow-wrap:break-word}
+.wrap{max-width:880px;margin:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+h1,h2,h3{text-wrap:balance;line-height:1.15;margin:0}
+h1{font:400 clamp(38px,7vw,60px)/1.05 var(--display);margin-block:8px 12px}
+h2{font:400 32px/1.15 var(--display);margin-block:36px 12px}
+h3{font-size:17px}
+p{max-width:68ch;margin:0 0 10px}
+a{color:var(--accent)}
+.eyebrow{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.muted,small{color:var(--muted)}
+.sample{background:var(--tint);padding:10px 14px;font-weight:700;margin-bottom:24px}
+.band{background:var(--band);color:var(--band-fg);padding:24px;border-radius:8px;margin-top:22px}
+.band p:last-child{margin:0}
+.score{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.big{font:400 92px/1 var(--display)}
+.score .words{flex:1 1 240px;min-width:0}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.facts div{padding:16px 8px 16px 0}
+.facts b{display:block;font-size:24px;font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--muted)}
+ol.fix{padding-left:24px}
+ol.fix li,.row{padding-block:12px;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px}
+.st{font-size:13px;font-weight:700}.good{color:var(--good)}.mid{color:var(--mid)}.bad{color:var(--bad)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-size:12px}
+footer{margin-top:36px;padding-top:14px;border-top:2px solid var(--fg);font-size:13px;color:var(--muted)}
+@media(max-width:600px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.row{grid-template-columns:1fr;gap:2px}}
+
+.inputs{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.2fr) auto;gap:12px;align-items:end;margin-top:22px}
+.inputs.two{grid-template-columns:minmax(0,1fr) auto;margin-top:8px}
+.inputs label{display:grid;gap:5px;font-size:14px;font-weight:700;min-width:0}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--muted);border-radius:6px;padding:10px;max-width:100%;min-width:0}
+button{font:700 15px var(--body);background:var(--accent);color:var(--on-accent);border:0;border-radius:22px;padding:12px 20px;cursor:pointer}
+button:disabled{opacity:.5}
+.fine{font-size:13px;margin-top:8px}
+.agree{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:14px}
+.agree input{margin-top:4px}
+.area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,150px) 108px;gap:12px;align-items:center;padding-block:9px;border-bottom:1px solid var(--line)}
+.area b{text-align:right}
+meter{width:100%;height:16px}
+.explain{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+pre{background:var(--soft);padding:14px;white-space:pre-wrap;font-size:13px;margin:0}
+details{margin-top:22px}summary{cursor:pointer;font-weight:700}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:640px){.inputs,.inputs.two,.explain{grid-template-columns:minmax(0,1fr)}.area{grid-template-columns:minmax(0,1fr) 108px}.area meter{display:none}}
+</style><main class="wrap">
+<div class="eyebrow">Free for local businesses</div>
+<h1>What grade does your website get?</h1>
+<p>54% of people visit a business’s website after reading its good reviews. See what they find, what Google and AI assistants can read, and what to fix first.</p>
+<form id="check"><div class="inputs"><label for="url">Your website<input id="url" required maxlength="300" placeholder="yourbusiness.com" autocomplete="url"></label>
+<label for="trade">Your trade<select id="trade"><option value="auto">Detect it for me</option><option value="realestate">Real estate</option><option value="lender">Mortgage lending</option><option value="other">Another local business</option></select></label>
+<button id="go">Grade my website</button></div><p class="muted fine">Free. No email needed. Read-only: it never fills in forms or changes anything.</p></form>
+<ul id="steps" hidden aria-live="polite"><li id="s1">Reading your pages and links: <span></span></li><li id="s2">Running Google’s phone test: <span></span></li><li id="s3">Writing your report: <span></span></li></ul><p id="error" role="alert" class="bad"></p>
+<section id="result" hidden><h2 id="site"></h2>
+<div class="band score"><div class="big" id="num"></div><div class="words"><h3 id="grade"></h3><p id="target"></p><p id="read"></p></div></div>
+<h2>The seven areas</h2><div id="areas"></div>
+<h2 id="fix-head">Fix these first</h2><ol class="fix" id="fixes"></ol>
+<div class="actions"><button id="copy" type="button">Copy the report</button><button id="save" type="button" hidden>Download the report</button></div>
+<p id="copied" role="status"></p><textarea id="manual" hidden aria-label="Report to copy"></textarea>
+<details><summary>See every check</summary><div id="checks"></div></details>
+<h2>Want help with the first fix?</h2><form id="lead"><div class="inputs two"><label for="email">Your email<input id="email" type="email" required maxlength="120" autocomplete="email"></label><button>Email me about it</button></div>
+<input id="company" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+<label class="agree" for="consent"><input id="consent" type="checkbox" required><span>Shauna may email me about this report. My email and website are saved for that follow-up only.</span></label><p id="lead-msg" role="status"></p></form></section>
+<h2>What is schema?</h2>
+<div class="explain"><div><p><b>It’s a name tag for your website, written for machines.</b> People see your logo and work out that you’re a bakery in Brandon. Schema says it outright, in a small block of hidden code.</p>
+<p>Google calls it “explicit clues” about what a page means. It should match what visitors can see. It helps you be understood, but it doesn’t guarantee a ranking, and Google says its AI answers have no special requirements.</p></div><pre>{
+  "@type": "Bakery",
+  "name": "Sample Corner Bakery",
+  "telephone": "(813) 555-0100",
+  "address": "100 Main St, Brandon, FL",
+  "areaServed": "Brandon and Valrico"
+}</pre></div>
+<footer><b>Shauna Banning, Coldwell Banker Realty</b> · <a href="tel:+18137989610">(813) 798-9610</a> · <a href="mailto:shaunasellstampa@gmail.com">shaunasellstampa@gmail.com</a> · <a href="../">shaunabanning.com</a> · <a href="../privacy/">Privacy Policy</a><br>
+An educational snapshot of up to 10 pages and 30 links. Not legal advice, not affiliated with Google, and no promise of rankings. The website you enter is sent to Google’s PageSpeed test.<br>
+Statistic: <a href="https://www.brightlocal.com/research/local-consumer-review-survey/">BrightLocal Local Consumer Review Survey 2026</a>.</footer></main>
+<script>
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbwLM3t05Hq01dbl2IYUfSOioLU-Mah55mQXZHIxbr1z_O64X2BvcEIqe0j4hk6eTRvwCA/exec", SAMPLE = null;
+// Scoring shared by the page, the CLI and the tests.
+var AREAS = [
+  ['phone', 'Speed and phone experience', 25], ['find', 'Can Google and AI read it', 18], ['schema', 'Schema, your name tag', 12],
+  ['links', 'Pages and links that work', 10], ['words', 'Clear words and a next step', 15], ['trade', 'Rules for your trade', 12],
+  ['privacy', 'Privacy and safety', 8]];
+function letter(s) { return s >= 90 ? 'A' : s >= 80 ? 'B' : s >= 70 ? 'C' : s >= 60 ? 'D' : 'F'; }
+function summarize(checks) {
+  var got = 0, seen = 0, fixes = [];
+  var areas = AREAS.map(function (a) {
+    var mine = checks.filter(function (c) { return c.area === a[0] && c.v !== null; });
+    var max = mine.reduce(function (n, c) { return n + c.w; }, 0);
+    var raw = max ? mine.reduce(function (n, c) { return n + c.w * c.v; }, 0) / max : null;
+    if (raw !== null) { got += raw * a[2]; seen += a[2]; }
+    mine.forEach(function (c) { if (c.v < (c.good || 1)) fixes.push(Object.assign({ cost: a[2] * c.w / max * (1 - c.v) }, c)); });
+    return { id: a[0], name: a[1], score: raw === null ? null : Math.floor(raw * 100 + .5) };
+  });
+  fixes.sort(function (a, b) { return b.cost - a.cost; });
+  var score = seen ? Math.floor(got / seen * 100 + .5) : null;
+  // A grade without the speed test would flatter the site, so it is only ever called partial.
+  var partial = checks.filter(function (c) { return c.area === 'phone' && c.v !== null; }).length < 4 || seen < 75;
+  return { score: score, letter: partial || score === null ? null : letter(score), partial: partial, measured: seen, areas: areas, fixes: fixes };
+}
+if (typeof module !== 'undefined') module.exports = { AREAS: AREAS, letter: letter, summarize: summarize };
+
+const $ = id => document.getElementById(id);
+function el(tag, text, cls) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (cls) n.className = cls; return n; }
+let report = null, sum = null;
+
+function render(r) {
+  report = r; sum = summarize(r.checks);
+  $('result').hidden = false;
+  $('site').textContent = r.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  $('num').textContent = sum.score === null ? 'n/a' : sum.score;
+  $('grade').textContent = sum.partial ? 'Partial score. The speed test didn’t run, so there is no letter grade yet.' : `Out of 100. Grade ${sum.letter}.`;
+  $('target').textContent = sum.partial ? `${sum.measured} of 100 points measured.` : sum.score >= 95 ? 'You’re at or above the 95 target.' : `${95 - sum.score} points short of the 95 target.`;
+  $('read').textContent = `Read ${r.pages.length} pages and tested ${r.linksTested} links. ` + (r.thin ? 'This site loads most words with JavaScript, so wording checks were not counted.' : 'Nothing was changed.');
+  $('areas').replaceChildren(...sum.areas.map(a => {
+    const row = el('div', undefined, 'area'), m = el('meter');
+    m.min = 0; m.max = 100; m.low = 70; m.high = 90; m.optimum = 100; m.value = a.score || 0; m.setAttribute('aria-label', a.name);
+    row.append(el('span', a.name), m, el('b', a.score === null ? 'Not measured' : String(a.score)));
+    return row;
+  }));
+  $('fix-head').textContent = sum.fixes.length ? 'Fix these first' : 'Nothing to fix from what we could see';
+  $('fixes').replaceChildren(...sum.fixes.slice(0, 8).map(f => { const li = el('li'); li.append(el('h3', f.name), el('p', f.fix), el('small', f.detail)); return li; }));
+  $('checks').replaceChildren(...r.checks.map(c => {
+    const good = c.good || 1, [word, cls] = c.v === null ? ['Not measured', 'muted'] : c.v >= good ? ['Good', 'good'] : c.v >= .5 ? ['Could be better', 'mid'] : ['Fix', 'bad'];
+    const row = el('div', undefined, 'row'), d = el('div'); d.append(el('h3', c.name), el('small', c.detail));
+    row.append(el('span', word, 'st ' + cls), d); return row;
+  }));
+}
+function asText() {
+  return [`Website Grade: ${report.url}`, sum.partial ? `Partial score ${sum.score}` : `${sum.score}/100, grade ${sum.letter}`, '',
+    ...sum.areas.map(a => `${a.name}: ${a.score ?? 'not measured'}`), '', 'FIX THESE FIRST',
+    ...sum.fixes.map((f, i) => `${i + 1}. ${f.name}: ${f.fix}\n   ${f.detail}`), '', 'EVERY CHECK',
+    ...report.checks.map(c => `${c.v === null ? 'Not measured' : c.v >= (c.good || 1) ? 'Good' : 'Improve'} | ${c.name} | ${c.detail}`),
+    '', 'Shauna Banning, Coldwell Banker Realty. Educational snapshot, not legal advice.'].join('\n');
+}
+async function getJSON(q) {
+  const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 240000);
+  try { const r = await fetch(ENDPOINT + '?' + new URLSearchParams(q), { signal: ctl.signal }); return await r.json(); }
+  finally { clearTimeout(t); }
+}
+function step(id, state) { $(id).dataset.state = state; $(id).querySelector('span').textContent = state; }
+
+if (ENDPOINT) $('check').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const url = $('url').value.trim(), trade = $('trade').value;
+  if (!url) return;
+  $('go').disabled = true; $('error').textContent = ''; $('result').hidden = true; $('steps').hidden = false;
+  $('lead-msg').textContent = '';
+  step('s1', 'running'); step('s2', 'running'); step('s3', 'waiting');
+  const site = getJSON({ action: 'site', url, trade }).then(r => { step('s1', r.error ? 'stopped' : 'done'); return r; });
+  const speed = getJSON({ action: 'speed', url }).catch(() => ({})).then(r => { step('s2', r.checks && r.checks.some(c => c.v !== null) ? 'done' : 'not measured'); return r; });
+  try {
+    const r = await site;
+    if (r.error) { $('error').textContent = r.error; return; }
+    const s = await speed;
+    r.checks = r.checks.concat(s.checks || []);
+    render(r); step('s3', 'done');
+    $('result').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  } catch (err) { $('error').textContent = 'The check didn’t finish. Check your connection and try again.'; step('s1', 'stopped'); }
+  finally { $('go').disabled = false; }
+});
+$('copy').onclick = async () => {
+  try { await navigator.clipboard.writeText(asText()); $('copied').textContent = 'Copied.'; }
+  catch { $('manual').hidden = false; $('manual').value = asText(); $('manual').select(); }
+};
+$('save').hidden = !ENDPOINT;
+$('save').onclick = () => {
+  const a = el('a'); a.href = URL.createObjectURL(new Blob([asText()], { type: 'text/plain' })); a.download = 'website-grade.txt';
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+};
+if (ENDPOINT) $('lead').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const body = new URLSearchParams({ email: $('email').value, company: $('company').value, consent: $('consent').checked ? 'yes' : '', url: report.url, score: (sum.partial ? 'partial ' : '') + sum.score });
+  try { const r = await (await fetch(ENDPOINT, { method: 'POST', body })).json(); $('lead-msg').textContent = r.ok ? 'Got it. Shauna will email you.' : r.error; }
+  catch { $('lead-msg').textContent = 'That didn’t send. Email shaunasellstampa@gmail.com instead.'; }
+});
+if (SAMPLE) render(SAMPLE);
+
+</script></html>

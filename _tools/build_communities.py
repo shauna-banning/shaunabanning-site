@@ -118,6 +118,8 @@ GA = """<!-- Google Analytics (GA4). Every form submit (home value, Flodesk sign
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLBMHTPVP9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SLBMHTPVP9');
 document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','generate_lead',{form_name:(f.getAttribute&&(f.getAttribute('class')||f.id))||'form',page_path:location.pathname});},true);</script>
+<!-- Microsoft Clarity (heat maps + session recordings) -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ziqe3qusgo");</script>
 """
 
 def page(slug, c):

@@ -114,6 +114,12 @@ def downloads(slug):
 </section>
 '''
 
+GA = """<!-- Google Analytics (GA4). Every form submit (home value, Flodesk sign-ups) is sent as a generate_lead event. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLBMHTPVP9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SLBMHTPVP9');
+document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','generate_lead',{form_name:(f.getAttribute&&(f.getAttribute('class')||f.id))||'form',page_path:location.pathname});},true);</script>
+"""
+
 def page(slug, c):
     url = f"https://shaunabanning.com/{slug}/"
     stat_html, note = stats(c)
@@ -134,7 +140,7 @@ def page(slug, c):
     return f"""<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+{GA}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(c['title'])}</title>
 <meta name="description" content="{E(c['description'])}">

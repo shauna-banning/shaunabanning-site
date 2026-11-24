@@ -58,7 +58,7 @@ def form(c):
     return f"""<!-- FLODESK TODO: create form "{c['name']} – Monthly Update (Website)" → segment "{c['name']}", then put its id in communities.json -->
     <div class="form">
       <p style="margin:0 0 14px;color:var(--ink)"><b>The monthly signup opens with the first update.</b> Want it now? Text me and I'll add you.</p>
-      <a class="btn btn-dark" href="sms:+14254954577?&body={E(c['name']).replace(' ','%20')}%20update%20-%20Hi%20Shauna!%20Please%20add%20me%20to%20the%20monthly%20{E(c['name']).replace(' ','%20')}%20update.">Text Me "UPDATE"</a>
+      <a class="btn btn-dark" href="sms:+18137989610?&body={E(c['name']).replace(' ','%20')}%20update%20-%20Hi%20Shauna!%20Please%20add%20me%20to%20the%20monthly%20{E(c['name']).replace(' ','%20')}%20update.">Text Me "UPDATE"</a>
       <small>Shauna Banning, Coldwell Banker Realty.</small>
     </div>"""
 
@@ -338,12 +338,12 @@ def page(slug, c):
       <h2>Hi, I'm Shauna.</h2>
       <p>I moved here from Seattle about six years ago, so I know what it's like to pick a neighborhood from 2,000 miles away. I help families buy and sell across Riverview, Brandon, Valrico, FishHawk and Apollo Beach, and I'll always give you the straight answer, even if it's "not this house."</p>
       <ul class="contact-lines">
-        <li>Call or text: <a href="tel:+14254954577">(425) 495-4577</a></li>
+        <li>Call or text: <a href="tel:+18137989610">(813) 798-9610</a></li>
         <li>Email: <a href="mailto:shaunasellstampa@gmail.com">shaunasellstampa@gmail.com</a></li>
         <li>Coldwell Banker Realty</li>
       </ul>
       <div class="btns">
-        <a class="btn btn-dark" href="sms:+14254954577">Text Me</a>
+        <a class="btn btn-dark" href="sms:+18137989610">Text Me</a>
         <a class="btn btn-light" href="../home-value/?source={slug}">Get My Home Value</a>
       </div>
     </div>
@@ -354,7 +354,7 @@ def page(slug, c):
   <div class="wrap f4">
     <div>
       <h4>Shauna Banning</h4>
-      <p>REALTOR® · Coldwell Banker Realty<br>Your Tampa Suburbs Realtor<br><a href="tel:+14254954577">(425) 495-4577</a> · <a href="mailto:shaunasellstampa@gmail.com">shaunasellstampa@gmail.com</a></p>
+      <p>REALTOR® · Coldwell Banker Realty<br>Your Tampa Suburbs Realtor<br><a href="tel:+18137989610">(813) 798-9610</a> · <a href="mailto:shaunasellstampa@gmail.com">shaunasellstampa@gmail.com</a></p>
     </div>
     <div>
       <h4>Areas</h4>
@@ -369,7 +369,7 @@ def page(slug, c):
       <ul><li><a href="../home-value/?source={slug}">Home Value</a></li><li><a href="../where-to-live-near-macdill/">Where to Live Near MacDill</a></li><li><a href="../macdill-bah-calculator/">MacDill BAH Calculator</a></li><li><a href="../">Home</a></li></ul>
     </div>
   </div>
-  <div class="legal">© 2026 Shauna Banning. Coldwell Banker Realty. Equal Housing Opportunity. Information is deemed reliable but not guaranteed. Costs, fees, school zones and boundaries change, so verify them for your specific address. Nothing here is legal, tax or insurance advice.</div>
+  <div class="legal">© 2026 Shauna Banning. Coldwell Banker Realty. Equal Housing Opportunity. Information is deemed reliable but not guaranteed. Costs, fees, school zones and boundaries change, so verify them for your specific address. Nothing here is legal, tax or insurance advice. <a href="../privacy/">Privacy Policy</a></div>
 </footer>
 <script>
 window.addEventListener('load',function(){{

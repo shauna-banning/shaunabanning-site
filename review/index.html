@@ -1,0 +1,308 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"></head><body><title>Review Helper</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow column, like a text thread with the business. Accent comes from the business's palette. */
+:root{
+  --bg:#FBFAF8; --card:#FFFFFF; --fg:#1C1917; --muted:#6B635B; --line:#E7E2DC;
+  --accent:#9A6B3F; --accent-ink:#FFFFFF; --accent-soft:#F4ECE3; --star:#C8913F;
+  --ok:#2F7A4A; --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171412; --card:#211D1A; --fg:#F3EEE9; --muted:#B3A99F; --line:#3A332E;
+  --accent:var(--accent-d,#D2A06E); --accent-ink:#1C1917; --accent-soft:var(--accent-dsoft,#3A2C20); --star:#E0AE5E; --ok:#6FC08E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171412; --card:#211D1A; --fg:#F3EEE9; --muted:#B3A99F; --line:#3A332E;
+  --accent:var(--accent-d,#D2A06E); --accent-ink:#1C1917; --accent-soft:var(--accent-dsoft,#3A2C20); --star:#E0AE5E; --ok:#6FC08E; color-scheme:dark}
+html,body{background:var(--bg)}
+body{color:var(--fg);font:16px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:540px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:10px 12px}
+.demo b{color:var(--fg);font-weight:600}
+.demo button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:4px 12px;cursor:pointer}
+.demo button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:600}
+header{display:flex;gap:14px;align-items:center}
+.mark{width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:20px var(--display);flex:none}
+header h1{font:400 1.35rem/1.2 var(--display);margin:0;text-wrap:balance}
+header p{margin:2px 0 0;color:var(--muted);font-size:14px}
+h2{font:400 1.5rem/1.25 var(--display);margin:0;text-wrap:balance}
+.lede{margin:0;color:var(--muted)}
+.stars{display:flex;gap:6px}
+.stars button{background:none;border:0;padding:4px;cursor:pointer;color:var(--line);font-size:40px;line-height:1}
+.stars button.on{color:var(--star)}
+.stars button:focus-visible,button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thread{display:flex;flex-direction:column;gap:12px}
+.q,.a{max-width:85%;padding:10px 14px;border-radius:16px}
+.q{background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.a{background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px;align-self:flex-end}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:15px;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:999px;padding:7px 14px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.row{display:flex;gap:8px;align-items:stretch}
+.row input{flex:1;min-width:0}
+input,textarea{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;width:100%;box-sizing:border-box}
+textarea{min-height:190px;resize:vertical;line-height:1.6}
+.btn{font:600 16px var(--body);border:0;border-radius:12px;padding:12px 18px;cursor:pointer;background:var(--accent);color:var(--accent-ink);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn.wide{width:100%;box-sizing:border-box}
+.link{background:none;border:0;padding:0;font:inherit;color:var(--muted);text-decoration:underline;cursor:pointer;text-align:left}
+.tabs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tabs button{font:600 15px var(--body);border:0;padding:10px;background:var(--card);color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.step{display:flex;flex-direction:column;gap:10px}
+.step h3{margin:0;font:600 13px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.note{font-size:13px;color:var(--muted);margin:0}
+.ok{color:var(--ok);font-weight:600}
+.choice{display:grid;gap:10px}
+.done{text-align:center;padding:28px 18px}
+.check{width:56px;height:56px;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:grid;place-items:center;margin:0 auto 8px;font-size:26px}
+label.cb{display:flex;gap:10px;align-items:flex-start}
+label.cb input{width:auto;margin-top:5px}
+footer{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+@media (prefers-reduced-motion:no-preference){.q,.a,.chips{animation:in .25s ease-out}@keyframes in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}}
+</style>
+
+<div class="wrap" id="app"></div>
+
+<script>
+/* ---- Settings for the live page ---- */
+const PREVIEW = false;      // build.py sets false for the live copy
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzxsdkAcNsForNx3-d9XqarcVPZNTSfk4tsO3SbIRkPZDTWffuwC1Q8NMxgU3vGo8PmXw/exec';       // Apps Script web app URL, once deployed
+
+const PALETTES = {
+  caramel:{l:'#9A6B3F',ls:'#F4ECE3',d:'#D2A06E',ds:'#3A2C20'},
+  bay:{l:'#1F5F8B',ls:'#E5EFF6',d:'#7DB6DE',ds:'#1B3242'},
+  palmetto:{l:'#2F6B4F',ls:'#E5F0EA',d:'#7CC4A0',ds:'#1B3327'},
+  coral:{l:'#B0473B',ls:'#F8E7E4',d:'#EE9A8E',ds:'#3D221E'},
+  slate:{l:'#3E4C59',ls:'#E9EDF1',d:'#A9B7C4',ds:'#262D33'},
+  plum:{l:'#6B3E75',ls:'#F1E8F3',d:'#C9A1D3',ds:'#33243A'}
+};
+
+/* Each business: who they are, where reviews go, and the questions customers answer.
+   Option phrases are what the draft says when a customer taps that answer. */
+const BUSINESSES = {
+  'shauna-banning': {
+    name:'Shauna Banning', short:'Shauna', sub:'Realtor · Coldwell Banker Realty', initials:'SB', palette:'caramel', pro:'She',
+    platforms:[{name:'Google',url:'https://search.google.com/local/writereview?placeid=ChIJkemA1sJUkAQR9EMXLCaUMGc'}],
+    questions:[
+      {slot:'service', ask:'What did Shauna help you with?', options:[
+        {label:'Buying a home', phrase:'Shauna helped me buy my home{area}.'},
+        {label:'Selling a home', phrase:'Shauna helped me sell my home{area}.'},
+        {label:'Selling and buying', phrase:'Shauna helped me sell my home and buy the next one{area}.'},
+        {label:'Moving to Tampa Bay', phrase:'Shauna helped me move to the Tampa Bay area{area}.'},
+        {label:'Advice, not ready yet', phrase:'Shauna gave me advice while I figured out my next move.'}]},
+      {slot:'area', ask:'Which area?', options:[
+        {label:'FishHawk / Lithia', phrase:' in FishHawk'},{label:'Valrico', phrase:' in Valrico'},
+        {label:'Brandon', phrase:' in Brandon'},{label:'Riverview', phrase:' in Riverview'},
+        {label:'Somewhere else', phrase:''}]},
+      {slot:'highlight', multi:true, ask:'What stood out? Pick any that fit.', options:[
+        {label:'Communication', phrase:'She kept me updated and was easy to reach.'},
+        {label:'Knew the area', phrase:'She knew the neighborhoods well.'},
+        {label:'Pricing and market data', phrase:'She backed her advice with real local market data.'},
+        {label:'Marketing strategy', phrase:'She had a clear marketing strategy, not just a listing.'},
+        {label:'Video and social media', phrase:'Her video and social media marketing stood out.'},
+        {label:'AI and tech tools', phrase:'She used AI and tech tools to make the whole process easier and more organized.'},
+        {label:'Negotiating', phrase:'She negotiated well on my behalf.'},
+        {label:'Patience', phrase:'She was patient with all of my questions.'},
+        {label:'Some things could be better', phrase:'Some parts of the process could have gone more smoothly.'}]},
+      {slot:'detail', free:true, ask:'Anything specific you’d want other people to know? A moment, a problem she solved, how it felt. (Optional)'},
+      {slot:'recommend', ask:'Would you recommend Shauna to a friend?', options:[
+        {label:'Yes, definitely', phrase:'I’d recommend Shauna to friends and family.'},
+        {label:'Probably', phrase:'I would probably recommend Shauna.'},
+        {label:'Not sure', phrase:''}]}
+    ]
+  },
+};
+
+/* ---- Draft writer: uses only what the customer chose or typed ---- */
+const OPEN = {
+  5:['I had a great experience with {n}.','Really glad I chose {n}.','Great experience from start to finish.'],
+  4:['I had a good experience with {n}.','Good experience overall with {n}.'],
+  3:['My experience with {n} was mixed.','Some good and some not-so-good with {n}.'],
+  2:['My experience with {n} didn’t go the way I hoped.'],
+  1:['My experience with {n} didn’t go the way I hoped.']
+};
+const CLOSE = {5:['Thank you, {n}!','','Thanks again, {n}.'],4:['Thank you, {n}.',''],3:[''],2:[''],1:['']};
+function pick(arr,k){return arr[((k%arr.length)+arr.length)%arr.length]}
+function tidy(s){s=String(s||'').replace(/\s+/g,' ').trim();if(!s)return '';s=s[0].toUpperCase()+s.slice(1);return /[.!?]$/.test(s)?s:s+'.'}
+function rotate(a,k){if(!a.length)return a;k%=a.length;return a.slice(k).concat(a.slice(0,k))}
+function compose(b,st,long,seed){
+  const n=b.short, fill=s=>s.replace(/\{n\}/g,n).replace(/\{area\}/g,(st.ans.area&&st.ans.area.phrases[0])||'');
+  const get=slot=>st.ans[slot]||{phrases:[],texts:[]};
+  const out=[fill(pick(OPEN[st.rating]||OPEN[5],seed))];
+  const named=out[0].includes(n), svc=get('service');
+  out.push(...svc.phrases.map(p=>{p=fill(p);return named&&b.pro&&p.startsWith(n+' ')?b.pro+p.slice(n.length):p}), ...svc.texts.map(tidy));
+  const list=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1];
+  const extra=b.questions.filter(q=>!['service','area','highlight','detail','recommend'].includes(q.slot));
+  const addExtra=q=>{const a=get(q.slot),ph=long?a.phrases:a.phrases.slice(0,2);
+    if(q.join){if(ph.length)out.push(fill(q.join.replace('{list}',list(ph))))}else ph.forEach(p=>out.push(fill(p)));
+    a.texts.forEach(t=>out.push(tidy(t)))};
+  extra.filter(q=>!q.after).forEach(addExtra);
+  const hi=get('highlight'); let hs=rotate(hi.phrases.map(fill),seed).concat(hi.texts.map(tidy));
+  out.push(...(long?hs:hs.slice(0,1)));
+  extra.filter(q=>q.after).forEach(q=>{const a=get(q.slot);(long?a.phrases:a.phrases.slice(0,1)).filter(Boolean).forEach(p=>out.push(fill(p)));if(long)a.texts.forEach(t=>out.push(tidy(t)))});
+  const det=get('detail').texts.map(tidy); if(long||!hs.length) out.push(...det);
+  const rec=get('recommend'); out.push(...rec.phrases.map(fill), ...rec.texts.map(tidy));
+  if(long) out.push(fill(pick(CLOSE[st.rating]||[''],seed)));
+  return out.filter(Boolean).join(' ').replace(/\s+/g,' ').trim();
+}
+
+/* ---- Light, anonymous counts for the owner's dashboard (no review text) ---- */
+function track(type,extra){
+  if(PREVIEW||!ENDPOINT) return;
+  try{const body=new URLSearchParams(Object.assign({action:'event',biz:S.slug,type},extra||{}));navigator.sendBeacon?navigator.sendBeacon(ENDPOINT,body):fetch(ENDPOINT,{method:'POST',body,mode:'no-cors'})}catch(e){}
+}
+
+/* ---- App state and screens ---- */
+const S={slug:null,b:null,screen:'start',rating:0,qi:0,ans:{},sel:[],long:true,seed:0,edits:{},copied:false};
+function slugFromUrl(){
+  const h=(location.hash||'').slice(1); if(BUSINESSES[h]) return h;
+  try{const q=new URLSearchParams(location.search).get('b'); if(q&&BUSINESSES[q]) return q}catch(e){}
+  return Object.keys(BUSINESSES)[0];
+}
+function setBiz(slug){
+  S.slug=slug;S.b=BUSINESSES[slug];Object.assign(S,{screen:'start',rating:0,qi:0,ans:{},sel:[],long:true,seed:0,edits:{},copied:false});
+  const p=PALETTES[S.b.palette]||PALETTES.caramel, r=document.documentElement.style;
+  r.setProperty('--accent',p.l);r.setProperty('--accent-soft',p.ls);r.setProperty('--accent-d',p.d);r.setProperty('--accent-dsoft',p.ds);
+  render();
+}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function h(html){const t=document.createElement('template');t.innerHTML=html.trim();return t.content}
+
+function render(){
+  const b=S.b, app=document.getElementById('app'); app.textContent='';
+  if(PREVIEW){
+    const d=h(`<div class="demo"><span><b>Preview.</b> Nothing you type here is sent or saved. Show:</span></div>`).firstChild;
+    Object.entries(BUSINESSES).forEach(([k,v])=>{const bt=document.createElement('button');bt.textContent=v.name;bt.setAttribute('aria-pressed',k===S.slug);bt.onclick=()=>setBiz(k);d.appendChild(bt)});
+    app.appendChild(d);
+  }
+  app.appendChild(h(`<header><div class="mark" aria-hidden="true">${esc(b.initials)}</div><div><h1>${esc(b.name)}</h1><p>${esc(b.sub)}</p></div></header>`));
+  const v=SCREENS[S.screen](); app.appendChild(v);
+  app.appendChild(h(`<footer>${ENDPOINT&&!PREVIEW?'We count visits and button taps. Your review text stays on your device until you post it.':'Your answers stay on your device. You post the review yourself.'}</footer>`));
+}
+
+const SCREENS={
+  start(){
+    const f=h(`<section class="card"><h2>How was your experience with ${esc(S.b.short)}?</h2>
+      <p class="lede">Answer a few quick taps and we’ll turn them into a review draft you can edit. Takes about two minutes.</p>
+      <div class="stars" role="radiogroup" aria-label="Your rating"></div>
+      <button class="link" id="skip">I’d rather write my own review</button>
+      <button class="link" id="priv">Send ${esc(S.b.short)} a private note instead</button></section>`);
+    const stars=f.querySelector('.stars');
+    for(let i=1;i<=5;i++){const bt=document.createElement('button');bt.textContent='★';bt.setAttribute('role','radio');bt.setAttribute('aria-label',i+' star'+(i>1?'s':''));
+      bt.onmouseenter=()=>stars.querySelectorAll('button').forEach((x,j)=>x.classList.toggle('on',j<i));
+      bt.onclick=()=>{S.rating=i;track('rated',{rating:i});S.screen=i<=3?'choice':'ask';render()};stars.appendChild(bt)}
+    stars.onmouseleave=()=>stars.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+    f.querySelector('#skip').onclick=()=>{S.rating=S.rating||5;S.screen='draft';S.edits={true:'',false:''};render()};
+    f.querySelector('#priv').onclick=()=>{S.screen='private';render()};
+    return f;
+  },
+  choice(){
+    const f=h(`<section class="card"><h2>Thanks for being straight with us.</h2>
+      <p class="lede">${esc(S.b.short)} reads every note and would like the chance to make it right. You can also post a public review. Either one is fine.</p>
+      <div class="choice"><button class="btn wide" id="p">Tell ${esc(S.b.short)} directly</button><button class="btn ghost wide" id="r">Write a public review</button></div></section>`);
+    f.querySelector('#p').onclick=()=>{S.screen='private';render()};
+    f.querySelector('#r').onclick=()=>{S.screen='ask';render()};
+    return f;
+  },
+  ask(){
+    const b=S.b, f=document.createDocumentFragment(), th=document.createElement('div');th.className='thread';
+    b.questions.slice(0,S.qi).forEach(q=>{const a=S.ans[q.slot];th.appendChild(h(`<div class="q">${esc(q.ask)}</div>`));
+      const said=a?[...a.labels,...a.texts].join(', '):'';th.appendChild(h(`<div class="${said?'a':'q note'}">${esc(said||'Skipped')}</div>`))});
+    const q=b.questions[S.qi]; th.appendChild(h(`<div class="q">${esc(q.ask)}</div>`)); f.appendChild(th);
+    const answer=(labels,phrases,texts)=>{S.ans[q.slot]={labels,phrases,texts};S.sel=[];S.qi++;
+      if(S.qi>=b.questions.length){track('drafted',{rating:S.rating});S.screen='draft'}render()};
+    if(q.options){const c=document.createElement('div');c.className='chips';
+      q.options.forEach((o,i)=>{const bt=document.createElement('button');bt.className='chip';bt.textContent=o.label;bt.setAttribute('aria-pressed',S.sel.includes(i));
+        bt.onclick=()=>{if(q.multi){S.sel=S.sel.includes(i)?S.sel.filter(x=>x!==i):[...S.sel,i];bt.setAttribute('aria-pressed',S.sel.includes(i))}
+          else answer([o.label],[o.phrase],[])};c.appendChild(bt)});f.appendChild(c)}
+    const row=h(`<div class="row"><label class="sr" for="own" hidden>Your answer</label><input id="own" placeholder="${q.options?'Or type your own answer':'Type here'}" autocomplete="off"><button class="btn" id="go">${q.multi?'Next':'Send'}</button></div>`);
+    f.appendChild(row);
+    f.appendChild(h(`<button class="link" id="sk">Skip this one</button>`));
+    setTimeout(()=>{const go=document.getElementById('go'),own=document.getElementById('own');
+      const submit=()=>{const t=own.value.trim();
+        if(q.multi&&(S.sel.length||t)) return answer(S.sel.map(i=>q.options[i].label),S.sel.map(i=>q.options[i].phrase),t?[t]:[]);
+        if(t) return answer([],[],[t]);};
+      go.onclick=submit;own.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();submit()}};
+      document.getElementById('sk').onclick=()=>{S.sel=[];S.qi++;if(S.qi>=b.questions.length){S.screen='draft'}render()};
+      if(q.free) own.focus({preventScroll:true});
+    });
+    return f;
+  },
+  draft(){
+    const b=S.b, key=String(S.long);
+    if(S.edits[key]===undefined) S.edits[key]=compose(b,S,S.long,S.seed);
+    const f=h(`<section class="card">
+      <h2>Your review draft</h2>
+      <p class="note">Built only from your answers. Change anything you like. It’s your review, and it reads best in your own words.</p>
+      <div class="stars" aria-label="Your rating: ${S.rating} of 5">${'<span style="color:var(--star);font-size:24px">★</span>'.repeat(S.rating)}${'<span style="color:var(--line);font-size:24px">★</span>'.repeat(5-S.rating)}</div>
+      <div class="tabs" role="tablist"><button role="tab" id="ts" aria-selected="${!S.long}">Short</button><button role="tab" id="tl" aria-selected="${S.long}">Long</button></div>
+      <label for="txt" hidden>Your review</label><textarea id="txt" placeholder="Write your review here."></textarea>
+      <button class="link" id="mix">Try another wording</button>
+      <div class="step"><h3>Step 1 · Copy it</h3><button class="btn wide" id="copy">Copy review</button><p class="note" id="cmsg" aria-live="polite"></p></div>
+      <div class="step"><h3>Step 2 · Paste it here</h3><div class="platforms" id="plats"></div>
+        <p class="note">Opens in a new tab. Tap the stars there, then paste. Post on more than one if you like.</p></div>
+      </section>`);
+    const ta=f.querySelector('#txt'); ta.value=S.edits[key]; ta.oninput=()=>{S.edits[key]=ta.value};
+    f.querySelector('#ts').onclick=()=>{S.long=false;render()}; f.querySelector('#tl').onclick=()=>{S.long=true;render()};
+    const mix=f.querySelector('#mix');
+    if(!Object.keys(S.ans).length) mix.hidden=true;
+    mix.onclick=()=>{S.seed++;S.edits={};render()};
+    f.querySelector('#copy').onclick=async()=>{const t=ta.value.trim(), m=document.getElementById('cmsg');
+      if(!t){m.textContent='Add a few words first.';return}
+      try{await navigator.clipboard.writeText(t);m.innerHTML='<span class="ok">Copied.</span> Now pick where to post it.';track('copied',{rating:S.rating})}
+      catch(e){ta.focus();ta.select();m.textContent='Your text is selected. Press copy on your keyboard or phone.'}};
+    const pl=f.querySelector('#plats');
+    if(!b.platforms.length) pl.appendChild(h(`<p class="note">No review sites are set up yet.</p>`));
+    b.platforms.forEach(p=>{const a=document.createElement('a');a.className='btn ghost';a.href=p.url;a.target='_blank';a.rel='noopener';a.textContent='Post on '+p.name+' ↗';
+      a.onclick=()=>track('platform',{platform:p.name,rating:S.rating});pl.appendChild(a)});
+    const tail=h(`<button class="link" id="priv">Rather send ${esc(b.short)} a private note?</button>`);
+    const frag=document.createDocumentFragment();frag.appendChild(f);frag.appendChild(tail);
+    setTimeout(()=>{document.getElementById('priv').onclick=()=>{S.screen='private';render()}});
+    return frag;
+  },
+  private(){
+    const b=S.b, f=h(`<section class="card">
+      <h2>Tell ${esc(b.short)} directly</h2>
+      <p class="lede">This goes only to ${esc(b.short)}. It isn’t posted anywhere.</p>
+      <form id="pf" novalidate>
+        <div class="step"><label for="msg">What happened?</label><textarea id="msg" style="min-height:130px" placeholder="Share what went well or what could be better."></textarea></div>
+        <label class="cb" for="want"><input type="checkbox" id="want"> I’d like ${esc(b.short)} to contact me about this</label>
+        <div class="step" id="contact" hidden>
+          <label for="em">Email</label><input id="em" type="email" autocomplete="email">
+          <label for="ph">Phone (optional)</label><input id="ph" type="tel" autocomplete="tel">
+        </div>
+        <input id="company" name="company" tabindex="-1" autocomplete="off" hidden>
+        <p class="note" id="pmsg" aria-live="polite"></p>
+        <button class="btn wide" type="submit">Send to ${esc(b.short)}</button>
+      </form>
+      <p class="note">Public reviews are always welcome too: <span id="pl"></span></p>
+      </section>`);
+    f.querySelector('form').style.cssText='display:flex;flex-direction:column;gap:14px';
+    const want=f.querySelector('#want'), ct=f.querySelector('#contact'); want.onchange=()=>{ct.hidden=!want.checked};
+    const pl=f.querySelector('#pl'); b.platforms.forEach((p,i)=>{const a=document.createElement('a');a.href=p.url;a.target='_blank';a.rel='noopener';a.textContent=p.name;a.style.color='var(--accent)';if(i)pl.append(', ');pl.appendChild(a)});
+    f.querySelector('form').onsubmit=async e=>{e.preventDefault();
+      const m=document.getElementById('pmsg'), msg=document.getElementById('msg').value.trim(), em=document.getElementById('em').value.trim();
+      if(!msg){m.textContent='Write a few words so '+b.short+' knows what happened.';return}
+      if(want.checked&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){m.textContent='Add an email so '+b.short+' can reach you, or uncheck the box.';return}
+      if(PREVIEW||!ENDPOINT){S.screen='sent';S.previewSent=true;render();return}
+      m.textContent='Sending…';
+      try{const body=new URLSearchParams({action:'feedback',biz:S.slug,rating:S.rating||'',message:msg,contact:want.checked?'yes':'no',email:want.checked?em:'',phone:want.checked?document.getElementById('ph').value.trim():'',company:document.getElementById('company').value});
+        const r=await fetch(ENDPOINT,{method:'POST',body}); const j=await r.json(); if(j.error) throw new Error(j.error);
+        S.screen='sent';S.previewSent=false;render()}
+      catch(err){m.textContent=(err&&err.message&&!/fetch/i.test(err.message))?err.message:'That didn’t go through. Please try again in a minute.'}};
+    return f;
+  },
+  sent(){
+    return h(`<section class="card done"><div class="check" aria-hidden="true">✓</div><h2>Thank you</h2>
+      <p class="lede">${S.previewSent?'Preview only: in the live version, this note goes straight to '+esc(S.b.short)+'.':esc(S.b.short)+' got your note and appreciates you taking the time.'}</p></section>`);
+  }
+};
+
+window.addEventListener('hashchange',()=>{const s=slugFromUrl();if(s!==S.slug)setBiz(s)});
+setBiz(slugFromUrl());
+</script>
+</body></html>

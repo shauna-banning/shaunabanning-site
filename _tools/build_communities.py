@@ -390,6 +390,7 @@ window.addEventListener('load',function(){{
   fit();setTimeout(fit,300);
 }});
 </script>
+<script src="../assets/js/slidein.js?v=2" data-title="Get the {E(c['name'])} Update" defer></script>
 </body>
 </html>
 """

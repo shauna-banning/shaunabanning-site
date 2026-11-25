@@ -5,288 +5,192 @@ document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','
 <!-- Microsoft Clarity (heat maps + session recordings) -->
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ziqe3qusgo");</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Google Profile Check</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="canonical" href="https://shaunabanning.com/google-profile-check/">
 <meta property="og:title" content="How strong is your Google profile?">
 <meta property="og:description" content="A free 12-question Google Business Profile check for local businesses, from Shauna Banning.">
 <meta name="description" content="A free 12-question Google Business Profile check for local businesses. Get a score, a grade and a fix-first list in about three minutes.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
-<style>
-/* Layout: questions on the left, a live report card on the right (stacks on phones); the finished report reads like the card a business owner keeps. */
-:root{
-  --bg:#ffffff; --fg:#151311; --muted:#6a625b; --line:#e8e2dc; --soft:#f7f4f1;
-  --caramel:#8d5b36; --caramel-tint:#f3e8de; --ink:#151311; --ink-fg:#f7f3ef; --ring-track:#ece5de;
-  --good:#2e6b48; --mid:#97600f; --bad:#a1372a; --on-caramel:#ffffff;
-  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
-  --body:"DM Sans",-apple-system,"Segoe UI",Arial,sans-serif;
-  color-scheme:light;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#141210; --fg:#f2ede7; --muted:#ada398; --line:#332d28; --soft:#1d1a17;
-  --caramel:#d6a273; --caramel-tint:#2e231b; --ink:#0b0a09; --ink-fg:#f2ede7; --ring-track:#2d2722;
-  --good:#7fc59d; --mid:#e3aa5e; --bad:#f09484; --on-caramel:#141210; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#141210; --fg:#f2ede7; --muted:#ada398; --line:#332d28; --soft:#1d1a17;
-  --caramel:#d6a273; --caramel-tint:#2e231b; --ink:#0b0a09; --ink-fg:#f2ede7; --ring-track:#2d2722;
-  --good:#7fc59d; --mid:#e3aa5e; --bad:#f09484; --on-caramel:#141210; color-scheme:dark}
+<style>[hidden]{display:none!important}</style>
+<title>Google Profile Check</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;700&display=swap">
+<style>/* Report card v2: one centered column. Hero ring, 4 part tiles, doing-well checks, fix-first cards, competitor bars. */
+:root{--bg:#faf7f3;--card:#fff;--fg:#141210;--muted:#655e57;--line:#e7e1da;--soft:#f3eee8;--accent:#8a5a37;--tint:#f2e6db;--track:#ece5dd;--good:#2f6b47;--good-bg:#e5f0e9;--mid:#a5660f;--mid-bg:#f8ecd9;--bad:#a63a2a;--bad-bg:#f7e3df;--on-accent:#fff;--display:"Instrument Serif",Georgia,serif;--body:"Manrope",-apple-system,"Segoe UI",Arial,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#141210;--card:#1d1a17;--fg:#f3eee8;--muted:#aba197;--line:#35302b;--soft:#24201c;--accent:#d7a170;--tint:#30241c;--track:#332d28;--good:#7cc29a;--good-bg:#1c2e23;--mid:#e0a25a;--mid-bg:#33271a;--bad:#ef8f80;--bad-bg:#3a201c;--on-accent:#171513;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#141210;--card:#1d1a17;--fg:#f3eee8;--muted:#aba197;--line:#35302b;--soft:#24201c;--accent:#d7a170;--tint:#30241c;--track:#332d28;--good:#7cc29a;--good-bg:#1c2e23;--mid:#e0a25a;--mid-bg:#33271a;--bad:#ef8f80;--bad-bg:#3a201c;--on-accent:#171513;color-scheme:dark}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);overflow-wrap:break-word}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
-h1,h2,h3{margin:0;text-wrap:balance}
-h1{font:600 clamp(40px,6.4vw,64px)/1.02 var(--display);letter-spacing:-.01em}
-h2{font:600 clamp(28px,4vw,36px)/1.1 var(--display)}
-h3{font:700 16px/1.35 var(--body)}
-p{margin:0;max-width:66ch}
-a{color:var(--caramel)}
-.eyebrow{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--caramel)}
-.muted{color:var(--muted)}
-:focus-visible{outline:3px solid var(--caramel);outline-offset:3px}
+.wrap{max-width:760px;margin:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px}
+h1,h2,h3{text-wrap:balance;line-height:1.15;margin:0}
+h1{font:400 clamp(34px,6.5vw,54px)/1.05 var(--display);margin-block:8px 10px}
+h2{font:400 30px/1.15 var(--display);margin-block:40px 14px}
+h3{font-size:17px}
+p{max-width:68ch;margin:0 0 10px}
+a{color:var(--accent)}
+.eyebrow{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.muted,small{color:var(--muted)}
+.center{text-align:center}.center p{margin-inline:auto}
+.sample{background:var(--tint);padding:10px 14px;font-weight:700;margin-bottom:24px;border-radius:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+/* rings: --p is 0-100, --c the color */
+.ring{--p:0;--c:var(--accent);--size:200px;--w:16px;width:var(--size);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;margin:auto;
+  background:radial-gradient(closest-side,var(--card) calc(100% - var(--w)),transparent calc(100% - var(--w) + 1px)),conic-gradient(var(--c) calc(var(--p)*1%),var(--track) 0)}
+.ring>div{text-align:center;line-height:1}
+.ring .num{font:400 calc(var(--size)*.36)/1 var(--display);font-variant-numeric:tabular-nums}
+.ring .of{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.c-good{--c:var(--good)}.c-mid{--c:var(--mid)}.c-bad{--c:var(--bad)}.c-none{--c:var(--track)}
+.hero{text-align:center;margin-top:22px}
+.grade{display:inline-block;margin-top:16px;padding:4px 14px;border-radius:20px;font-weight:700;font-size:14px}
+.g-good{background:var(--good-bg);color:var(--good)}.g-mid{background:var(--mid-bg);color:var(--mid)}.g-bad{background:var(--bad-bg);color:var(--bad)}
+.verdict{font:400 26px/1.25 var(--display);margin:14px auto 6px;max-width:30ch}
+.parts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.part{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 8px;text-align:center}
+.part .ring{--size:84px;--w:9px}
+.part .num{font-size:28px}
+.part b{display:block;font-size:22px;font-variant-numeric:tabular-nums;line-height:84px}
+.part span{display:block;margin-top:8px;font-size:13px;color:var(--muted);line-height:1.3}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.checks li:last-child{border-bottom:0}
+.ok{flex:none;width:26px;height:26px;border-radius:50%;background:var(--good-bg);color:var(--good);display:grid;place-items:center;font-weight:700;font-size:14px}
+.fixes{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:f}
+.fixes li{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--bad);border-radius:12px;padding:16px 18px;counter-increment:f}
+.fixes li.mid{border-left-color:var(--mid)}
+.fixes .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:6px}
+.fixes h3::before{content:counter(f) ". ";color:var(--muted)}
+.pts{flex:none;font-size:13px;font-weight:700;color:var(--accent);background:var(--tint);padding:2px 10px;border-radius:12px;white-space:nowrap}
+.fixes p{margin:0}
+.flags{background:var(--mid-bg);border-radius:12px;padding:14px 18px 14px 36px;margin:0}
+.flags li{margin:6px 0}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) 3.5em;gap:10px;align-items:center;font-size:14px}
+.bar .name{min-width:0}
+.bar .name span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .track{height:10px;background:var(--track);border-radius:6px;margin-top:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--muted);border-radius:6px}
+.bar.you .fill{background:var(--accent)}.bar.you{font-weight:700;color:var(--accent)}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums}
+details{margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+summary{cursor:pointer;font-weight:700}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding-block:12px;border-bottom:1px solid var(--line)}
+.st{font-size:13px;font-weight:700}.good{color:var(--good)}.mid{color:var(--mid)}.bad{color:var(--bad)}
+footer{margin-top:40px;padding-top:14px;border-top:2px solid var(--fg);font-size:13px;color:var(--muted)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:600px){.parts{grid-template-columns:repeat(2,minmax(0,1fr))}.row{grid-template-columns:1fr;gap:2px}.ring{--size:170px}.card{padding:18px}}
 
-/* Hero */
-.hero{display:grid;gap:14px;padding-bottom:28px;border-bottom:1px solid var(--line)}
-.hero .lede{font-size:18px;color:var(--muted)}
-.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:10px;border-top:1px solid var(--line)}
-.how div{padding:14px 16px 4px 0;display:grid;gap:4px;align-content:start;min-width:0}
-.how b{font:700 11px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.how span{font-size:14.5px}
-
-/* Main grid */
-.grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:start;margin-top:28px}
-.part-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:22px 0 6px;border-bottom:2px solid var(--fg)}
-.part-head h2{font-size:26px}
-.part-head span{font:500 13px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
-fieldset{border:0;border-bottom:1px solid var(--line);margin:0;padding:16px 0 18px;min-width:0;display:grid;gap:10px}
-legend{display:contents}
-.qline{display:grid;grid-template-columns:28px minmax(0,1fr) 18px;gap:8px;align-items:start}
-.qn{font:600 20px/1.2 var(--display);color:var(--muted);font-variant-numeric:lining-nums tabular-nums}
-.qt{font-weight:700;line-height:1.4}
-.dot{width:12px;height:12px;border-radius:50%;margin-top:5px;border:1.5px solid var(--line)}
-.dot.good{background:var(--good);border-color:var(--good)}.dot.mid{background:var(--mid);border-color:var(--mid)}.dot.bad{background:var(--bad);border-color:var(--bad)}.dot.na{background:var(--line)}
-.opts{display:flex;flex-wrap:wrap;gap:8px;padding-left:36px}
-.opts label{position:relative;border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;font-size:15px;background:var(--bg);transition:border-color .15s,background .15s}
-.opts input{position:absolute;opacity:0;width:1px;height:1px}
-.opts label:hover{border-color:var(--caramel)}
-.opts label:has(:checked){background:var(--caramel);border-color:var(--caramel);color:var(--on-caramel)}
-.opts label:has(:focus-visible){outline:3px solid var(--caramel);outline-offset:2px}
-
-/* Live card */
-.card{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--ink);color:var(--ink-fg);border-radius:14px;padding:22px;display:grid;gap:18px}
-.card .eyebrow{color:var(--ink-fg);opacity:.7}
-.ringrow{display:flex;gap:18px;align-items:center}
-.ring{position:relative;flex:none}
-.ring svg{display:block;transform:rotate(-90deg)}
-.ring .track{fill:none;stroke:color-mix(in srgb,var(--ink-fg) 16%,transparent)}
-.ring .val{fill:none;stroke-linecap:round;transition:stroke-dashoffset .6s ease,stroke .3s}
-.ring .label{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
-.ring .num{font:600 44px/1 var(--display);font-variant-numeric:lining-nums tabular-nums}
-.ring .gr{font:700 11px/1.2 var(--body);letter-spacing:.1em;opacity:.75;margin-top:4px}
-.verdict{display:grid;gap:4px;min-width:0}
-.verdict b{font-size:17px;line-height:1.3}
-.verdict span{font-size:14px;opacity:.75}
-.parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;border-top:1px solid color-mix(in srgb,var(--ink-fg) 18%,transparent);padding-top:16px}
-.part{display:grid;justify-items:center;gap:6px;text-align:center}
-.part .num{font-size:20px}
-.part small{font-size:12px;opacity:.8;line-height:1.3}
-.progress{font-size:13px;opacity:.75}
-.bar{height:4px;background:color-mix(in srgb,var(--ink-fg) 16%,transparent);border-radius:2px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--caramel);width:0;transition:width .3s}
-
-/* Report */
-#report{margin-top:48px;display:grid;gap:28px}
-.report-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;background:var(--soft);border-radius:14px;padding:28px}
-.report-top .ring .track{stroke:var(--ring-track)}
-.report-top .verdict b{font:600 clamp(26px,3.6vw,34px)/1.12 var(--display);font-variant-numeric:lining-nums}
-.report-top .verdict span{opacity:1;color:var(--muted);font-size:15px}
-.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
-.list{list-style:none;margin:12px 0 0;padding:0}
-.list li{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
-.ico{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 13px/1 var(--body);color:var(--bg)}
-.ico.good{background:var(--good)}.ico.mid{background:var(--mid)}.ico.bad{background:var(--bad)}.ico.na{background:var(--muted)}
-.list .part-tag{font:700 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
-.list p{font-size:14.5px;color:var(--muted);margin-top:3px}
-.pts{font:500 13px var(--body);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
-.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-button{font:700 15px var(--body);background:var(--caramel);color:var(--on-caramel);border:0;border-radius:999px;padding:12px 20px;cursor:pointer}
-button.ghost{background:transparent;color:var(--caramel);border:1.5px solid var(--caramel)}
-textarea{width:100%;min-height:170px;font:14px/1.5 var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px}
-.offer{border-top:2px solid var(--fg);padding-top:24px;display:grid;gap:10px}
-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:grid;gap:4px}
-
-@media (max-width:860px){
-  .grid{grid-template-columns:minmax(0,1fr);gap:0}
-  .card{order:-1;position:sticky;top:env(safe-area-inset-top,0px);border-radius:0 0 14px 14px;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:14px max(16px,env(safe-area-inset-left,0px));gap:10px;z-index:5}
-  .card .eyebrow,.card .parts,.card .verdict span{display:none}
-  .card .ring svg{width:64px;height:64px}.card .ring .num{font-size:24px}.card .ring .gr{font-size:9px}
-  .how{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .cols{grid-template-columns:minmax(0,1fr);gap:24px}
-  .report-top{grid-template-columns:minmax(0,1fr);justify-items:start;padding:22px}
-}
-@media (max-width:420px){.opts{padding-left:0}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body>
-<main class="wrap">
-  <header class="hero">
-    <div class="eyebrow">Free for local business owners</div>
-    <h1>How strong is your Google profile?</h1>
-    <p class="lede">Open your business on Google Maps in another tab and answer 12 quick questions. Your score builds as you go.</p>
-    <div class="how">
-      <div><b>What it checks</b><span>The 12 things owners control on a Google Business Profile.</span></div>
-      <div><b>How long</b><span>About three minutes, on your phone or computer.</span></div>
-      <div><b>What it never does</b><span>No login, no email, and your answers aren’t stored.</span></div>
-      <div><b>What you get</b><span>A score out of 100, a grade, and a fix-first list.</span></div>
-    </div>
-  </header>
-
-  <div class="grid">
-    <div id="questions"></div>
-    <aside class="card" aria-label="Your score so far">
-      <div class="eyebrow">Your report card</div>
-      <div class="ringrow">
-        <div class="ring" id="live-ring"></div>
-        <div class="verdict"><b id="live-verdict">Answer the first question to start your score.</b><span id="live-sub">Twelve questions in three parts.</span></div>
-      </div>
-      <div class="parts" id="live-parts"></div>
-      <div><div class="progress" id="progress" aria-live="polite">0 of 12 answered</div><div class="bar"><i id="bar"></i></div></div>
-    </aside>
-  </div>
-
-  <section id="report" hidden aria-labelledby="report-title">
-    <div class="report-top">
-      <div class="ring" id="final-ring"></div>
-      <div class="verdict"><span class="eyebrow">Google profile check</span><b id="report-title"></b><span id="report-sub"></span></div>
-    </div>
-    <div class="cols">
-      <div><h2 id="fix-head">Fix these first</h2><ol class="list" id="fixes"></ol></div>
-      <div><h2>What you’re doing well</h2><ul class="list" id="wins"></ul></div>
-    </div>
-    <div class="actions">
-      <button id="copy-results">Copy my results</button>
-      <button class="ghost" id="copy-link" hidden>Copy my results link</button>
-      <span id="copied" class="muted" role="status"></span>
-    </div>
-    <p id="link-tip" class="muted">To share this result, copy the link from your browser’s address bar.</p>
-    <textarea id="manual" aria-label="Results to copy" hidden></textarea>
-  </section>
-
-  <section class="offer">
-    <h2>Want me to check it for you?</h2>
-    <p>I’ll read your profile the way a customer does, see who shows up ahead of you on the map, and send you a private report. It’s free. Email your business name and town to <b>shaunasellstampa@gmail.com</b>.</p>
-  </section>
-
-  <footer>
+fieldset{border:0;border-bottom:1px solid var(--line);margin:0;padding:18px 0;min-width:0}fieldset:last-child{border-bottom:0}#progress{position:sticky;bottom:0;background:var(--bg);padding:10px 0;margin:0;text-align:center;font-weight:700}
+legend{font-weight:700;float:left;width:100%;margin-bottom:10px;padding:0}
+.opts{clear:both;display:flex;flex-wrap:wrap;gap:8px}
+.opts label{border:1px solid var(--line);border-radius:22px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.opts label:has(:checked){background:var(--tint);border-color:var(--accent)}
+input{accent-color:var(--accent)}
+button{font:700 15px var(--body);background:var(--accent);color:var(--on-accent);border:0;border-radius:22px;padding:11px 18px;cursor:pointer;margin:8px 8px 8px 0}
+textarea{width:100%;min-height:180px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style><main class="wrap">
+<div class="center"><div class="eyebrow">Free for local business owners</div>
+<h1>How strong is your Google profile?</h1>
+<p>Open your business on Google in another tab and answer 12 questions. You get a score and a fix-first list in about three minutes. No login or email, and your answers aren’t stored.</p></div>
+<div class="parts"><div class="part"><b>6</b><span>checks on the basics</span></div><div class="part"><b>4</b><span>checks on reviews</span></div><div class="part"><b>2</b><span>checks on photos and posts</span></div><div class="part"><b>0–100</b><span>score, with a grade</span></div></div>
+<div id="questions" class="card" style="margin-top:24px"><fieldset><legend>Have you claimed and verified your profile?</legend><div class="opts"><label><input type="radio" name="q0" id="q0-0"><span>Yes</span></label><label><input type="radio" name="q0" id="q0-1"><span>Started, not verified</span></label><label><input type="radio" name="q0" id="q0-2"><span>No</span></label><label><input type="radio" name="q0" id="q0-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>Does your main category say exactly what you do?</legend><div class="opts"><label><input type="radio" name="q1" id="q1-0"><span>Yes, it is specific</span></label><label><input type="radio" name="q1" id="q1-1"><span>It is close, but broad</span></label><label><input type="radio" name="q1" id="q1-2"><span>No category, or the wrong one</span></label><label><input type="radio" name="q1" id="q1-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>Are your hours correct for all seven days?</legend><div class="opts"><label><input type="radio" name="q2" id="q2-0"><span>Yes</span></label><label><input type="radio" name="q2" id="q2-1"><span>Some are off</span></label><label><input type="radio" name="q2" id="q2-2"><span>Not set</span></label><label><input type="radio" name="q2" id="q2-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>Are your phone and your address or service area correct?</legend><div class="opts"><label><input type="radio" name="q3" id="q3-0"><span>Both</span></label><label><input type="radio" name="q3" id="q3-1"><span>One of them</span></label><label><input type="radio" name="q3" id="q3-2"><span>Neither</span></label><label><input type="radio" name="q3" id="q3-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>Does your profile link to a website that works on a phone?</legend><div class="opts"><label><input type="radio" name="q4" id="q4-0"><span>Yes</span></label><label><input type="radio" name="q4" id="q4-1"><span>Only to social media</span></label><label><input type="radio" name="q4" id="q4-2"><span>No link</span></label><label><input type="radio" name="q4" id="q4-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>Does your description say who you help, with what, and where?</legend><div class="opts"><label><input type="radio" name="q5" id="q5-0"><span>All three</span></label><label><input type="radio" name="q5" id="q5-1"><span>Some of it</span></label><label><input type="radio" name="q5" id="q5-2"><span>No description</span></label><label><input type="radio" name="q5" id="q5-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>What is your star rating?</legend><div class="opts"><label><input type="radio" name="q6" id="q6-0"><span>4.5 or higher</span></label><label><input type="radio" name="q6" id="q6-1"><span>4.0 to 4.4</span></label><label><input type="radio" name="q6" id="q6-2"><span>Under 4.0, or no reviews</span></label><label><input type="radio" name="q6" id="q6-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>How does your review count compare with the top three in your search?</legend><div class="opts"><label><input type="radio" name="q7" id="q7-0"><span>As many or more</span></label><label><input type="radio" name="q7" id="q7-1"><span>At least half as many</span></label><label><input type="radio" name="q7" id="q7-2"><span>Less than half</span></label><label><input type="radio" name="q7" id="q7-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>When was your newest review?</legend><div class="opts"><label><input type="radio" name="q8" id="q8-0"><span>Within 30 days</span></label><label><input type="radio" name="q8" id="q8-1"><span>Within 90 days</span></label><label><input type="radio" name="q8" id="q8-2"><span>Older, or never</span></label><label><input type="radio" name="q8" id="q8-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>Have you replied to your 10 newest reviews?</legend><div class="opts"><label><input type="radio" name="q9" id="q9-0"><span>Almost all</span></label><label><input type="radio" name="q9" id="q9-1"><span>About half</span></label><label><input type="radio" name="q9" id="q9-2"><span>Few or none</span></label><label><input type="radio" name="q9" id="q9-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>How many of your own photos are on the profile?</legend><div class="opts"><label><input type="radio" name="q10" id="q10-0"><span>10 or more</span></label><label><input type="radio" name="q10" id="q10-1"><span>1 to 9</span></label><label><input type="radio" name="q10" id="q10-2"><span>None</span></label><label><input type="radio" name="q10" id="q10-3"><span>Not sure</span></label></div></fieldset><fieldset><legend>When did you last post an update?</legend><div class="opts"><label><input type="radio" name="q11" id="q11-0"><span>Within 14 days</span></label><label><input type="radio" name="q11" id="q11-1"><span>Within 45 days</span></label><label><input type="radio" name="q11" id="q11-2"><span>Older, or never</span></label><label><input type="radio" name="q11" id="q11-3"><span>Not sure</span></label></div></fieldset></div>
+<p id="progress" class="muted" aria-live="polite" style="padding-top:14px">0 of 12 answered</p>
+<section id="result" hidden><h2 class="center">Your results</h2>
+<div class="card hero"><div class="ring" id="ring" role="img"><div><span class="num" id="num"></span><span class="of">out of 100</span></div></div>
+<span class="grade" id="grade" hidden></span><p class="verdict" id="verdict"></p><p class="muted" id="measured"></p></div>
+<div class="parts" id="parts"></div>
+<h2 id="fix-head">Fix these first</h2><ol class="fixes" id="fixes"></ol>
+<h2 id="win-head">Doing well</h2><ul class="checks card" id="wins"></ul>
+<p style="margin-top:20px"><button id="copy-results">Copy my results</button><button id="copy-link" hidden>Copy my results link</button></p>
+<p id="link-tip" class="muted">To share this result, copy the link from your browser’s address bar.</p>
+<p id="copied" role="status"></p><textarea id="manual" aria-label="Results to copy" hidden></textarea></section>
+<h2>Want me to check it for you?</h2>
+<p>I’ll read your profile the way a customer does, see who shows up ahead of you, and send a private report. It’s free. Email your business name and town to <b>shaunasellstampa@gmail.com</b>.</p>
+<footer>
     <div><b>Shauna Banning, Coldwell Banker Realty</b> · (813) 798-9610 · shaunasellstampa@gmail.com · <a href="https://shaunabanning.com/">shaunabanning.com</a> · <a href="https://shaunabanning.com/privacy/">Privacy Policy</a></div>
     <div>An educational self-check. It is not affiliated with Google and cannot promise a map position. Never offer anything in exchange for a review.</div>
-  </footer>
-</main>
+  </footer></main>
+<script>const RUBRIC=[{"id": "claimed", "part": "Basics", "pts": 10, "name": "Claimed by the owner", "q": "Have you claimed and verified your profile?", "a": ["Yes", "Started, not verified", "No"], "fix": "Search your business on Google, tap \u201cClaim this business\u201d and finish verification."}, {"id": "category", "part": "Basics", "pts": 8, "name": "Main category", "q": "Does your main category say exactly what you do?", "a": ["Yes, it is specific", "It is close, but broad", "No category, or the wrong one"], "fix": "Edit profile, then Business category. Pick the most specific one that is true."}, {"id": "hours", "part": "Basics", "pts": 7, "name": "Hours", "q": "Are your hours correct for all seven days?", "a": ["Yes", "Some are off", "Not set"], "fix": "Set all seven days, then add holiday hours."}, {"id": "contact", "part": "Basics", "pts": 5, "name": "Phone and location", "q": "Are your phone and your address or service area correct?", "a": ["Both", "One of them", "Neither"], "fix": "Add a local phone number and your address or service area. Make them match your website."}, {"id": "website", "part": "Basics", "pts": 7, "name": "Website", "q": "Does your profile link to a website that works on a phone?", "a": ["Yes", "Only to social media", "No link"], "fix": "Link to one working page that says what you do, where, and how to reach you."}, {"id": "description", "part": "Basics", "pts": 5, "name": "Description", "q": "Does your description say who you help, with what, and where?", "a": ["All three", "Some of it", "No description"], "fix": "Write a few plain sentences covering who you help, what you do and the towns you serve."}, {"id": "rating", "part": "Reviews", "pts": 10, "name": "Star rating", "q": "What is your star rating?", "a": ["4.5 or higher", "4.0 to 4.4", "Under 4.0, or no reviews"], "fix": "Read your lowest reviews, fix what repeats, and reply calmly to each."}, {"id": "count", "part": "Reviews", "pts": 12, "name": "Review count", "q": "How does your review count compare with the top three in your search?", "a": ["As many or more", "At least half as many", "Less than half"], "fix": "Ask each real customer for a review with your direct link. Never offer anything in return."}, {"id": "recent", "part": "Reviews", "pts": 10, "name": "Recent reviews", "q": "When was your newest review?", "a": ["Within 30 days", "Within 90 days", "Older, or never"], "fix": "Make the review ask the last step of every job, so new ones keep arriving."}, {"id": "replies", "part": "Reviews", "pts": 10, "name": "Replies to reviews", "q": "Have you replied to your 10 newest reviews?", "a": ["Almost all", "About half", "Few or none"], "fix": "Reply to every review, starting today. Two sentences is plenty."}, {"id": "photos", "part": "Photos and posts", "pts": 8, "name": "Photos from the owner", "q": "How many of your own photos are on the profile?", "a": ["10 or more", "1 to 9", "None"], "fix": "Add real photos of you, the work, the team and the place."}, {"id": "posts", "part": "Photos and posts", "pts": 8, "name": "Recent update", "q": "When did you last post an update?", "a": ["Within 14 days", "Within 45 days", "Older, or never"], "fix": "Post one useful update a week with a photo and a button."}];
+const CODE = /^#r-([0-3n]{12})$/, VALUE = [1, .5, 0, null];
+const $ = id => document.getElementById(id);
+let answers = Array(RUBRIC.length).fill(null);
 
-<script>
-const RUBRIC=[{"id":"claimed","part":"Basics","pts":10,"name":"Claimed by the owner","q":"Have you claimed and verified your profile?","a":["Yes","Started, not verified","No"],"fix":"Search your business on Google, tap “Claim this business” and finish verification."},{"id":"category","part":"Basics","pts":8,"name":"Main category","q":"Does your main category say exactly what you do?","a":["Yes, it is specific","It is close, but broad","No category, or the wrong one"],"fix":"Edit profile, then Business category. Pick the most specific one that is true."},{"id":"hours","part":"Basics","pts":7,"name":"Hours","q":"Are your hours correct for all seven days?","a":["Yes","Some are off","Not set"],"fix":"Set all seven days, then add holiday hours."},{"id":"contact","part":"Basics","pts":5,"name":"Phone and location","q":"Are your phone and your address or service area correct?","a":["Both","One of them","Neither"],"fix":"Add a local phone number and your address or service area. Make them match your website."},{"id":"website","part":"Basics","pts":7,"name":"Website","q":"Does your profile link to a website that works on a phone?","a":["Yes","Only to social media","No link"],"fix":"Link to one working page that says what you do, where, and how to reach you."},{"id":"description","part":"Basics","pts":5,"name":"Description","q":"Does your description say who you help, with what, and where?","a":["All three","Some of it","No description"],"fix":"Write a few plain sentences covering who you help, what you do and the towns you serve."},{"id":"rating","part":"Reviews","pts":10,"name":"Star rating","q":"What is your star rating?","a":["4.5 or higher","4.0 to 4.4","Under 4.0, or no reviews"],"fix":"Read your lowest reviews, fix what repeats, and reply calmly to each."},{"id":"count","part":"Reviews","pts":12,"name":"Review count","q":"How does your review count compare with the top three in your search?","a":["As many or more","At least half as many","Less than half"],"fix":"Ask each real customer for a review with your direct link. Never offer anything in return."},{"id":"recent","part":"Reviews","pts":10,"name":"Recent reviews","q":"When was your newest review?","a":["Within 30 days","Within 90 days","Older, or never"],"fix":"Make the review ask the last step of every job, so new ones keep arriving."},{"id":"replies","part":"Reviews","pts":10,"name":"Replies to reviews","q":"Have you replied to your 10 newest reviews?","a":["Almost all","About half","Few or none"],"fix":"Reply to every review, starting today. Two sentences is plenty."},{"id":"photos","part":"Photos and posts","pts":8,"name":"Photos from the owner","q":"How many of your own photos are on the profile?","a":["10 or more","1 to 9","None"],"fix":"Add real photos of you, the work, the team and the place."},{"id":"posts","part":"Photos and posts","pts":8,"name":"Recent update","q":"When did you last post an update?","a":["Within 14 days","Within 45 days","Older, or never"],"fix":"Post one useful update a week with a photo and a button."}];
-const PARTS=['Basics','Reviews','Photos and posts'];
-const CODE=/^#r-([0-3n]{12})$/, VALUE=[1,.5,0,null], STATE=['good','mid','bad','na'];
-const $=id=>document.getElementById(id);
-let answers=Array(RUBRIC.length).fill(null);
-
-/* Questions, grouped by part */
-(function build(){
-  const box=$('questions');
-  PARTS.forEach(part=>{
-    const qs=RUBRIC.map((q,i)=>({q,i})).filter(x=>x.q.part===part);
-    const head=document.createElement('div');head.className='part-head';
-    head.innerHTML=`<h2></h2><span>${qs.length} questions · ${qs.reduce((s,x)=>s+x.q.pts,0)} points</span>`;
-    head.querySelector('h2').textContent=part;box.append(head);
-    qs.forEach(({q,i})=>{
-      const fs=document.createElement('fieldset');
-      fs.innerHTML=`<legend><div class="qline"><span class="qn">${i+1}</span><span class="qt"></span><span class="dot" id="dot${i}" aria-hidden="true"></span></div></legend><div class="opts"></div>`;
-      fs.querySelector('.qt').textContent=q.q;
-      const opts=fs.querySelector('.opts');
-      [...q.a,'Not sure'].forEach((label,j)=>{
-        const l=document.createElement('label'),inp=document.createElement('input'),s=document.createElement('span');
-        inp.type='radio';inp.name='q'+i;inp.id=`q${i}-${j}`;s.textContent=label;l.append(inp,s);opts.append(l);
-      });
-      box.append(fs);
-    });
+function readLink() {
+  const m = location.hash.match(CODE);
+  answers = m ? [...m[1]].map(c => c === 'n' ? null : +c) : Array(RUBRIC.length).fill(null);
+}
+function result(a) {
+  let got = 0, seen = 0, fixes = [];
+  RUBRIC.forEach((q, i) => {
+    if (a[i] === null || a[i] === 3) return;
+    const v = VALUE[a[i]];
+    got += q.pts * v; seen += q.pts;
+    if (v < 1) fixes.push({name: q.name, fix: q.fix, lost: q.pts * (1 - v)});
   });
-})();
-
-function ringSVG(el,score,size,stroke){
-  const r=(size-stroke)/2,c=2*Math.PI*r,v=score===null?0:score/100;
-  const col=score===null?'var(--muted)':score>=80?'var(--good)':score>=60?'var(--mid)':'var(--bad)';
-  if(!el.firstChild){
-    el.innerHTML=`<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-hidden="true"><circle class="track" cx="${size/2}" cy="${size/2}" r="${r}" stroke-width="${stroke}"/><circle class="val" cx="${size/2}" cy="${size/2}" r="${r}" stroke-width="${stroke}" stroke-dasharray="${c}" stroke-dashoffset="${c}"/></svg><div class="label"><span class="num"></span><span class="gr"></span></div>`;
-  }
-  const val=el.querySelector('.val');
-  requestAnimationFrame(()=>{val.style.stroke=col;val.style.strokeDashoffset=c*(1-v)});
-  return el;
+  fixes.sort((x, y) => y.lost - x.lost);
+  const score = seen >= 70 ? Math.floor(got * 100 / seen + .5) : null;
+  const grade = score === null ? '' : score >= 90 ? 'A' : score >= 80 ? 'B' : score >= 70 ? 'C' : score >= 60 ? 'D' : 'F';
+  return {score, grade, fixes, seen};
 }
-function setRing(el,score,grade,size,stroke){
-  ringSVG(el,score,size,stroke);
-  el.querySelector('.num').textContent=score===null?'–':score;
-  el.querySelector('.gr').textContent=grade;
+const tone = v => v === null ? 'none' : v >= 80 ? 'good' : v >= 60 ? 'mid' : 'bad';
+function el(tag, cls, text) { const x = document.createElement(tag); if (cls) x.className = cls; if (text != null) x.textContent = text; return x; }
+function show() {
+  const n = answers.filter(x => x !== null).length, done = n === RUBRIC.length, r = result(answers);
+  $('result').hidden = !done;
+  $('progress').textContent = done ? 'All 12 answered. Your results are below.' : `${n} of 12 answered`;
+  if (!done) return;
+  const t = tone(r.score);
+  $('ring').className = 'ring c-' + t; $('ring').style.setProperty('--p', r.score || 0);
+  $('ring').setAttribute('aria-label', r.score === null ? 'No score' : `Score ${r.score} out of 100`);
+  $('num').textContent = r.score === null ? '–' : r.score;
+  $('grade').hidden = r.score === null; $('grade').className = 'grade g-' + t; $('grade').textContent = 'Grade ' + r.grade;
+  const parts = {};
+  RUBRIC.forEach((q, i) => { const a = answers[i]; if (a === null || a === 3) return;
+    const p = parts[q.part] || (parts[q.part] = {got: 0, seen: 0}); p.got += q.pts * VALUE[a]; p.seen += q.pts; });
+  const ps = Object.keys(parts).map(k => [k, Math.floor(parts[k].got * 100 / parts[k].seen + .5)]);
+  const sorted = [...ps].sort((x, y) => y[1] - x[1]);
+  $('verdict').textContent = r.score === null ? 'Too many “not sure” answers to grade.'
+    : sorted.length > 1 && sorted.at(-1)[1] < 80 ? `Strong ${sorted[0][0].toLowerCase()}. ${sorted.at(-1)[0]} ${/s$/.test(sorted.at(-1)[0]) ? 'are' : 'is'} holding you back.` : 'Solid across the board. Keep it fresh.';
+  const wins = RUBRIC.filter((q, i) => answers[i] === 0);
+  $('measured').textContent = `${wins.length} done well · ${r.fixes.length} to fix · ${r.seen} of 100 points measured`;
+  const tiles = ['Basics', 'Reviews', 'Photos and posts'].map(k => {
+    const v = (ps.find(x => x[0] === k) || [k, null])[1], d = el('div', 'part'), ring = el('div', 'ring c-' + tone(v));
+    ring.style.setProperty('--p', v || 0); const inner = el('div'); inner.append(el('span', 'num', v === null ? '–' : v)); ring.append(inner);
+    d.append(ring, el('span', null, k)); return d; });
+  const f = el('div', 'part'); f.append(el('b', null, r.fixes.length), el('span', null, 'fixes to make')); tiles.push(f);
+  $('parts').replaceChildren(...tiles);
+  $('fixes').replaceChildren(...r.fixes.map(x => {
+    const li = el('li', x.lost < RUBRIC.find(q => q.name === x.name).pts ? 'mid' : ''), top = el('div', 'top');
+    top.append(el('h3', null, x.name), el('span', 'pts', `+${x.lost} pts`)); li.append(top, el('p', null, x.fix)); return li; }));
+  $('fix-head').textContent = r.fixes.length ? 'Fix these first' : 'Nothing to fix from your answers';
+  $('wins').replaceChildren(...wins.map(q => { const li = el('li'), d = el('div');
+    const ok = el('span', 'ok', '✓'); ok.setAttribute('aria-hidden', 'true'); d.append(el('h3', null, q.name)); li.append(ok, d); return li; }));
+  $('win-head').hidden = $('wins').hidden = !wins.length;
 }
-function gradeOf(s){return s===null?'':s>=90?'A':s>=80?'B':s>=70?'C':s>=60?'D':'F'}
-function result(a,only){
-  let got=0,seen=0,fixes=[],wins=[],unknown=[];
-  RUBRIC.forEach((q,i)=>{
-    if(only&&q.part!==only)return;
-    if(a[i]===null)return;
-    if(a[i]===3){unknown.push(q);return}
-    const v=VALUE[a[i]];got+=q.pts*v;seen+=q.pts;
-    if(v<1)fixes.push({q,v,lost:q.pts*(1-v)});else wins.push({q});
-  });
-  fixes.sort((x,y)=>y.lost-x.lost);
-  const live=seen?Math.round(got*100/seen):null;
-  return{got,seen,live,fixes,wins,unknown};
+function draw() {
+  answers.forEach((v, i) => { for (let j = 0; j < 4; j++) $(`q${i}-${j}`).checked = v === j; });
+  show();
 }
-
-function show(){
-  const n=answers.filter(x=>x!==null).length,done=n===RUBRIC.length,r=result(answers);
-  answers.forEach((v,i)=>{$('dot'+i).className='dot'+(v===null?'':' '+STATE[v])});
-  $('progress').textContent=done?'All 12 answered. Your report is below.':`${n} of 12 answered`;
-  $('bar').style.width=(n/12*100)+'%';
-  setRing($('live-ring'),r.live,r.live===null?'':'SO FAR',112,10);
-  $('live-verdict').textContent=r.live===null?'Answer the first question to start your score.':r.fixes.length?`${r.fixes.length} thing${r.fixes.length>1?'s':''} to fix so far.`:'Nothing to fix so far.';
-  $('live-sub').textContent=r.live===null?'Twelve questions in three parts.':`${r.seen} of 100 points answered.`;
-  const lp=$('live-parts');
-  if(!lp.children.length)PARTS.forEach(p=>{const d=document.createElement('div');d.className='part';d.innerHTML='<div class="ring"></div><small></small>';d.querySelector('small').textContent=p;lp.append(d)});
-  PARTS.forEach((p,k)=>{const pr=result(answers,p);setRing(lp.children[k].querySelector('.ring'),pr.live,'',64,6)});
-
-  $('report').hidden=!done;
-  if(!done)return;
-  const score=r.seen>=70?Math.round(r.got*100/r.seen):null,g=gradeOf(score);
-  setRing($('final-ring'),score,score===null?'':'GRADE '+g,170,14);
-  $('report-title').textContent=score===null?'Too many “not sure” answers to grade.':`${score} out of 100, ${/^[AEF]/.test(g)?'an':'a'} ${g}. ${r.fixes.length?r.fixes.length+' thing'+(r.fixes.length>1?'s':'')+' to fix.':'Nothing to fix from your answers.'}`;
-  $('report-sub').textContent=`${r.wins.length} looked good, ${r.fixes.length} to fix, ${r.unknown.length} not sure. The score covers what you control. Where you show up on the map also depends on where the customer is standing.`;
-  const row=(cls,mark,q,text,pts)=>{const li=document.createElement('li');
-    li.innerHTML=`<span class="ico ${cls}" aria-hidden="true">${mark}</span><div><span class="part-tag"></span><h3></h3>${text?'<p></p>':''}</div><span class="pts"></span>`;
-    li.querySelector('.part-tag').textContent=q.part;li.querySelector('h3').textContent=q.name;if(text)li.querySelector('p').textContent=text;li.querySelector('.pts').textContent=pts;return li};
-  $('fixes').replaceChildren(...r.fixes.map(f=>row(f.v===0?'bad':'mid',f.v===0?'!':'–',f.q,f.q.fix,`+${f.lost} pts`)),...r.unknown.map(q=>row('na','?',q,'You weren’t sure. Check this one on your profile.','')));
-  $('wins').replaceChildren(...(r.wins.length?r.wins.map(w=>row('good','✓',w.q,'',`${w.q.pts} pts`)):[Object.assign(document.createElement('li'),{textContent:'Nothing yet. Start with the first fix on the left.'})]));
-  $('fix-head').textContent=r.fixes.length||r.unknown.length?'Fix these first':'Nothing to fix';
+function summary() {
+  const r = result(answers);
+  return ['Google Profile Self-Check', r.score === null ? 'Not enough measured to grade' : `${r.score}/100, grade ${r.grade}`, '',
+    ...r.fixes.map((f, i) => `${i + 1}. ${f.name}: ${f.fix}`), '', 'From Shauna Banning, Coldwell Banker Realty'].join('\n');
 }
-function draw(){answers.forEach((v,i)=>{for(let j=0;j<4;j++)$(`q${i}-${j}`).checked=v===j});show()}
-function readLink(){const m=location.hash.match(CODE);answers=m?[...m[1]].map(c=>c==='n'?null:+c):Array(RUBRIC.length).fill(null)}
-function summary(){
-  const r=result(answers),score=r.seen>=70?Math.round(r.got*100/r.seen):null;
-  return['Google Profile Check',score===null?'Not enough measured to grade':`${score}/100, grade ${gradeOf(score)}`,'','Fix these first:',...r.fixes.map((f,i)=>`${i+1}. ${f.q.name}: ${f.q.fix}`),'','Doing well: '+(r.wins.map(w=>w.q.name).join(', ')||'none yet'),'','From Shauna Banning, Coldwell Banker Realty · shaunabanning.com/google-profile-check'].join('\n');
+async function copy(text) {
+  try { await navigator.clipboard.writeText(text); $('copied').textContent = 'Copied.'; }
+  catch { $('manual').hidden = false; $('manual').value = text; $('manual').select(); $('copied').textContent = 'Select the text and copy it.'; }
 }
-async function copy(text){
-  try{await navigator.clipboard.writeText(text);$('copied').textContent='Copied.'}
-  catch{$('manual').hidden=false;$('manual').value=text;$('manual').select();$('copied').textContent='Select the text and copy it.'}
-}
-$('questions').addEventListener('change',ev=>{
-  const[i,j]=ev.target.id.slice(1).split('-').map(Number);answers[i]=j;show();
+$('questions').addEventListener('change', ev => {
+  const [i, j] = ev.target.id.slice(1).split('-').map(Number);
+  answers[i] = j; show();
   // The answers travel in the link. No name, and nothing is stored.
-  const h='#r-'+answers.map(x=>x===null?'n':x).join('');
-  try{history.replaceState(null,'',h)}catch{location.hash=h}
+  location.hash = 'r-' + answers.map(x => x === null ? 'n' : x).join('');
 });
-$('copy-results').onclick=()=>copy(summary());
-const hosted=/(^|\.)(shaunabanning\.com|github\.io)$/.test(location.hostname);
-$('copy-link').hidden=!hosted;$('link-tip').hidden=hosted;
-$('copy-link').onclick=()=>copy(location.href);
-addEventListener('hashchange',()=>{readLink();draw()});
-readLink();draw();
+$('copy-results').onclick = () => copy(summary());
+// Inside claude.ai the frame's own address is not the shareable one.
+const hosted = /(^|\.)(shaunabanning\.com|github\.io)$/.test(location.hostname);
+$('copy-link').hidden = !hosted; $('link-tip').hidden = hosted;
+$('copy-link').onclick = () => copy(location.href);
+addEventListener('hashchange', () => { readLink(); draw(); });
+readLink(); draw();
 </script>
-</body></html>
+</html>

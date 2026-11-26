@@ -18,7 +18,7 @@
     if (Date.now() - (+get(KEY_CLOSED) || 0) < WEEK) return;
   }
 
-  var host = document.querySelector('[id^="fd-form-"]');
+  var host = document.querySelector('#monthly [id^="fd-form-"]') || document.querySelector('[id^="fd-form-"]:not(.dl-form)');
   if (!host || !window.fd) return;
   var formId = host.id.replace('fd-form-', '');
   var title = me.getAttribute('data-title') || 'Get the Monthly Update';

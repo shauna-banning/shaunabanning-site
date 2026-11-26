@@ -89,29 +89,62 @@ def hoods(c):
 </section>
 """
 
-# ===== FREE DOWNLOADS (same on every page). Fill in Flodesk form ids to switch the section on. =====
+# ===== FREE DOWNLOADS (same on every page; borrowed from Krista Mashore's cover-image "click to access" tiles, gated by Flodesk) =====
 DOWNLOADS = [
- # (title, blurb, flodesk_form_id)
- ("The Complete Guide to Buying a Home", "Every step from pre-approval to keys, with Florida costs nobody mentions.", ""),
- ("Moving Checklist", "What to do 8 weeks, 4 weeks and 1 week out, plus your first week here.", ""),
- ("The Complete Guide to Selling a Home", "How to price, prep and market your home to sell for top dollar.", ""),
- ("30-Day Plan to Prep Your Home for Sale", "A simple day-by-day list to get your home photo-ready in a month.", ""),
+ # (key, cover image, title, blurb, flodesk_form_id)
+ ("buyer", "cover-buyer.jpg", "The Complete Guide to Buying a Home", "Every step from pre-approval to keys, plus the Florida costs nobody mentions: CDDs, insurance and flood zones.", "6b08163e9698beb340fdf204"),
+ ("seller", "cover-seller.jpg", "The Complete Guide to Selling a Home", "What it really costs to sell in Florida, how to price it right and how I market your home.", "6b0816925a760592ef79686d"),
+ ("prep30", "cover-prep30.jpg", "30-Day Plan to Prep Your Home for Sale", "One small task a day, and your home is photo-ready in a month.", "6b0816b15340528a320c7a9a"),
 ]
+MOVING = ("moving", "cover-moving.jpg", "The Moving Checklist", "A countdown from 45 days out to your first week in the new place, plus packing, kids, pets and garage sale checklists.", "6b0816d1ddbcc784232c75b5")
+
+def dl_modal(key, cover, title, fid):
+    return f'''<dialog class="dl-modal" id="dl-{key}" aria-label="{E(title)}">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/{cover}?v=2" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>{E(title)}</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-{fid}" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{{formId:'{fid}',containerEl:'#fd-form-{fid}'}});</script>'''
+
 def downloads(slug):
-    if not all(d[2] for d in DOWNLOADS): return "<!-- FREE DOWNLOADS: hidden until all 4 Flodesk form ids are filled in DOWNLOADS -->"
-    cards = "\n".join(f'''      <div class="card dl"><span class="tag">Free Download</span><h3>{E(t)}</h3><p>{E(b)}</p>
-        <div id="fd-form-{fid}"></div><script>window.fd('form',{{formId:'{fid}',containerEl:'#fd-form-{fid}'}});</script></div>''' for t, b, fid in DOWNLOADS)
-    return f'''<!-- ===== FREE DOWNLOADS ===== -->
-<section id="downloads" class="alt">
+    cards = "\n".join(f'''      <div class="dl-card">
+        <button class="dl-cover" type="button" data-dl="{k}" aria-label="Get {E(t)}"><img src="../assets/img/guides/{img}?v=2" alt="{E(t)} cover" loading="lazy"></button>
+        <span class="tag">Free Guide</span>
+        <h3>{E(t)}</h3>
+        <p>{E(b)}</p>
+        <button class="btn btn-dark btn-sm" type="button" data-dl="{k}">Get the Free Guide</button>
+      </div>''' for k, img, t, b, fid in DOWNLOADS)
+    mk, mimg, mt, mb, mfid = MOVING
+    modals = "\n".join(dl_modal(k, img, t, fid) for k, img, t, b, fid in DOWNLOADS + [MOVING])
+    return f'''<!-- ===== FREE GUIDES ===== -->
+<section id="guides">
   <div class="wrap">
-    <span class="eyebrow">Free Downloads</span>
-    <h2>Guides for Buying, Selling &amp; Moving</h2>
-    <p class="lead">Pick what fits where you are. Each one lands in your inbox.</p>
-    <div class="grid-2" style="margin-top:34px">
+    <span class="eyebrow">Free Guides</span>
+    <h2>Buying, Selling or Moving? Start Here.</h2>
+    <p class="lead">Tap a guide and it lands in your inbox.</p>
+    <div class="grid-3 dl-grid">
 {cards}
+    </div>
+    <div class="dl-banner">
+      <button class="dl-cover" type="button" data-dl="{mk}" aria-label="Get {E(mt)}"><img src="../assets/img/guides/{mimg}?v=2" alt="{E(mt)} cover" loading="lazy"></button>
+      <div>
+        <span class="eyebrow">Free Checklist</span>
+        <h3>Moving Soon? Don't Forget a Thing.</h3>
+        <p>{E(mb)}</p>
+        <button class="btn btn-caramel" type="button" data-dl="{mk}">Get the Moving Checklist</button>
+      </div>
     </div>
   </div>
 </section>
+{modals}
+<script>document.querySelectorAll('[data-dl]').forEach(function(b){{b.addEventListener('click',function(){{var d=document.getElementById('dl-'+b.dataset.dl);if(d&&d.showModal){{d.showModal();if(window.gtag)gtag('event','guide_open',{{guide:b.dataset.dl,page_path:location.pathname}});}}}});}});
+document.querySelectorAll('.dl-modal').forEach(function(d){{d.querySelector('.dl-x').addEventListener('click',function(){{d.close();}});d.addEventListener('click',function(e){{if(e.target===d)d.close();}});}});</script>
 '''
 
 GA = """<!-- Google Analytics (GA4). Every form submit (home value, Flodesk sign-ups) is sent as a generate_lead event. -->
@@ -154,7 +187,7 @@ def page(slug, c):
 <meta property="og:image" content="https://shaunabanning.com/assets/img/{c['hero']['src'] if c.get('hero') else 'shauna-banning-realtor.jpg'}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=4">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
 {LOADER}
@@ -174,6 +207,7 @@ def page(slug, c):
   <ul>
     <li class="hide-sm"><a href="#market-update">Market Update</a></li>
     <li class="hide-sm"><a href="#living">Living Here</a></li>
+    <li class="hide-sm"><a href="#guides">Free Guides</a></li>
     <li class="hide-sm"><a href="#faq">FAQ</a></li>
     <li><a class="btn btn-dark btn-sm" href="../home-value/?source={slug}">Home Value</a></li>
   </ul>
@@ -234,6 +268,7 @@ def page(slug, c):
   </div>
 </section>
 
+{downloads(slug)}
 <!-- ===== AT A GLANCE ===== -->
 <section class="alt">
   <div class="wrap">
@@ -320,7 +355,6 @@ def page(slug, c):
   </div>
 </section>
 
-{downloads(slug)}
 <!-- ===== FAQ ===== -->
 <section id="faq">
   <div class="wrap">
@@ -390,7 +424,7 @@ window.addEventListener('load',function(){{
   fit();setTimeout(fit,300);
 }});
 </script>
-<script src="../assets/js/slidein.js?v=2" data-title="Get the {E(c['name'])} Update" defer></script>
+<script src="../assets/js/slidein.js?v=3" data-title="Get the {E(c['name'])} Update" defer></script>
 </body>
 </html>
 """

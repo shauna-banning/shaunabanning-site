@@ -19,7 +19,7 @@ document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','
 <meta property="og:image" content="https://shaunabanning.com/assets/img/florida-home-palms-1.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=4">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
 <script>
@@ -58,6 +58,7 @@ document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','
   <ul>
     <li class="hide-sm"><a href="#market-update">Market Update</a></li>
     <li class="hide-sm"><a href="#living">Living Here</a></li>
+    <li class="hide-sm"><a href="#guides">Free Guides</a></li>
     <li class="hide-sm"><a href="#faq">FAQ</a></li>
     <li><a class="btn btn-dark btn-sm" href="../home-value/?source=south-fork">Home Value</a></li>
   </ul>
@@ -120,6 +121,97 @@ document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','
     <a class="btn btn-light" href="../home-value/?source=south-fork-band">Get My Free Report</a>
   </div>
 </section>
+
+<!-- ===== FREE GUIDES ===== -->
+<section id="guides">
+  <div class="wrap">
+    <span class="eyebrow">Free Guides</span>
+    <h2>Buying, Selling or Moving? Start Here.</h2>
+    <p class="lead">Tap a guide and it lands in your inbox.</p>
+    <div class="grid-3 dl-grid">
+      <div class="dl-card">
+        <button class="dl-cover" type="button" data-dl="buyer" aria-label="Get The Complete Guide to Buying a Home"><img src="../assets/img/guides/cover-buyer.jpg?v=2" alt="The Complete Guide to Buying a Home cover" loading="lazy"></button>
+        <span class="tag">Free Guide</span>
+        <h3>The Complete Guide to Buying a Home</h3>
+        <p>Every step from pre-approval to keys, plus the Florida costs nobody mentions: CDDs, insurance and flood zones.</p>
+        <button class="btn btn-dark btn-sm" type="button" data-dl="buyer">Get the Free Guide</button>
+      </div>
+      <div class="dl-card">
+        <button class="dl-cover" type="button" data-dl="seller" aria-label="Get The Complete Guide to Selling a Home"><img src="../assets/img/guides/cover-seller.jpg?v=2" alt="The Complete Guide to Selling a Home cover" loading="lazy"></button>
+        <span class="tag">Free Guide</span>
+        <h3>The Complete Guide to Selling a Home</h3>
+        <p>What it really costs to sell in Florida, how to price it right and how I market your home.</p>
+        <button class="btn btn-dark btn-sm" type="button" data-dl="seller">Get the Free Guide</button>
+      </div>
+      <div class="dl-card">
+        <button class="dl-cover" type="button" data-dl="prep30" aria-label="Get 30-Day Plan to Prep Your Home for Sale"><img src="../assets/img/guides/cover-prep30.jpg?v=2" alt="30-Day Plan to Prep Your Home for Sale cover" loading="lazy"></button>
+        <span class="tag">Free Guide</span>
+        <h3>30-Day Plan to Prep Your Home for Sale</h3>
+        <p>One small task a day, and your home is photo-ready in a month.</p>
+        <button class="btn btn-dark btn-sm" type="button" data-dl="prep30">Get the Free Guide</button>
+      </div>
+    </div>
+    <div class="dl-banner">
+      <button class="dl-cover" type="button" data-dl="moving" aria-label="Get The Moving Checklist"><img src="../assets/img/guides/cover-moving.jpg?v=2" alt="The Moving Checklist cover" loading="lazy"></button>
+      <div>
+        <span class="eyebrow">Free Checklist</span>
+        <h3>Moving Soon? Don't Forget a Thing.</h3>
+        <p>A countdown from 45 days out to your first week in the new place, plus packing, kids, pets and garage sale checklists.</p>
+        <button class="btn btn-caramel" type="button" data-dl="moving">Get the Moving Checklist</button>
+      </div>
+    </div>
+  </div>
+</section>
+<dialog class="dl-modal" id="dl-buyer" aria-label="The Complete Guide to Buying a Home">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/cover-buyer.jpg?v=2" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>The Complete Guide to Buying a Home</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-6b08163e9698beb340fdf204" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{formId:'6b08163e9698beb340fdf204',containerEl:'#fd-form-6b08163e9698beb340fdf204'});</script>
+<dialog class="dl-modal" id="dl-seller" aria-label="The Complete Guide to Selling a Home">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/cover-seller.jpg?v=2" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>The Complete Guide to Selling a Home</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-6b0816925a760592ef79686d" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{formId:'6b0816925a760592ef79686d',containerEl:'#fd-form-6b0816925a760592ef79686d'});</script>
+<dialog class="dl-modal" id="dl-prep30" aria-label="30-Day Plan to Prep Your Home for Sale">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/cover-prep30.jpg?v=2" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>30-Day Plan to Prep Your Home for Sale</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-6b0816b15340528a320c7a9a" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{formId:'6b0816b15340528a320c7a9a',containerEl:'#fd-form-6b0816b15340528a320c7a9a'});</script>
+<dialog class="dl-modal" id="dl-moving" aria-label="The Moving Checklist">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/cover-moving.jpg?v=2" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>The Moving Checklist</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-6b0816d1ddbcc784232c75b5" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{formId:'6b0816d1ddbcc784232c75b5',containerEl:'#fd-form-6b0816d1ddbcc784232c75b5'});</script>
+<script>document.querySelectorAll('[data-dl]').forEach(function(b){b.addEventListener('click',function(){var d=document.getElementById('dl-'+b.dataset.dl);if(d&&d.showModal){d.showModal();if(window.gtag)gtag('event','guide_open',{guide:b.dataset.dl,page_path:location.pathname});}});});
+document.querySelectorAll('.dl-modal').forEach(function(d){d.querySelector('.dl-x').addEventListener('click',function(){d.close();});d.addEventListener('click',function(e){if(e.target===d)d.close();});});</script>
 
 <!-- ===== AT A GLANCE ===== -->
 <section class="alt">
@@ -235,7 +327,6 @@ document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','
   </div>
 </section>
 
-<!-- FREE DOWNLOADS: hidden until all 4 Flodesk form ids are filled in DOWNLOADS -->
 <!-- ===== FAQ ===== -->
 <section id="faq">
   <div class="wrap">
@@ -312,6 +403,6 @@ window.addEventListener('load',function(){
   fit();setTimeout(fit,300);
 });
 </script>
-<script src="../assets/js/slidein.js?v=2" data-title="Get the South Fork Update" defer></script>
+<script src="../assets/js/slidein.js?v=3" data-title="Get the South Fork Update" defer></script>
 </body>
 </html>

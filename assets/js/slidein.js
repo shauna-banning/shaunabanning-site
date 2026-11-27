@@ -18,9 +18,14 @@
     if (Date.now() - (+get(KEY_CLOSED) || 0) < WEEK) return;
   }
 
-  var host = document.querySelector('#monthly [id^="fd-form-"]') || document.querySelector('[id^="fd-form-"]:not(.dl-form)');
+  // Optional: data-form="<flodesk id>" picks a specific form (e.g. a guide form inside a modal),
+  // and data-watch="#section" is the on-page block that should suppress the pop-up while visible.
+  var pick = me.getAttribute('data-form');
+  var host = pick ? document.getElementById('fd-form-' + pick)
+    : (document.querySelector('#monthly [id^="fd-form-"]') || document.querySelector('[id^="fd-form-"]:not(.dl-form)'));
   if (!host || !window.fd) return;
   var formId = host.id.replace('fd-form-', '');
+  var watchEl = me.getAttribute('data-watch') ? document.querySelector(me.getAttribute('data-watch')) : null;
   var title = me.getAttribute('data-title') || 'Get the Monthly Update';
   var eyebrow = me.getAttribute('data-eyebrow') || 'Free · Monthly';
   var sub = me.getAttribute('data-sub') || 'Buying or selling here? One email a month: what sold, what it sold for and how fast homes are moving.';
@@ -29,7 +34,7 @@
   var formInView = false;
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (es) { formInView = es[0].isIntersecting; }, { threshold: 0.3 })
-      .observe(host.closest('section') || host);
+      .observe(watchEl || host.closest('section') || host);
   }
 
   var shown = false, el;

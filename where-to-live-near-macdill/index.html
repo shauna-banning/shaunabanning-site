@@ -321,6 +321,59 @@ document.addEventListener('submit',function(e){var f=e.target||{};gtag('event','
   </div>
 </section>
 
+<!-- ===== FREE PCS GUIDE + CHECKLIST (Flodesk: PCS Guide / PCS Checklist) ===== -->
+<section id="pcs-guide">
+  <div class="wrap">
+    <span class="eyebrow">Free PCS Guide + Checklist</span>
+    <h2>Planning Your PCS to MacDill?</h2>
+    <p class="lead">Tap a cover and it lands in your inbox.</p>
+    <div class="dl-banner">
+      <button class="dl-cover" type="button" data-dl="pcsguide" aria-label="Get the PCS to MacDill Guide"><img src="../assets/img/guides/cover-pcs-guide.jpg" alt="PCS to MacDill AFB guide cover" loading="lazy"></button>
+      <div>
+        <span class="eyebrow">Free Guide · 13 Pages</span>
+        <h3>The PCS to MacDill Guide</h3>
+        <p>Rush-hour drive times from 6 areas, rent or buy, VA loan basics (including assumable VA loans) and the Florida costs that surprise most families.</p>
+        <button class="btn btn-caramel" type="button" data-dl="pcsguide">Get the Free Guide</button>
+      </div>
+    </div>
+    <div class="dl-banner">
+      <button class="dl-cover" type="button" data-dl="pcschecklist" aria-label="Get the PCS Checklist"><img src="../assets/img/guides/cover-pcs-checklist.jpg" alt="PCS made simple checklist cover" loading="lazy"></button>
+      <div>
+        <span class="eyebrow">Free Checklist</span>
+        <h3>PCS Made Simple: The Checklist</h3>
+        <p>A countdown from the day your orders drop to pack-out week, plus paperwork, your HHG move or PPM, kids and pets, and your first 30 days at MacDill.</p>
+        <button class="btn btn-dark" type="button" data-dl="pcschecklist">Get the PCS Checklist</button>
+      </div>
+    </div>
+  </div>
+</section>
+<dialog class="dl-modal" id="dl-pcsguide" aria-label="The PCS to MacDill Guide">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/cover-pcs-guide.jpg" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>The PCS to MacDill Guide</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-6b0968889dac04931fc9efef" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{formId:'6b0968889dac04931fc9efef',containerEl:'#fd-form-6b0968889dac04931fc9efef'});</script>
+<dialog class="dl-modal" id="dl-pcschecklist" aria-label="PCS Made Simple: The Checklist">
+  <button class="dl-x" type="button" aria-label="Close">&times;</button>
+  <img src="../assets/img/guides/cover-pcs-checklist.jpg" alt="" loading="lazy">
+  <div>
+    <span class="eyebrow">Free Download</span>
+    <h3>PCS Made Simple: The Checklist</h3>
+    <p>Where should I send it? It lands in your inbox in a minute.</p>
+    <div class="form"><div id="fd-form-6b0968b922777cb3d69269ae" class="dl-form"></div></div>
+    <small>No spam, unsubscribe anytime.</small>
+  </div>
+</dialog>
+<script>window.fd('form',{formId:'6b0968b922777cb3d69269ae',containerEl:'#fd-form-6b0968b922777cb3d69269ae'});</script>
+<script>document.querySelectorAll('[data-dl]').forEach(function(b){b.addEventListener('click',function(){var d=document.getElementById('dl-'+b.dataset.dl);if(d&&d.showModal){d.showModal();if(window.gtag)gtag('event','guide_open',{guide:b.dataset.dl,page_path:location.pathname});}});});
+document.querySelectorAll('.dl-modal').forEach(function(d){d.querySelector('.dl-x').addEventListener('click',function(){d.close();});d.addEventListener('click',function(e){if(e.target===d)d.close();});});</script>
+
 <!-- ===== BAH / RENT VS BUY ===== -->
 <section class="dark">
   <div class="wrap capture">
@@ -448,6 +501,6 @@ document.querySelectorAll('.flip').forEach(function(c){
   c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t(e)}});
 });
 </script>
-<script src="../assets/js/slidein.js?v=3" data-eyebrow="Free · No Pressure" data-title="PCSing to MacDill?" data-sub="Get a free shortlist of 2 or 3 areas that fit your BAH, commute and must-haves." defer></script>
+<script src="../assets/js/slidein.js?v=4" data-form="6b0968889dac04931fc9efef" data-watch="#pcs-guide" data-eyebrow="Free PCS Guide" data-title="PCSing to MacDill?" data-sub="Get the free PCS to MacDill guide: rush-hour drive times, VA loan basics and the Florida costs nobody mentions." defer></script>
 </body>
 </html>
